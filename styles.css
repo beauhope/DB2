@@ -74,21 +74,23 @@ main,
 }
 
 .brand {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 22px;
+  width: fit-content;
+  margin: 0 auto 28px;
   border: 0;
-  padding: 0;
-  background: transparent;
+  border-radius: 18px;
+  padding: 8px 10px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 8px 18px rgba(26, 55, 47, 0.16);
 }
 
 .site-logo-img {
   display: block;
-  width: clamp(160px, 48vw, 220px);
+  width: clamp(180px, 54vw, 220px);
   height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 10px 20px rgba(26, 55, 47, 0.18));
 }
 
 .brand-mark {
@@ -878,7 +880,7 @@ main {
   }
 
   .site-logo-img {
-    width: 240px;
+    width: 260px;
   }
 
   main {
