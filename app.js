@@ -186,8 +186,8 @@ function formatConceptTable(lines) {
   if (!rows.length) return "<p>لا توجد مفاهيم منظمة للعرض.</p>";
 
   return `
-    <div class="concept-table-wrap">
-      <table class="concept-table">
+    <div class="concept-table-wrap concepts-table-wrap">
+      <table class="concept-table concepts-table">
         <thead>
           <tr>
             <th>المفهوم</th>

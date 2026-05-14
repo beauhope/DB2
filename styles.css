@@ -1011,3 +1011,74 @@ main {
     align-items: start;
   }
 }
+
+@media (max-width: 700px) {
+  .concepts-table-wrap {
+    overflow-x: visible;
+    border: 0;
+    box-shadow: none;
+  }
+
+  .concepts-table,
+  .concepts-table thead,
+  .concepts-table tbody,
+  .concepts-table tr,
+  .concepts-table th,
+  .concepts-table td {
+    display: block;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .concepts-table {
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+
+  .concepts-table thead {
+    display: none;
+  }
+
+  .concepts-table tbody {
+    display: block;
+  }
+
+  .concepts-table tr {
+    margin-bottom: 14px;
+    padding: 14px;
+    border: 1px solid rgba(45, 128, 104, 0.22);
+    border-radius: 16px;
+    background: #fffdf7;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.04);
+  }
+
+  .concepts-table tr:last-child {
+    margin-bottom: 0;
+  }
+
+  .concepts-table td {
+    border: 0;
+    padding: 6px 0;
+    text-align: right;
+  }
+
+  .concepts-table td + td {
+    margin-top: 0;
+  }
+
+  .concepts-table td:first-child::before {
+    content: "المفهوم";
+    display: block;
+    font-weight: 700;
+    color: #2d8068;
+    margin-bottom: 4px;
+  }
+
+  .concepts-table td:nth-child(2)::before {
+    content: "معناه المبسط";
+    display: block;
+    font-weight: 700;
+    color: #2d8068;
+    margin-bottom: 4px;
+  }
+}

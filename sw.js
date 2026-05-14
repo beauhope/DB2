@@ -1,4 +1,4 @@
-const CACHE_NAME = "douae-bac2-v6";
+const CACHE_NAME = "douae-bac2-v7";
 
 const STATIC_ASSETS = [
   "./",
