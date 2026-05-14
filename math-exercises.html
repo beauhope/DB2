@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#2f7d68">
-    <title>تمارين قصيرة تفاعلية في الفيزياء - ثانية باك علوم فيزيائية</title>
+    <title>تمارين قصيرة تفاعلية في الرياضيات - ثانية باك علوم فيزيائية</title>
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
     <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
@@ -21,23 +21,23 @@
         <nav class="subject-nav" aria-label="أقسام المراجعة">
           <a class="subject-nav-link" href="./index.html">الرئيسية</a>
           <a class="subject-nav-link" href="./philosophy.html">الفلسفة</a>
-          <a class="subject-nav-link active" href="./physics-equations.html">الفيزياء</a>
+          <a class="subject-nav-link" href="./physics-equations.html">الفيزياء</a>
           <a class="subject-nav-link" href="./chemistry-equations.html">الكيمياء</a>
-          <a class="subject-nav-link" href="./math.html">الرياضيات</a>
+          <a class="subject-nav-link active" href="./math.html">الرياضيات</a>
         </nav>
 
-        <p class="eyebrow">ثانية باك علوم فيزيائية</p>
-        <h1>تمارين قصيرة تفاعلية في الفيزياء</h1>
-        <p class="intro">Exercices interactifs courts en physique</p>
-        <p class="intro">تدريب سريع على اختيار العلاقة المناسبة، تطبيق منهجية الحل، ثم مقارنة جوابك بالحل المنظم.</p>
+        <p class="eyebrow">Mathématiques – 2e Bac Sciences Physiques</p>
+        <h1>تمارين قصيرة تفاعلية في الرياضيات</h1>
+        <p class="intro">Exercices interactifs courts en mathématiques</p>
+        <p class="intro">تدريب سريع على القواعد الأساسية مع منهجية الحل والحل الملائم بعد كل تمرين.</p>
       </div>
     </header>
 
-    <main class="formula-page exercises-page">
+    <main class="formula-page exercises-page math-exercises-page">
       <nav class="breadcrumb" aria-label="مسار التنقل">
         <a class="breadcrumb-link" href="./index.html">الرئيسية</a>
         <span class="breadcrumb-separator" aria-hidden="true">›</span>
-        <a class="breadcrumb-link" href="./physics-equations.html">الفيزياء</a>
+        <a class="breadcrumb-link" href="./math.html">الرياضيات</a>
         <span class="breadcrumb-separator" aria-hidden="true">›</span>
         <span class="breadcrumb-current">تمارين تفاعلية</span>
       </nav>
@@ -46,10 +46,10 @@
         <div>
           <p class="eyebrow">تدريب قصير قبل التمارين الطويلة</p>
           <h2>كيف تستعمل هذه الصفحة؟</h2>
-          <p class="muted">اختر الجواب، ثم اضغط على زر التحقق. بعد ذلك اقرأ منهجية الحل والحل الملائم. الهدف ليس معرفة الجواب فقط، بل فهم سبب اختيار العلاقة.</p>
+          <p class="muted">اختر الجواب، ثم اضغط على زر التحقق. بعد ذلك افتح منهجية الحل والحل الملائم. الهدف هو فهم سبب الاختيار، وليس حفظ الجواب فقط.</p>
         </div>
         <div class="formula-note">
-          بعد كل تمرين اسأل نفسك: ما المعطيات؟ ما المطلوب؟ ما العلاقة التي تربط بينهما؟ وهل الوحدات صحيحة؟
+          في كل تمرين اسأل نفسك: ما نوع السؤال؟ ما القاعدة المناسبة؟ هل المجال أو الإشارة أو الوحدة الرياضية محترمة؟
         </div>
       </section>
 
@@ -58,8 +58,8 @@
         <div class="toc-actions formula-toc">
           <a class="toc-button" href="#true-false">صح أو خطأ / Vrai-Faux</a>
           <a class="toc-button" href="#mcq">اختر الجواب / QCM</a>
-          <a class="toc-button" href="#complete-equation">أكمل المعادلة / Compléter</a>
-          <a class="toc-button" href="#choose-relation">اختر العلاقة / Choisir la relation</a>
+          <a class="toc-button" href="#complete-step">أكمل الخطوة / Compléter</a>
+          <a class="toc-button" href="#choose-method">اختر المنهجية / Choisir la méthode</a>
           <a class="toc-button" href="#method-box">منهجية مختصرة / Méthode</a>
         </div>
       </section>
@@ -68,7 +68,7 @@
         <div>
           <p class="eyebrow">نتيجتك الحالية</p>
           <h2><span id="scoreValue">0</span> / <span id="scoreTotal">0</span></h2>
-          <p class="muted">النتيجة تتحدث كلما تحققت من تمرين. يمكن إعادة المحاولة قبل الانتقال إلى تمرين آخر.</p>
+          <p class="muted">النتيجة تتحدث كلما تحققت من تمرين. يمكنك إعادة المحاولة في أي لحظة.</p>
         </div>
         <button class="quiz-reset-btn" type="button" id="resetQuiz">إعادة المحاولة / Recommencer</button>
       </section>
@@ -76,14 +76,14 @@
       <section class="section-heading" id="true-false">
         <p class="eyebrow">النوع الأول</p>
         <h2>صح أو خطأ / Vrai ou Faux</h2>
-        <p class="muted">هذا النوع يساعدك على تصحيح المفاهيم السريعة المرتبطة بالمعادلات.</p>
+        <p class="muted">تمارين قصيرة لتصحيح المفاهيم الأساسية قبل الانتقال إلى الحلول الطويلة.</p>
       </section>
 
       <section class="exercise-grid">
         <article class="exercise-card" data-answer="true">
-          <span class="exercise-tag">ميكانيك</span>
-          <h3>إذا تضاعفت سرعة جسم، فإن طاقته الحركية تصبح أربع مرات أكبر.</h3>
-          <p class="fr">Si la vitesse d’un corps double, son énergie cinétique devient quatre fois plus grande.</p>
+          <span class="exercise-tag">الدالة من الدرجة الثانية</span>
+          <h3>إذا كان a &gt; 0 في f(x)=ax²+bx+c، فإن المنحنى مفتوح إلى الأعلى.</h3>
+          <p class="fr">Si a &gt; 0 dans f(x)=ax²+bx+c, la parabole est ouverte vers le haut.</p>
           <div class="quiz-options" role="group" aria-label="اختيار الجواب">
             <button type="button" data-choice="true">صحيح / Vrai</button>
             <button type="button" data-choice="false">خطأ / Faux</button>
@@ -93,18 +93,18 @@
           <details class="exercise-solution">
             <summary>منهجية الحل والحل الملائم</summary>
             <ol>
-              <li>المعطيات: السرعة تضاعفت.</li>
-              <li>العلاقة: الطاقة الحركية تعتمد على مربع السرعة.</li>
-              <li>إذا أصبحت السرعة 2v فإن v² تصبح 4v².</li>
+              <li>نحدد نوع الدالة: دالة من الدرجة الثانية.</li>
+              <li>ننظر أولًا إلى إشارة المعامل a.</li>
+              <li>إذا كان a موجبًا، فالقطع المكافئ مفتوح إلى الأعلى.</li>
             </ol>
-            <p><strong>الحل:</strong> العبارة صحيحة، لأن Ec = 1/2 m v².</p>
+            <p><strong>الحل:</strong> العبارة صحيحة.</p>
           </details>
         </article>
 
         <article class="exercise-card" data-answer="false">
-          <span class="exercise-tag">كهرباء</span>
-          <h3>في العلاقة U = R I، يمكن استعمال R بالأوم و I بالملي أمبير دون تحويل.</h3>
-          <p class="fr">Dans U = R I, on peut utiliser R en ohm et I en milliampère sans conversion.</p>
+          <span class="exercise-tag">اللوغاريتم</span>
+          <h3>الدالة ln(x-2) معرفة على ℝ كله.</h3>
+          <p class="fr">La fonction ln(x-2) est définie sur tout ℝ.</p>
           <div class="quiz-options" role="group" aria-label="اختيار الجواب">
             <button type="button" data-choice="true">صحيح / Vrai</button>
             <button type="button" data-choice="false">خطأ / Faux</button>
@@ -114,11 +114,11 @@
           <details class="exercise-solution">
             <summary>منهجية الحل والحل الملائم</summary>
             <ol>
-              <li>نحدد العلاقة: U = R I.</li>
-              <li>الوحدة المناسبة لشدة التيار في النظام الدولي هي الأمبير A.</li>
-              <li>إذا أعطيت I بالملي أمبير، نحولها إلى أمبير قبل التعويض.</li>
+              <li>مع ln يجب أن يكون ما داخل اللوغاريتم موجبًا.</li>
+              <li>نكتب الشرط: x - 2 &gt; 0.</li>
+              <li>إذن x &gt; 2.</li>
             </ol>
-            <p><strong>الحل:</strong> العبارة خطأ. يجب تحويل mA إلى A.</p>
+            <p><strong>الحل:</strong> العبارة خطأ. مجال التعريف هو ]2,+∞[.</p>
           </details>
         </article>
       </section>
@@ -130,177 +130,175 @@
 
       <section class="exercise-grid">
         <article class="exercise-card" data-answer="b">
-          <span class="exercise-tag">موجات</span>
-          <h3>موجة طولها الموجي λ = 0.50 m وترددها f = 20 Hz. ما سرعة انتشارها؟</h3>
-          <p class="fr">Une onde a une longueur d’onde λ = 0,50 m et une fréquence f = 20 Hz. Quelle est sa célérité ?</p>
+          <span class="exercise-tag">معادلة من الدرجة الثانية</span>
+          <h3>حل المعادلة x² - 5x + 6 = 0 هو:</h3>
+          <p class="fr">Les solutions de x² - 5x + 6 = 0 sont :</p>
           <div class="quiz-options vertical" role="group" aria-label="اختيار الجواب">
-            <button type="button" data-choice="a">5 m/s</button>
-            <button type="button" data-choice="b">10 m/s</button>
-            <button type="button" data-choice="c">40 m/s</button>
+            <button type="button" data-choice="a">1 و 6</button>
+            <button type="button" data-choice="b">2 و 3</button>
+            <button type="button" data-choice="c">-2 و -3</button>
           </div>
           <button class="check-answer-btn" type="button">تحقق من الجواب</button>
           <div class="exercise-feedback" hidden></div>
           <details class="exercise-solution">
             <summary>منهجية الحل والحل الملائم</summary>
             <ol>
-              <li>المعطيات: λ = 0.50 m و f = 20 Hz.</li>
-              <li>المطلوب: سرعة الانتشار v.</li>
-              <li>العلاقة المناسبة: v = λ f.</li>
-              <li>التعويض: v = 0.50 × 20 = 10 m/s.</li>
+              <li>نحسب المميز: Δ = b² - 4ac.</li>
+              <li>هنا a = 1 و b = -5 و c = 6.</li>
+              <li>Δ = 25 - 24 = 1.</li>
+              <li>x₁ = (5 - 1)/2 = 2 و x₂ = (5 + 1)/2 = 3.</li>
             </ol>
-            <p><strong>الحل:</strong> الجواب الصحيح هو 10 m/s.</p>
+            <p><strong>الحل:</strong> الجواب الصحيح هو 2 و 3.</p>
           </details>
         </article>
 
         <article class="exercise-card" data-answer="c">
-          <span class="exercise-tag">نووي</span>
-          <h3>إذا كان النشاط A = 200 Bq وثابت التفكك λ = 0.5 s⁻¹، فما عدد النوى N؟</h3>
-          <p class="fr">Si A = 200 Bq et λ = 0,5 s⁻¹, quel est le nombre de noyaux N ?</p>
+          <span class="exercise-tag">الاشتقاق</span>
+          <h3>إذا كانت f(x)=x³، فإن f'(x) تساوي:</h3>
+          <p class="fr">Si f(x)=x³, alors f'(x) est :</p>
           <div class="quiz-options vertical" role="group" aria-label="اختيار الجواب">
-            <button type="button" data-choice="a">100</button>
-            <button type="button" data-choice="b">200</button>
-            <button type="button" data-choice="c">400</button>
+            <button type="button" data-choice="a">x²</button>
+            <button type="button" data-choice="b">3x</button>
+            <button type="button" data-choice="c">3x²</button>
           </div>
           <button class="check-answer-btn" type="button">تحقق من الجواب</button>
           <div class="exercise-feedback" hidden></div>
           <details class="exercise-solution">
             <summary>منهجية الحل والحل الملائم</summary>
             <ol>
-              <li>المعطيات: A = 200 Bq و λ = 0.5 s⁻¹.</li>
-              <li>المطلوب: N.</li>
-              <li>العلاقة: A = λN، إذن N = A / λ.</li>
-              <li>التعويض: N = 200 / 0.5 = 400.</li>
+              <li>نستعمل قاعدة الاشتقاق: (xⁿ)' = n xⁿ⁻¹.</li>
+              <li>هنا n = 3.</li>
+              <li>إذن f'(x)=3x².</li>
             </ol>
-            <p><strong>الحل:</strong> عدد النوى هو 400.</p>
+            <p><strong>الحل:</strong> الجواب الصحيح هو 3x².</p>
           </details>
         </article>
       </section>
 
-      <section class="section-heading" id="complete-equation">
+      <section class="section-heading" id="complete-step">
         <p class="eyebrow">النوع الثالث</p>
-        <h2>أكمل المعادلة / Compléter l’équation</h2>
+        <h2>أكمل الخطوة الناقصة / Compléter l’étape</h2>
+      </section>
+
+      <section class="exercise-grid">
+        <article class="exercise-card" data-answer="a">
+          <span class="exercise-tag">النهايات</span>
+          <h3>لإزالة حالة 0/0 في كسر جبري، أول خطوة غالبًا هي:</h3>
+          <p class="fr">Pour lever une indétermination 0/0 dans une fraction algébrique, on commence souvent par :</p>
+          <div class="quiz-options vertical" role="group" aria-label="اختيار الجواب">
+            <button type="button" data-choice="a">تحليل البسط أو المقام ثم الاختزال</button>
+            <button type="button" data-choice="b">حذف x مباشرة</button>
+            <button type="button" data-choice="c">كتابة النتيجة 0</button>
+          </div>
+          <button class="check-answer-btn" type="button">تحقق من الجواب</button>
+          <div class="exercise-feedback" hidden></div>
+          <details class="exercise-solution">
+            <summary>منهجية الحل والحل الملائم</summary>
+            <ol>
+              <li>نلاحظ أن التعويض المباشر يعطي 0/0.</li>
+              <li>نبحث عن عامل مشترك أو تحليل مناسب.</li>
+              <li>بعد الاختزال نعيد حساب النهاية.</li>
+            </ol>
+            <p><strong>الحل:</strong> الخطوة المناسبة هي التحليل ثم الاختزال، وليس حذف المتغير عشوائيًا.</p>
+          </details>
+        </article>
+
+        <article class="exercise-card" data-answer="b">
+          <span class="exercise-tag">الأعداد العقدية</span>
+          <h3>إذا كان z = a + ib، فإن مرافقه هو:</h3>
+          <p class="fr">Si z = a + ib, son conjugué est :</p>
+          <div class="quiz-options vertical" role="group" aria-label="اختيار الجواب">
+            <button type="button" data-choice="a">-a + ib</button>
+            <button type="button" data-choice="b">a - ib</button>
+            <button type="button" data-choice="c">-a - ib</button>
+          </div>
+          <button class="check-answer-btn" type="button">تحقق من الجواب</button>
+          <div class="exercise-feedback" hidden></div>
+          <details class="exercise-solution">
+            <summary>منهجية الحل والحل الملائم</summary>
+            <ol>
+              <li>نحتفظ بالجزء الحقيقي كما هو.</li>
+              <li>نغير إشارة الجزء التخيلي فقط.</li>
+              <li>إذن مرافق a + ib هو a - ib.</li>
+            </ol>
+            <p><strong>الحل:</strong> الجواب الصحيح هو a - ib.</p>
+          </details>
+        </article>
+      </section>
+
+      <section class="section-heading" id="choose-method">
+        <p class="eyebrow">النوع الرابع</p>
+        <h2>اختر المنهجية المناسبة / Choisir la méthode adaptée</h2>
       </section>
 
       <section class="exercise-grid">
         <article class="exercise-card" data-answer="c">
-          <span class="exercise-tag">مكثف</span>
-          <h3>أكمل العلاقة: الطاقة المخزنة في مكثف هي E = ?</h3>
-          <p class="fr">Complète la relation : l’énergie stockée dans un condensateur est E = ?</p>
+          <span class="exercise-tag">دراسة الدوال</span>
+          <h3>طلب منك التمرين دراسة رتابة دالة. ما الخطوة الأساسية؟</h3>
+          <p class="fr">On demande d’étudier les variations d’une fonction. Quelle est l’étape essentielle ?</p>
           <div class="quiz-options vertical" role="group" aria-label="اختيار الجواب">
-            <button type="button" data-choice="a">C × U</button>
-            <button type="button" data-choice="b">R × I</button>
-            <button type="button" data-choice="c">1/2 × C × U²</button>
+            <button type="button" data-choice="a">حساب f(0) فقط</button>
+            <button type="button" data-choice="b">رسم المنحنى مباشرة بدون حساب</button>
+            <button type="button" data-choice="c">حساب المشتقة ودراسة إشارتها</button>
           </div>
           <button class="check-answer-btn" type="button">تحقق من الجواب</button>
           <div class="exercise-feedback" hidden></div>
           <details class="exercise-solution">
             <summary>منهجية الحل والحل الملائم</summary>
             <ol>
-              <li>المجال: كهرباء، مكثف.</li>
-              <li>المطلوب: طاقة مخزنة.</li>
-              <li>العلاقة المناسبة: E = 1/2 C U².</li>
+              <li>دراسة الرتابة ترتبط بإشارة المشتقة.</li>
+              <li>نحسب f'(x).</li>
+              <li>ننجز جدول إشارة f'(x)، ثم نستنتج جدول تغيرات f.</li>
             </ol>
-            <p><strong>الحل:</strong> الجواب الصحيح هو E = 1/2 × C × U².</p>
+            <p><strong>الحل:</strong> المنهجية الصحيحة هي حساب المشتقة ودراسة إشارتها.</p>
           </details>
         </article>
 
         <article class="exercise-card" data-answer="a">
-          <span class="exercise-tag">ميكانيك</span>
-          <h3>أكمل العلاقة: الوزن P يساوي...</h3>
-          <p class="fr">Complète la relation : le poids P est égal à...</p>
+          <span class="exercise-tag">الاحتمالات</span>
+          <h3>عند وجود عبارة “علما أن” في تمرين احتمال، فهذا غالبًا يشير إلى:</h3>
+          <p class="fr">L’expression “sachant que” dans un exercice de probabilité indique souvent :</p>
           <div class="quiz-options vertical" role="group" aria-label="اختيار الجواب">
-            <button type="button" data-choice="a">m × g</button>
-            <button type="button" data-choice="b">m × v</button>
-            <button type="button" data-choice="c">R × I</button>
+            <button type="button" data-choice="a">احتمال شرطي</button>
+            <button type="button" data-choice="b">مشتقة</button>
+            <button type="button" data-choice="c">معادلة تفاضلية</button>
           </div>
           <button class="check-answer-btn" type="button">تحقق من الجواب</button>
           <div class="exercise-feedback" hidden></div>
           <details class="exercise-solution">
             <summary>منهجية الحل والحل الملائم</summary>
             <ol>
-              <li>المجال: الثقالة والقوى.</li>
-              <li>المطلوب: الوزن.</li>
-              <li>العلاقة: P = m g.</li>
+              <li>نقرأ العبارة المفتاحية: “علما أن” أو “sachant que”.</li>
+              <li>هذه العبارة غالبًا تدل على احتمال شرطي.</li>
+              <li>نستعمل علاقة الاحتمال الشرطي حسب المعطيات.</li>
             </ol>
-            <p><strong>الحل:</strong> الجواب الصحيح هو P = m × g.</p>
-          </details>
-        </article>
-      </section>
-
-      <section class="section-heading" id="choose-relation">
-        <p class="eyebrow">النوع الرابع</p>
-        <h2>اختر العلاقة المناسبة / Choisir la relation adaptée</h2>
-      </section>
-
-      <section class="exercise-grid">
-        <article class="exercise-card" data-answer="b">
-          <span class="exercise-tag">ميكانيك</span>
-          <h3>جسم كتلته وسرعته معطاتان، والمطلوب حساب طاقته الحركية. ما العلاقة المناسبة؟</h3>
-          <p class="fr">La masse et la vitesse d’un corps sont données. On demande son énergie cinétique. Quelle relation utiliser ?</p>
-          <div class="quiz-options vertical" role="group" aria-label="اختيار الجواب">
-            <button type="button" data-choice="a">P = m g</button>
-            <button type="button" data-choice="b">Ec = 1/2 m v²</button>
-            <button type="button" data-choice="c">U = R I</button>
-          </div>
-          <button class="check-answer-btn" type="button">تحقق من الجواب</button>
-          <div class="exercise-feedback" hidden></div>
-          <details class="exercise-solution">
-            <summary>منهجية الحل والحل الملائم</summary>
-            <ol>
-              <li>نبدأ بالمطلوب: الطاقة الحركية Ec.</li>
-              <li>نبحث عن علاقة فيها Ec وتستعمل الكتلة والسرعة.</li>
-              <li>العلاقة التي تربط هذه المعطيات هي Ec = 1/2 m v².</li>
-            </ol>
-            <p><strong>الحل:</strong> العلاقة المناسبة هي Ec = 1/2 m v².</p>
-          </details>
-        </article>
-
-        <article class="exercise-card" data-answer="a">
-          <span class="exercise-tag">RC</span>
-          <h3>تمرين يتحدث عن شحن مكثف في دارة RC وثابتة الزمن. ما العلاقة الأساسية لثابتة الزمن؟</h3>
-          <p class="fr">Un exercice parle de la charge d’un condensateur dans un circuit RC et de la constante de temps. Quelle relation utiliser ?</p>
-          <div class="quiz-options vertical" role="group" aria-label="اختيار الجواب">
-            <button type="button" data-choice="a">τ = R C</button>
-            <button type="button" data-choice="b">τ = L / R</button>
-            <button type="button" data-choice="c">T = 1 / f</button>
-          </div>
-          <button class="check-answer-btn" type="button">تحقق من الجواب</button>
-          <div class="exercise-feedback" hidden></div>
-          <details class="exercise-solution">
-            <summary>منهجية الحل والحل الملائم</summary>
-            <ol>
-              <li>الكلمة المفتاحية: مكثف ودارة RC.</li>
-              <li>في دارة RC، ثابتة الزمن ترتبط بالمقاومة والسعة.</li>
-              <li>العلاقة المناسبة هي τ = R C.</li>
-            </ol>
-            <p><strong>الحل:</strong> العلاقة المناسبة هي τ = R C.</p>
+            <p><strong>الحل:</strong> الجواب الصحيح هو احتمال شرطي.</p>
           </details>
         </article>
       </section>
 
       <section class="section-heading" id="method-box">
         <p class="eyebrow">منهجية ثابتة</p>
-        <h2>طريقة التعامل مع أي تمرين قصير / Méthode pour chaque exercice court</h2>
+        <h2>طريقة التعامل مع أي تمرين رياضيات قصير</h2>
       </section>
 
       <section class="content-block exercise-method-card">
         <ol class="methodology-steps compact">
-          <li><strong>المجال / Domaine :</strong> هل التمرين في الميكانيك، الكهرباء، الموجات، أم النووي؟</li>
-          <li><strong>المعطيات / Données :</strong> اكتب القيم المعطاة مع الوحدات.</li>
-          <li><strong>المطلوب / Inconnue :</strong> حدد الرمز المطلوب حسابه.</li>
-          <li><strong>العلاقة / Relation :</strong> اختر العلاقة التي تربط المعطيات بالمطلوب.</li>
-          <li><strong>الوحدات / Unités :</strong> حوّل إلى الوحدات المناسبة قبل التعويض.</li>
-          <li><strong>النتيجة / Résultat :</strong> اكتب الجواب بوحدة واضحة وتحقق من منطقيته.</li>
+          <li><strong>نوع السؤال:</strong> هل هو حساب، برهان، دراسة دالة، متتالية، عقدية، احتمال؟</li>
+          <li><strong>المجال:</strong> قبل أي حساب، تحقق من مجال التعريف إذا كانت هناك دالة.</li>
+          <li><strong>القاعدة:</strong> اختر القاعدة المناسبة: مشتقة، نهاية، مميز، لوغاريتم، تكامل...</li>
+          <li><strong>الكتابة:</strong> لا تكتب النتيجة فقط؛ اكتب خطوات مختصرة ومنظمة.</li>
+          <li><strong>التحقق:</strong> راجع الإشارة، المجال، ترتيب الجدول، وصحة الاستنتاج.</li>
         </ol>
       </section>
 
       <section class="content-block next-actions-card">
         <h3>تابع المراجعة</h3>
         <div class="toc-actions formula-toc">
-          <a class="toc-button" href="./physics-equations.html">بنك معادلات الفيزياء</a>
-          <a class="toc-button" href="./physics-methodology.html">منهجية حل التمارين</a>
-          <a class="toc-button" href="./physics-common-mistakes.html">الأخطاء الشائعة</a>
-          <a class="toc-button" href="./index.html">العودة إلى الصفحة الرئيسية</a>
+          <a class="toc-button" href="./math.html">صفحة الرياضيات</a>
+          <a class="toc-button" href="./math-formulas.html">بنك القواعد والقوانين</a>
+          <a class="toc-button" href="./math-methodology.html">منهجية حل التمارين</a>
+          <a class="toc-button" href="./math-common-mistakes.html">الأخطاء الشائعة</a>
         </div>
       </section>
     </main>
@@ -314,7 +312,7 @@
             <p>ثانية باك علوم فيزيائية</p>
           </div>
         </div>
-        <p>تمارين تفاعلية قصيرة لتثبيت منهجية الحل قبل الانتقال إلى تمارين أطول.</p>
+        <p>تمارين تفاعلية قصيرة لتثبيت قواعد الرياضيات ومنهجية الحل قبل الانتقال إلى تمارين أطول.</p>
         <p class="footer-meta">من إعداد: دعاء جول · 2026</p>
         <p class="footer-note">هذا الموقع مخصص للمراجعة والدعم، ولا يغني عن الدروس الرسمية وتوجيهات الأستاذ.</p>
       </div>
@@ -358,7 +356,7 @@
           if (!selected) {
             feedback.hidden = false;
             feedback.className = "exercise-feedback is-warning";
-            feedback.textContent = "اختاري جوابًا أولًا، ثم اضغطي على التحقق.";
+            feedback.textContent = "اختر جوابًا أولًا، ثم اضغط على التحقق.";
             return;
           }
 
@@ -367,8 +365,8 @@
           feedback.hidden = false;
           feedback.className = isCorrect ? "exercise-feedback is-correct" : "exercise-feedback is-wrong";
           feedback.textContent = isCorrect
-            ? "جواب صحيح. افتحي منهجية الحل لتثبيت الفكرة."
-            : "الجواب غير صحيح. راجعي منهجية الحل والحل الملائم أسفل التمرين.";
+            ? "جواب صحيح. افتح منهجية الحل لتثبيت الفكرة."
+            : "الجواب غير صحيح. راجع منهجية الحل والحل الملائم أسفل التمرين.";
           updateScore();
         });
       });

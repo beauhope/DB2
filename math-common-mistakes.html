@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#2f7d68">
+    <title>أخطاء شائعة في امتحان الرياضيات - ثانية باك علوم فيزيائية</title>
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <div class="header-content">
+        <a class="brand" href="./index.html" aria-label="العودة إلى الصفحة الرئيسية">
+          <img src="DB2_logo.png" alt="شعار DB2 - ثانية علوم فيزياء" class="site-logo-img">
+        </a>
+
+        <nav class="subject-nav" aria-label="أقسام المراجعة">
+          <a class="subject-nav-link" href="./index.html">الرئيسية</a>
+          <a class="subject-nav-link" href="./philosophy.html">الفلسفة</a>
+          <a class="subject-nav-link" href="./physics-equations.html">الفيزياء</a>
+          <a class="subject-nav-link" href="./chemistry-equations.html">الكيمياء</a>
+          <a class="subject-nav-link active" href="./math.html">الرياضيات</a>
+        </nav>
+
+        <p class="eyebrow">Erreurs fréquentes en mathématiques</p>
+        <h1>أخطاء شائعة في امتحان الرياضيات</h1>
+        <p class="intro">صفحة مراجعة عملية تساعدك على الانتباه إلى الأخطاء التي تتكرر في تمارين الرياضيات: المجال، الإشارة، الاشتقاق، اللوغاريتم، التكامل، العقدية، والتبرير.</p>
+      </div>
+    </header>
+
+    <main class="formula-page math-page">
+      <nav class="breadcrumb" aria-label="مسار التنقل">
+        <a class="breadcrumb-link" href="./index.html">الرئيسية</a>
+        <span class="breadcrumb-separator" aria-hidden="true">›</span>
+        <a class="breadcrumb-link" href="./math.html">الرياضيات</a>
+        <span class="breadcrumb-separator" aria-hidden="true">›</span>
+        <span class="breadcrumb-current">أخطاء شائعة</span>
+      </nav>
+
+      <section class="home-dashboard formula-hero-card">
+        <div>
+          <p class="eyebrow">Révision ciblée</p>
+          <h2>لا يكفي أن تعرف القاعدة، يجب أن تعرف أين يكثر الخطأ</h2>
+          <p class="muted">كثير من نقط الرياضيات تضيع بسبب أخطاء صغيرة: نسيان المجال، قلب إشارة، استعمال قاعدة في غير محلها، أو كتابة نتيجة دون تبرير.</p>
+        </div>
+        <div class="formula-note">
+          استعمل هذه الصفحة قبل حل سلسلة تمارين أو قبل الامتحان. اقرأ الخطأ، ثم راجع المثال، ثم طبّق قائمة التحقق في آخر الصفحة.
+          <br><br>
+          <a class="toc-button" href="./math-formulas.html">فتح بنك القواعد</a>
+          <a class="toc-button" href="./math-methodology.html">فتح منهجية الحل</a>
+        </div>
+      </section>
+
+      <section class="content-block">
+        <h3>فهرس سريع / Sommaire rapide</h3>
+        <div class="toc-actions formula-toc">
+          <a class="toc-button" href="#domaine">المجال</a>
+          <a class="toc-button" href="#signes">الإشارات</a>
+          <a class="toc-button" href="#limites">النهايات</a>
+          <a class="toc-button" href="#derivee">الاشتقاق</a>
+          <a class="toc-button" href="#log-exp">ln و exp</a>
+          <a class="toc-button" href="#integrale">التكامل</a>
+          <a class="toc-button" href="#complexes">العقدية</a>
+          <a class="toc-button" href="#checklist">قائمة التحقق</a>
+        </div>
+      </section>
+
+      <section class="section-heading" id="domaine">
+        <p class="eyebrow">Domaine de définition</p>
+        <h2>1. نسيان مجال التعريف</h2>
+        <p class="muted">المجال ليس تفصيلًا شكليًا، بل يحدد أين يمكن استعمال القواعد والحلول.</p>
+      </section>
+
+      <section class="formula-list">
+        <details class="formula-card" open>
+          <summary><span>الخطأ</span><small>Erreur</small></summary>
+          <div class="formula-body">
+            <p>حل معادلة أو دراسة دالة دون تحديد المجال، خصوصًا مع الكسر، الجذر، أو اللوغاريتم.</p>
+            <p class="fr">Résoudre ou étudier une fonction sans préciser le domaine, surtout avec une fraction, une racine ou un logarithme.</p>
+          </div>
+        </details>
+        <details class="formula-card" open>
+          <summary><span>التصحيح</span><small>Correction</small></summary>
+          <div class="formula-body">
+            <ul class="method-list">
+              <li>في الكسر: المقام يجب ألا يساوي صفرًا.</li>
+              <li>في الجذر التربيعي: ما داخل الجذر يجب أن يكون موجبًا أو منعدمًا.</li>
+              <li>في اللوغاريتم: داخل ln يجب أن يكون موجبًا تمامًا.</li>
+            </ul>
+            <p class="fr">Avant de calculer, vérifier les conditions d’existence.</p>
+          </div>
+        </details>
+      </section>
+
+      <section class="section-heading" id="signes">
+        <p class="eyebrow">Signes et tableaux</p>
+        <h2>2. أخطاء الإشارة وجدول الإشارة</h2>
+        <p class="muted">علامة ناقص واحدة قد تغير جدول التغيرات أو نتيجة المتراجحة بالكامل.</p>
+      </section>
+
+      <section class="formula-list">
+        <details class="formula-card" open>
+          <summary><span>أخطاء متكررة</span><small>Erreurs fréquentes</small></summary>
+          <div class="formula-body">
+            <ul class="method-list">
+              <li>نسيان تغيير اتجاه المتراجحة عند الضرب أو القسمة في عدد سالب.</li>
+              <li>الخلط بين إشارة الدالة وإشارة المشتقة.</li>
+              <li>تطبيق قاعدة ثلاثي الحدود دون ترتيب الجذور.</li>
+            </ul>
+          </div>
+        </details>
+        <details class="formula-card">
+          <summary><span>طريقة آمنة</span><small>Méthode sûre</small></summary>
+          <div class="formula-body">
+            <p>اكتب الجذور بترتيب تصاعدي، ثم ضع إشارات واضحة في الجدول، ثم استنتج بجملة كاملة.</p>
+            <p class="fr">Classer les racines, construire le tableau, puis conclure clairement.</p>
+          </div>
+        </details>
+      </section>
+
+      <section class="section-heading" id="limites">
+        <p class="eyebrow">Limites</p>
+        <h2>3. استعمال قواعد النهايات دون الانتباه إلى الحالات غير المحددة</h2>
+        <p class="muted">ليست كل نهاية تحسب بالتعويض المباشر.</p>
+      </section>
+
+      <section class="content-block solution-template">
+        <h3>الخطأ / Erreur</h3>
+        <p>التعويض مباشرة والحصول على شكل مثل: 0/0 أو ∞/∞ ثم كتابة نتيجة غير مبررة.</p>
+        <h3>التصحيح / Correction</h3>
+        <ol class="method-list">
+          <li>أحدد أولًا هل هناك شكل غير محدد.</li>
+          <li>إذا وجد، أبحث عن تقنية مناسبة: تحليل، اختزال، ضرب في المرافق، أو مقارنة.</li>
+          <li>أكتب سبب الانتقال من خطوة إلى أخرى.</li>
+        </ol>
+      </section>
+
+      <section class="section-heading" id="derivee">
+        <p class="eyebrow">Dérivation</p>
+        <h2>4. الخلط بين المشتقة والرتابة</h2>
+        <p class="muted">المشتقة أداة، أما الرتابة فهي نتيجة نستخرجها من إشارة المشتقة.</p>
+      </section>
+
+      <section class="formula-list">
+        <details class="formula-card" open>
+          <summary><span>الخطأ</span><small>Erreur</small></summary>
+          <div class="formula-body">
+            <p>حساب المشتقة ثم القول مباشرة إن الدالة تصاعدية أو تنازلية دون دراسة إشارة المشتقة.</p>
+            <p class="fr">Calculer la dérivée sans étudier son signe, puis conclure trop vite.</p>
+          </div>
+        </details>
+        <details class="formula-card" open>
+          <summary><span>الصياغة الصحيحة</span><small>Bonne rédaction</small></summary>
+          <div class="formula-body">
+            <p>نحسب f'(x)، ثم ندرس إشارة f'(x)، ثم نستنتج رتابة f على المجال المدروس.</p>
+            <p class="fr">On calcule f'(x), on étudie son signe, puis on déduit les variations de f.</p>
+          </div>
+        </details>
+      </section>
+
+      <section class="section-heading" id="log-exp">
+        <p class="eyebrow">Logarithme et exponentielle</p>
+        <h2>5. أخطاء شائعة في ln و exp</h2>
+        <p class="muted">هذه الدوال تحتاج احترام المجال والقواعد بدقة.</p>
+      </section>
+
+      <section class="content-block">
+        <ul class="method-list">
+          <li><strong>خطأ:</strong> كتابة ln(a+b)=ln(a)+ln(b). هذه قاعدة خاطئة.</li>
+          <li><strong>صحيح:</strong> ln(ab)=ln(a)+ln(b) بشرط a>0 و b>0.</li>
+          <li><strong>خطأ:</strong> نسيان أن exp(x) موجب دائمًا.</li>
+          <li><strong>صحيح:</strong> e^x &gt; 0 لكل x حقيقي.</li>
+        </ul>
+        <p class="fr">Les règles de ln et exp doivent être appliquées avec leurs conditions.</p>
+      </section>
+
+      <section class="section-heading" id="integrale">
+        <p class="eyebrow">Calcul intégral</p>
+        <h2>6. أخطاء التكامل والدوال الأصلية</h2>
+        <p class="muted">أكثر الأخطاء تكون في الثابت، الحدود، أو إشارة النتيجة.</p>
+      </section>
+
+      <section class="formula-list">
+        <details class="formula-card" open>
+          <summary><span>أخطاء متكررة</span><small>Erreurs fréquentes</small></summary>
+          <div class="formula-body">
+            <ul class="method-list">
+              <li>نسيان ثابت التكامل عند البحث عن دالة أصلية عامة.</li>
+              <li>عكس حدود التكامل دون تغيير الإشارة.</li>
+              <li>اعتبار المساحة سالبة دون الانتباه إلى أن المساحة الهندسية موجبة.</li>
+            </ul>
+          </div>
+        </details>
+      </section>
+
+      <section class="section-heading" id="complexes">
+        <p class="eyebrow">Nombres complexes</p>
+        <h2>7. أخطاء الأعداد العقدية</h2>
+        <p class="muted">في العقدية يجب الانتباه إلى الشكل المستعمل: جبري، مثلثي، أو أسي.</p>
+      </section>
+
+      <section class="content-block solution-template">
+        <ul class="method-list">
+          <li>الخلط بين الجزء الحقيقي والجزء التخيلي.</li>
+          <li>نسيان أن i² = -1.</li>
+          <li>حساب العمدة دون تحديد الربع المناسب.</li>
+          <li>استعمال الشكل المثلثي دون حساب الوحدة والعمدة بدقة.</li>
+        </ul>
+        <p class="fr">Toujours préciser la forme utilisée et vérifier le module, l’argument et le signe.</p>
+      </section>
+
+      <section class="section-heading" id="checklist">
+        <p class="eyebrow">Avant de rendre la copie</p>
+        <h2>8. قائمة تحقق قبل تسليم ورقة الرياضيات</h2>
+        <p class="muted">استعمل هذه القائمة في آخر 5 دقائق.</p>
+      </section>
+
+      <section class="content-block solution-template">
+        <ol class="method-list">
+          <li>هل حددت المجال عندما كان ضروريًا؟</li>
+          <li>هل رتبت الجذور أو القيم المهمة قبل جدول الإشارة؟</li>
+          <li>هل درست إشارة المشتقة قبل استنتاج الرتابة؟</li>
+          <li>هل كتبت التبرير قبل النتيجة؟</li>
+          <li>هل راجعت إشارات الناقص والأقواس؟</li>
+          <li>هل النتيجة تنتمي إلى المجال أو تحقق الشرط المطلوب؟</li>
+        </ol>
+      </section>
+
+      <section class="content-block next-steps-card">
+        <h3>الخطوة التالية / Suite</h3>
+        <p>بعد مراجعة الأخطاء الشائعة، يمكن الانتقال إلى تمارين قصيرة تفاعلية لاكتشاف الخطأ وتصحيحه.</p>
+        <div class="toc-actions">
+          <a class="toc-button" href="./math.html">العودة إلى صفحة الرياضيات</a>
+          <a class="toc-button" href="./math-formulas.html">فتح بنك القواعد</a>
+          <a class="toc-button" href="./math-methodology.html">فتح منهجية الحل</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="brand-mark">DB2</span>
+          <div>
+            <strong>Douae Bac 2</strong>
+            <p>ثانية باك علوم فيزيائية</p>
+          </div>
+        </div>
+        <p>صفحة دعم لتجنب الأخطاء الشائعة في امتحان الرياضيات.</p>
+      </div>
+    </footer>
+      <script src="pwa-register.js"></script>
+  </body>
+</html>

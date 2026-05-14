@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#2f7d68">
     <title>بنك القواعد والقوانين الأساسية في الرياضيات - ثانية باك علوم فيزيائية</title>
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="styles.css">
   </head>
@@ -52,6 +55,9 @@
       <section class="content-block">
         <h3>فهرس سريع / Sommaire rapide</h3>
         <div class="toc-actions formula-toc">
+          <a class="toc-button" href="#algebra">الأدوات الجبرية</a>
+          <a class="toc-button" href="#graph-from-equation">شكل المنحنى من المعادلة</a>
+          <a class="toc-button" href="#quadratic-practice">تمارين قصيرة</a>
           <a class="toc-button" href="#limites">النهايات والاتصال</a>
           <a class="toc-button" href="#derivation">الاشتقاق والدوال</a>
           <a class="toc-button" href="#suites">المتتاليات</a>
@@ -62,6 +68,414 @@
           <a class="toc-button" href="#geometrie">الهندسة في الفضاء</a>
           <a class="toc-button" href="#probabilites">الاحتمالات</a>
         </div>
+      </section>
+
+      <section class="section-heading" id="algebra">
+        <p class="eyebrow">Outils algébriques indispensables</p>
+        <h2>0. أدوات جبرية ضرورية قبل دروس الثانية باك</h2>
+        <p class="muted">هذه القواعد لا تظهر دائمًا كدروس مستقلة، لكنها تستعمل كثيرًا داخل دراسة الدوال، النهايات، الأعداد العقدية، والمتراجحات.</p>
+      </section>
+
+      <section class="formula-list">
+        <details class="formula-card" open>
+          <summary><span>المعادلة من الدرجة الأولى</span><small>Équation du premier degré</small></summary>
+          <div class="formula-body">
+            <h3>الصيغة / Forme</h3>
+            <div class="equation-box">ax + b = 0 ، مع a ≠ 0</div>
+            <h3>طريقة الحل / Méthode</h3>
+            <p>ننقل b إلى الطرف الآخر، ثم نقسم على a.</p>
+            <p class="fr">On isole x : ax = -b, donc x = -b/a.</p>
+            <h3>متى نستعملها؟ / Quand l’utiliser ?</h3>
+            <p>عندما نبحث عن قيمة مجهولة وتظهر x بدرجة واحدة فقط.</p>
+            <h3>خطأ شائع / Erreur fréquente</h3>
+            <p>نسيان تغيير الإشارة عند نقل b إلى الطرف الآخر.</p>
+          </div>
+        </details>
+
+        <details class="formula-card" open>
+          <summary><span>المعادلة من الدرجة الثانية</span><small>Équation du deuxième degré</small></summary>
+          <div class="formula-body">
+            <h3>الصيغة / Forme</h3>
+            <div class="equation-box">ax² + bx + c = 0 ، مع a ≠ 0</div>
+            <h3>المعنى / Sens</h3>
+            <p>هي معادلة يكون أكبر أس فيها هو 2. تظهر كثيرًا عند دراسة الدوال، حساب التقاطع مع محور Ox، دراسة الإشارة، وفي الأعداد العقدية.</p>
+            <p class="fr">C’est une équation dont le plus grand exposant est 2. Elle apparaît dans l’étude des fonctions, le signe d’un trinôme et les nombres complexes.</p>
+            <h3>متى أستعملها؟ / Quand l’utiliser ?</h3>
+            <p>عندما أجد عبارة على شكل ثلاثي حدود من الدرجة الثانية، أو عندما يطلب التمرين حل f(x)=0 لدالة تربيعية.</p>
+            <h3>خطأ شائع / Erreur fréquente</h3>
+            <p>البدء بحساب المميز دون التأكد أولًا من تحديد a و b و c بشكل صحيح.</p>
+          </div>
+        </details>
+
+        <details class="formula-card">
+          <summary><span>المميز</span><small>Discriminant Δ</small></summary>
+          <div class="formula-body">
+            <h3>العلاقة / Relation</h3>
+            <div class="equation-box">Δ = b² - 4ac</div>
+            <h3>الحالات / Cas</h3>
+            <p>إذا كان Δ &gt; 0: للمعادلة حلان حقيقيان مختلفان.</p>
+            <p>إذا كان Δ = 0: للمعادلة حل حقيقي مضاعف.</p>
+            <p>إذا كان Δ &lt; 0: لا يوجد حل في ℝ، وننتقل إلى ℂ إذا كان الدرس يسمح بذلك.</p>
+            <p class="fr">Δ détermine le nombre de solutions réelles de l’équation du second degré.</p>
+            <h3>خطأ شائع / Erreur fréquente</h3>
+            <p>نسيان أن b² دائمًا موجب أو منعدم، حتى لو كان b سالبًا.</p>
+          </div>
+        </details>
+
+        <details class="formula-card">
+          <summary><span>حلول المعادلة من الدرجة الثانية</span><small>Solutions</small></summary>
+          <div class="formula-body">
+            <h3>إذا كان Δ &gt; 0</h3>
+            <div class="equation-box">x₁ = (-b - √Δ) / 2a &nbsp; و &nbsp; x₂ = (-b + √Δ) / 2a</div>
+            <h3>إذا كان Δ = 0</h3>
+            <div class="equation-box">x₀ = -b / 2a</div>
+            <h3>متى نستعملها؟ / Quand l’utiliser ?</h3>
+            <p>بعد حساب Δ وتحديد حالته، نختار صيغة الحل المناسبة.</p>
+            <h3>خطأ شائع / Erreur fréquente</h3>
+            <p>نسيان وضع المقام 2a كاملًا تحت كل البسط.</p>
+          </div>
+        </details>
+
+        <details class="formula-card">
+          <summary><span>تحليل ثلاثي الحدود</span><small>Factorisation d’un trinôme</small></summary>
+          <div class="formula-body">
+            <h3>إذا كان Δ &gt; 0</h3>
+            <div class="equation-box">ax² + bx + c = a(x - x₁)(x - x₂)</div>
+            <h3>إذا كان Δ = 0</h3>
+            <div class="equation-box">ax² + bx + c = a(x - x₀)²</div>
+            <h3>متى نستعملها؟ / Quand l’utiliser ?</h3>
+            <p>نستعمل التحليل لتبسيط العبارات، حل المتراجحات، أو دراسة إشارة ثلاثي الحدود.</p>
+            <p class="fr">La factorisation facilite l’étude du signe et la résolution des inéquations.</p>
+          </div>
+        </details>
+
+        <details class="formula-card">
+          <summary><span>إشارة ثلاثي الحدود</span><small>Signe d’un trinôme</small></summary>
+          <div class="formula-body">
+            <h3>القاعدة السريعة / Règle rapide</h3>
+            <p>إذا كان للثلاثي حدان جذران x₁ و x₂، فإن إشارته تكون نفس إشارة a خارج الجذرين، وعكس إشارة a بين الجذرين.</p>
+            <p class="fr">Le trinôme a le signe de a à l’extérieur des racines, et le signe opposé de a entre les racines.</p>
+            <div class="concept-table-wrap">
+              <table class="concept-table">
+                <thead>
+                  <tr><th>المجال</th><th>إشارة ax²+bx+c</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>قبل x₁</td><td>نفس إشارة a</td></tr>
+                  <tr><td>بين x₁ و x₂</td><td>عكس إشارة a</td></tr>
+                  <tr><td>بعد x₂</td><td>نفس إشارة a</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <h3>خطأ شائع / Erreur fréquente</h3>
+            <p>حفظ جدول الإشارة دون ترتيب الجذرين من الأصغر إلى الأكبر.</p>
+          </div>
+        </details>
+      </section>
+
+
+      <section class="section-heading" id="graph-from-equation">
+        <p class="eyebrow">Reconnaître la courbe à partir de l’équation</p>
+        <h2>كيف أتعرف على شكل المنحنى من المعادلة؟</h2>
+        <p class="muted">هذا القسم يساعدك على قراءة المعادلة قبل الرسم. الفكرة ليست حفظ الشكل فقط، بل معرفة ما الذي يخبرك به كل رمز داخل المعادلة.</p>
+      </section>
+
+      <section class="formula-list graph-rules">
+        <details class="formula-card" open>
+          <summary><span>الدالة الخطية</span><small>Fonction linéaire</small></summary>
+          <div class="formula-body">
+            <h3>الصيغة / Forme</h3>
+            <div class="equation-box">f(x) = ax</div>
+            <h3>كيف أعرف شكلها؟ / Comment reconnaître sa courbe ?</h3>
+            <p>رسمها مستقيم يمر دائمًا من أصل المعلم O. العدد a يحدد اتجاه المستقيم وميله.</p>
+            <p class="fr">Sa représentation graphique est une droite qui passe par l’origine O. Le nombre a détermine la pente et le sens de variation.</p>
+            <div class="concept-table-wrap">
+              <table class="concept-table">
+                <thead><tr><th>المعلومة من المعادلة</th><th>معناها في الرسم</th></tr></thead>
+                <tbody>
+                  <tr><td>a &gt; 0</td><td>المستقيم تصاعدي / Droite croissante</td></tr>
+                  <tr><td>a &lt; 0</td><td>المستقيم تنازلي / Droite décroissante</td></tr>
+                  <tr><td>b غير موجود</td><td>يمر من أصل المعلم O</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </details>
+
+        <details class="formula-card" open>
+          <summary><span>الدالة التآلفية</span><small>Fonction affine</small></summary>
+          <div class="formula-body">
+            <h3>الصيغة / Forme</h3>
+            <div class="equation-box">f(x) = ax + b</div>
+            <h3>كيف أعرف شكلها؟ / Comment reconnaître sa courbe ?</h3>
+            <p>رسمها مستقيم. العدد a يمثل الميل، والعدد b يعطي نقطة التقاطع مع محور Oy لأن f(0)=b.</p>
+            <p class="fr">Sa courbe est une droite. Le nombre a représente la pente, et b donne l’intersection avec l’axe Oy car f(0)=b.</p>
+            <div class="concept-table-wrap">
+              <table class="concept-table">
+                <thead><tr><th>المعلومة من المعادلة</th><th>معناها في الرسم</th></tr></thead>
+                <tbody>
+                  <tr><td>a &gt; 0</td><td>المستقيم يصعد من اليسار إلى اليمين</td></tr>
+                  <tr><td>a &lt; 0</td><td>المستقيم ينزل من اليسار إلى اليمين</td></tr>
+                  <tr><td>b</td><td>نقطة التقاطع مع محور Oy هي (0 ; b)</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <h3>خطأ شائع / Erreur fréquente</h3>
+            <p>الخلط بين a و b: الأول يحدد الميل، والثاني يحدد التقاطع مع Oy.</p>
+          </div>
+        </details>
+
+        <details class="formula-card" open>
+          <summary><span>الدالة من الدرجة الثانية</span><small>Fonction du second degré</small></summary>
+          <div class="formula-body">
+            <h3>الصيغة / Forme</h3>
+            <div class="equation-box">f(x) = ax² + bx + c ، مع a ≠ 0</div>
+            <h3>الفكرة الأساسية / Idée principale</h3>
+            <p>رسم هذه الدالة يسمى قطعًا مكافئًا: Parabole. يمكن معرفة اتجاهه، رأسه، ومحاور تقاطعه انطلاقًا من a و b و c و Δ.</p>
+            <p class="fr">La courbe est une parabole. On peut déterminer son ouverture, son sommet et ses intersections à partir de a, b, c et Δ.</p>
+
+            <div class="concept-table-wrap">
+              <table class="concept-table">
+                <thead><tr><th>ما أنظر إليه؟</th><th>ماذا يخبرني؟</th></tr></thead>
+                <tbody>
+                  <tr><td>a &gt; 0</td><td>المنحنى مفتوح إلى الأعلى، وله قيمة صغرى.</td></tr>
+                  <tr><td>a &lt; 0</td><td>المنحنى مفتوح إلى الأسفل، وله قيمة كبرى.</td></tr>
+                  <tr><td>x = -b / 2a</td><td>محور التماثل.</td></tr>
+                  <tr><td>S(α ; β)</td><td>رأس المنحنى، حيث α = -b / 2a و β = f(α).</td></tr>
+                  <tr><td>f(0)=c</td><td>نقطة التقاطع مع محور Oy هي (0 ; c).</td></tr>
+                  <tr><td>Δ = b² - 4ac</td><td>يحدد عدد نقاط التقاطع مع محور Ox.</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3>التقاطع مع محور Ox / Intersection avec Ox</h3>
+            <p>نحل المعادلة ax² + bx + c = 0. إذا كان Δ &gt; 0 فهناك تقاطعان، إذا كان Δ = 0 فهناك تماس واحد، وإذا كان Δ &lt; 0 فلا يوجد تقاطع مع Ox في ℝ.</p>
+          </div>
+        </details>
+      </section>
+
+      <section class="content-block graph-examples" id="quadratic-graphs">
+        <p class="eyebrow">Exemples dessinés</p>
+        <h3>أمثلة مرسومة للدالة من الدرجة الثانية</h3>
+        <p class="muted">الرسوم التالية تقريبية، والغرض منها فهم الشكل العام وليس استخراج القيم بدقة من الرسم.</p>
+
+        <div class="graph-grid">
+          <article class="graph-card">
+            <h4>1. منحنى مفتوح إلى الأعلى ويقطع Ox في نقطتين</h4>
+            <div class="equation-box">f(x)=x²-4x+3</div>
+            <svg class="mini-graph" viewBox="0 0 240 160" role="img" aria-label="منحنى قطع مكافئ مفتوح إلى الأعلى ويقطع محور Ox في نقطتين">
+              <line x1="20" y1="120" x2="220" y2="120" class="axis" />
+              <line x1="65" y1="20" x2="65" y2="145" class="axis" />
+              <path d="M35 30 C70 150, 150 150, 195 30" class="curve" />
+              <circle cx="85" cy="120" r="3" class="point" />
+              <circle cx="165" cy="120" r="3" class="point" />
+              <circle cx="115" cy="142" r="3" class="vertex" />
+              <text x="205" y="116">Ox</text>
+              <text x="72" y="28">Oy</text>
+            </svg>
+            <p>a &gt; 0 و Δ &gt; 0: المنحنى مفتوح إلى الأعلى ويقطع محور Ox في نقطتين.</p>
+          </article>
+
+          <article class="graph-card">
+            <h4>2. منحنى مفتوح إلى الأعلى ويمس Ox</h4>
+            <div class="equation-box">f(x)=x²-2x+1</div>
+            <svg class="mini-graph" viewBox="0 0 240 160" role="img" aria-label="منحنى قطع مكافئ يمس محور Ox في نقطة واحدة">
+              <line x1="20" y1="120" x2="220" y2="120" class="axis" />
+              <line x1="70" y1="20" x2="70" y2="145" class="axis" />
+              <path d="M45 35 C80 120, 150 120, 190 35" class="curve" />
+              <circle cx="118" cy="120" r="3" class="vertex" />
+              <text x="205" y="116">Ox</text>
+              <text x="77" y="28">Oy</text>
+            </svg>
+            <p>a &gt; 0 و Δ = 0: المنحنى يلمس محور Ox في نقطة واحدة هي رأس المنحنى.</p>
+          </article>
+
+          <article class="graph-card">
+            <h4>3. منحنى مفتوح إلى الأسفل ولا يقطع Ox</h4>
+            <div class="equation-box">f(x)=-x²-1</div>
+            <svg class="mini-graph" viewBox="0 0 240 160" role="img" aria-label="منحنى قطع مكافئ مفتوح إلى الأسفل ولا يقطع محور Ox">
+              <line x1="20" y1="45" x2="220" y2="45" class="axis" />
+              <line x1="120" y1="20" x2="120" y2="145" class="axis" />
+              <path d="M50 150 C80 70, 160 70, 195 150" class="curve" />
+              <circle cx="122" cy="68" r="3" class="vertex" />
+              <text x="205" y="40">Ox</text>
+              <text x="127" y="28">Oy</text>
+            </svg>
+            <p>a &lt; 0 و Δ &lt; 0: المنحنى مفتوح إلى الأسفل ولا يقطع محور Ox.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-block quick-check">
+        <p class="eyebrow">Vrai ou Faux</p>
+        <h3>أسئلة سريعة للتثبيت</h3>
+        <div class="concept-table-wrap">
+          <table class="concept-table">
+            <thead><tr><th>العبارة</th><th>الجواب مع الشرح</th></tr></thead>
+            <tbody>
+              <tr><td>إذا كان a &gt; 0 في f(x)=ax²+bx+c، فإن المنحنى مفتوح إلى الأعلى.</td><td>صحيح. إشارة a تحدد اتجاه فتحة القطع المكافئ.</td></tr>
+              <tr><td>إذا كان Δ &lt; 0، فإن المنحنى يقطع محور Ox في نقطتين.</td><td>خطأ. لا توجد حلول حقيقية، لذلك لا يوجد تقاطع مع Ox في ℝ.</td></tr>
+              <tr><td>إذا كان b = 0، فإن محور التماثل هو x = 0.</td><td>صحيح، لأن x = -b / 2a = 0.</td></tr>
+              <tr><td>القيمة c تعطي نقطة التقاطع مع محور Oy.</td><td>صحيح، لأن f(0)=c.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+
+
+      <section class="section-heading" id="quadratic-practice">
+        <p class="eyebrow">Exercices courts avec méthode</p>
+        <h2>تمارين قصيرة على المعادلة من الدرجة الثانية وشكل المنحنى</h2>
+        <p class="muted">هذه التمارين لا تهدف إلى الإكثار من الحساب، بل إلى تدريبك على الربط بين المعادلة، المميز Δ، الجذور، وشكل المنحنى.</p>
+      </section>
+
+      <section class="practice-grid quadratic-practice-grid">
+        <article class="practice-card">
+          <span class="practice-tag">تمرين 1</span>
+          <h3>حل معادلة من الدرجة الثانية</h3>
+          <p class="fr">Résoudre une équation du second degré</p>
+          <div class="equation-box">x² - 5x + 6 = 0</div>
+          <details>
+            <summary>عرض المنهجية والحل / Voir la méthode et la solution</summary>
+            <div class="practice-solution">
+              <h4>منهجية الحل</h4>
+              <ol>
+                <li>نحدد a و b و c.</li>
+                <li>نحسب المميز Δ = b² - 4ac.</li>
+                <li>نحدد عدد الحلول حسب إشارة Δ.</li>
+                <li>نكتب الحلين إذا كان Δ موجبًا.</li>
+              </ol>
+              <h4>الحل الملائم</h4>
+              <p>a = 1 ، b = -5 ، c = 6.</p>
+              <p>Δ = (-5)² - 4 × 1 × 6 = 25 - 24 = 1.</p>
+              <p>بما أن Δ &gt; 0، فهناك حلان حقيقيان مختلفان.</p>
+              <p>x₁ = (5 - 1) / 2 = 2 ، و x₂ = (5 + 1) / 2 = 3.</p>
+              <p class="final-answer">إذن مجموعة الحلول هي: S = {2 ; 3}.</p>
+            </div>
+          </details>
+        </article>
+
+        <article class="practice-card">
+          <span class="practice-tag">تمرين 2</span>
+          <h3>استنتاج شكل المنحنى من Δ و a</h3>
+          <p class="fr">Déduire la forme de la parabole</p>
+          <div class="equation-box">f(x)=x² - 4x + 3</div>
+          <details>
+            <summary>عرض المنهجية والحل / Voir la méthode et la solution</summary>
+            <div class="practice-solution">
+              <h4>منهجية الحل</h4>
+              <ol>
+                <li>ننظر أولًا إلى إشارة a لمعرفة اتجاه الفتحة.</li>
+                <li>نحسب Δ لمعرفة عدد نقاط التقاطع مع محور Ox.</li>
+                <li>نحسب محور التماثل x = -b / 2a عند الحاجة.</li>
+              </ol>
+              <h4>الحل الملائم</h4>
+              <p>a = 1 &gt; 0، إذن المنحنى مفتوح إلى الأعلى.</p>
+              <p>Δ = (-4)² - 4 × 1 × 3 = 16 - 12 = 4.</p>
+              <p>بما أن Δ &gt; 0، فالمنحنى يقطع محور Ox في نقطتين.</p>
+              <p>محور التماثل: x = -b / 2a = 4 / 2 = 2.</p>
+              <p class="final-answer">الشكل المتوقع: قطع مكافئ مفتوح للأعلى، يقطع Ox في نقطتين، ومحوره x = 2.</p>
+            </div>
+          </details>
+        </article>
+
+        <article class="practice-card">
+          <span class="practice-tag">تمرين 3</span>
+          <h3>منحنى لا يقطع محور Ox</h3>
+          <p class="fr">Parabole sans intersection avec Ox</p>
+          <div class="equation-box">f(x)=-2x² + 4x - 5</div>
+          <details>
+            <summary>عرض المنهجية والحل / Voir la méthode et la solution</summary>
+            <div class="practice-solution">
+              <h4>منهجية الحل</h4>
+              <ol>
+                <li>نحدد اتجاه المنحنى من إشارة a.</li>
+                <li>نحسب Δ لمعرفة هل توجد جذور حقيقية.</li>
+                <li>نربط النتيجة بعدد التقاطعات مع Ox.</li>
+              </ol>
+              <h4>الحل الملائم</h4>
+              <p>a = -2 &lt; 0، إذن المنحنى مفتوح إلى الأسفل.</p>
+              <p>Δ = 4² - 4 × (-2) × (-5) = 16 - 40 = -24.</p>
+              <p>بما أن Δ &lt; 0، فلا توجد حلول حقيقية للمعادلة f(x)=0.</p>
+              <p class="final-answer">إذن المنحنى لا يقطع محور Ox، وهو مفتوح إلى الأسفل.</p>
+            </div>
+          </details>
+        </article>
+
+        <article class="practice-card">
+          <span class="practice-tag">تمرين 4</span>
+          <h3>تحديد الرأس ومحور التماثل</h3>
+          <p class="fr">Sommet et axe de symétrie</p>
+          <div class="equation-box">f(x)=x² - 6x + 8</div>
+          <details>
+            <summary>عرض المنهجية والحل / Voir la méthode et la solution</summary>
+            <div class="practice-solution">
+              <h4>منهجية الحل</h4>
+              <ol>
+                <li>نحسب α = -b / 2a.</li>
+                <li>نحسب β = f(α).</li>
+                <li>نكتب الرأس S(α ; β) ومحور التماثل x = α.</li>
+              </ol>
+              <h4>الحل الملائم</h4>
+              <p>a = 1 ، b = -6 ، c = 8.</p>
+              <p>α = -b / 2a = 6 / 2 = 3.</p>
+              <p>β = f(3) = 3² - 6 × 3 + 8 = 9 - 18 + 8 = -1.</p>
+              <p class="final-answer">رأس المنحنى هو S(3 ; -1)، ومحور التماثل هو x = 3.</p>
+            </div>
+          </details>
+        </article>
+
+        <article class="practice-card">
+          <span class="practice-tag">تمرين 5</span>
+          <h3>اختر الوصف المناسب للمنحنى</h3>
+          <p class="fr">Choisir la description correcte</p>
+          <div class="equation-box">f(x)=x² + 2x + 1</div>
+          <p>اختر الوصف الصحيح قبل فتح الحل:</p>
+          <ul class="mini-choices">
+            <li>أ. مفتوح للأسفل ويقطع Ox في نقطتين.</li>
+            <li>ب. مفتوح للأعلى ويمس Ox في نقطة واحدة.</li>
+            <li>ج. مفتوح للأعلى ولا يقطع Ox.</li>
+          </ul>
+          <details>
+            <summary>عرض المنهجية والحل / Voir la méthode et la solution</summary>
+            <div class="practice-solution">
+              <h4>منهجية الحل</h4>
+              <ol>
+                <li>نبدأ بإشارة a.</li>
+                <li>نحسب Δ.</li>
+                <li>نختار الوصف الموافق لاتجاه الفتحة وعدد التقاطعات.</li>
+              </ol>
+              <h4>الحل الملائم</h4>
+              <p>a = 1 &gt; 0، إذن المنحنى مفتوح إلى الأعلى.</p>
+              <p>Δ = 2² - 4 × 1 × 1 = 4 - 4 = 0.</p>
+              <p>بما أن Δ = 0، فالمنحنى يمس محور Ox في نقطة واحدة.</p>
+              <p class="final-answer">الاختيار الصحيح هو: ب. مفتوح للأعلى ويمس Ox في نقطة واحدة.</p>
+            </div>
+          </details>
+        </article>
+
+        <article class="practice-card">
+          <span class="practice-tag">تمرين 6</span>
+          <h3>صح أم خطأ مع التعليل</h3>
+          <p class="fr">Vrai ou Faux avec justification</p>
+          <div class="equation-box">f(x)=3x² - 2x + 5</div>
+          <p>العبارة: بما أن a = 3 &gt; 0، فإن المنحنى مفتوح إلى الأعلى.</p>
+          <details>
+            <summary>عرض الجواب / Voir la réponse</summary>
+            <div class="practice-solution">
+              <h4>الحل الملائم</h4>
+              <p>العبارة صحيحة.</p>
+              <p>في الدالة f(x)=ax²+bx+c، إشارة a هي التي تحدد اتجاه فتحة المنحنى.</p>
+              <p class="final-answer">لأن a = 3 موجب، فالقطع المكافئ مفتوح إلى الأعلى.</p>
+            </div>
+          </details>
+        </article>
+      </section>
+
+      <section class="content-block revision-tip">
+        <h3>قاعدة ذهبية / Règle d’or</h3>
+        <p>عند التعامل مع دالة من الدرجة الثانية، لا تبدأ بالرسم مباشرة. ابدأ دائمًا بترتيب المعلومات: إشارة a، قيمة Δ، محور التماثل، الرأس، ثم التقاطعات مع المحورين.</p>
       </section>
 
       <section class="section-heading" id="limites">
@@ -382,5 +796,6 @@
         });
       }
     </script>
+      <script src="pwa-register.js"></script>
   </body>
 </html>

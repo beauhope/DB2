@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#2f7d68">
     <title>الرياضيات - ثانية باك علوم فيزيائية</title>
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="styles.css">
   </head>
@@ -43,10 +46,11 @@
           <p class="muted">تجمع هذه الصفحة مدخلًا منظمًا لدروس الرياضيات في الثانية باك علوم فيزيائية، مع روابط مباشرة إلى بنك القواعد، ومنهجية الحل، والصفحات التطبيقية التي سنضيفها تدريجيًا.</p>
         </div>
         <div class="formula-note">
-          ابدئي من خريطة الدروس، ثم انتقلي إلى بنك القواعد أو منهجية الحل حسب حاجتك في المراجعة.
+          ابدأ من خريطة الدروس، ثم انتقل إلى بنك القواعد أو منهجية الحل حسب حاجتك في المراجعة.
           <br><br>
           <a class="toc-button" href="./math-formulas.html">فتح بنك القواعد والقوانين</a>
           <a class="toc-button" href="./math-methodology.html">فتح منهجية حل التمارين</a>
+          <a class="toc-button" href="./math-exercises.html">فتح التمارين التفاعلية</a>
         </div>
       </section>
 
@@ -55,6 +59,8 @@
         <div class="toc-actions formula-toc">
           <a class="toc-button" href="./math-formulas.html">بنك القواعد / Banque des règles</a>
           <a class="toc-button" href="./math-methodology.html">منهجية الحل / Méthodologie</a>
+          <a class="toc-button" href="./math-common-mistakes.html">أخطاء شائعة / Erreurs fréquentes</a>
+          <a class="toc-button" href="./math-exercises.html">تمارين تفاعلية / Exercices</a>
           <a class="toc-button" href="#programme">محاور البرنامج / Programme</a>
           <a class="toc-button" href="#priorite-revision">أولوية المراجعة / Priorités</a>
           <a class="toc-button" href="#methode">منهجية المراجعة / Méthode</a>
@@ -202,14 +208,16 @@
           <h2>منهجية حل تمارين الرياضيات</h2>
           <p>خطوات عملية لقراءة السؤال، تحديد نوع المطلوب، اختيار القاعدة، كتابة البرهان، وتنظيم الحل.</p>
         </a>
-        <div class="future-card">
+        <a class="future-card future-link" href="./math-common-mistakes.html">
+          <span class="subject-badge">متاح الآن</span>
           <h2>أخطاء شائعة في الرياضيات</h2>
           <p>أخطاء الإشارة، المجال، اللوغاريتم، الاشتقاق، التكامل، الترتيب، والنتيجة غير المبررة.</p>
-        </div>
-        <div class="future-card">
+        </a>
+        <a class="future-card future-link" href="./math-exercises.html">
+          <span class="subject-badge">متاح الآن</span>
           <h2>تمارين قصيرة تفاعلية</h2>
-          <p>أسئلة سريعة لاختبار القواعد: صح أو خطأ، اختيار القاعدة، أكمل الخطوة، واكتشف الخطأ.</p>
-        </div>
+          <p>أسئلة سريعة لاختبار القواعد: صح أو خطأ، اختيار القاعدة، أكمل الخطوة، واكتشف الخطأ، مع منهجية الحل والحل الملائم.</p>
+        </a>
       </section>
     </main>
 
@@ -225,5 +233,6 @@
         <p>صفحة مستقلة لمراجعة الرياضيات ضمن منصة Douae Bac 2.</p>
       </div>
     </footer>
+      <script src="pwa-register.js"></script>
   </body>
 </html>

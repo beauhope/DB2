@@ -1,25 +1,37 @@
-const CACHE_NAME = "douae-bac2-v24-math-methodology";
+const CACHE_NAME = "douae-bac2-v33-pwa-offline";
 
 const STATIC_ASSETS = [
   "./",
-  "./index.html",
-  "./philosophy.html",
-  "./physics-equations.html",
-  "./physics-methodology.html",
-  "./physics-common-mistakes.html",
-  "./physics-exercises.html",
   "./chemistry-equations.html",
-  "./math.html",
+  "./index.html",
+  "./math-common-mistakes.html",
+  "./math-exercises.html",
+  "./math-for-physics.html",
   "./math-formulas.html",
   "./math-methodology.html",
-  "./math-for-physics.html",
+  "./math.html",
+  "./offline.html",
+  "./philosophy.html",
+  "./physics-common-mistakes.html",
+  "./physics-equations.html",
+  "./physics-exercises.html",
+  "./physics-methodology.html",
   "./styles.css",
   "./app.js",
   "./data.js",
+  "./pwa-register.js",
   "./DB2_logo.png",
+  "./favicon.ico",
   "./manifest.webmanifest",
-  "./fonts/Cairo-Regular.ttf",
+  "./icons/README.md",
+  "./icons/apple-touch-icon.png",
+  "./icons/favicon-16.png",
+  "./icons/favicon-32.png",
+  "./icons/favicon-48.png",
+  "./icons/icon-192.png",
+  "./icons/icon-512.png",
   "./fonts/Cairo-Bold.ttf",
+  "./fonts/Cairo-Regular.ttf",
   "./fonts/Cairo-VariableFont_slnt,wght.woff2"
 ];
 
@@ -43,7 +55,9 @@ self.addEventListener("fetch", (event) => {
   if (event.request.method !== "GET") return;
 
   const request = event.request;
-  const isHtmlRequest = request.mode === "navigate" || request.headers.get("accept")?.includes("text/html");
+  const isHtmlRequest =
+    request.mode === "navigate" ||
+    (request.headers.get("accept") || "").includes("text/html");
 
   if (isHtmlRequest) {
     event.respondWith(
@@ -53,7 +67,10 @@ self.addEventListener("fetch", (event) => {
           caches.open(CACHE_NAME).then((cache) => cache.put(request, responseClone));
           return networkResponse;
         })
-        .catch(() => caches.match(request).then((cachedResponse) => cachedResponse || caches.match("./index.html")))
+        .catch(() =>
+          caches.match(request)
+            .then((cachedResponse) => cachedResponse || caches.match("./offline.html") || caches.match("./index.html"))
+        )
     );
     return;
   }
@@ -64,11 +81,17 @@ self.addEventListener("fetch", (event) => {
 
       return fetch(request)
         .then((networkResponse) => {
+          if (!networkResponse || networkResponse.status !== 200 || networkResponse.type === "opaque") {
+            return networkResponse;
+          }
           const responseClone = networkResponse.clone();
           caches.open(CACHE_NAME).then((cache) => cache.put(request, responseClone));
           return networkResponse;
         })
-        .catch(() => caches.match("./index.html"));
+        .catch(() => {
+          if (request.destination === "image") return caches.match("./DB2_logo.png");
+          return caches.match("./offline.html");
+        });
     })
   );
 });

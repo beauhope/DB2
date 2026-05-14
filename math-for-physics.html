@@ -3,17 +3,314 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="0; url=./math.html">
-    <title>الانتقال إلى صفحة الرياضيات</title>
+    <meta name="theme-color" content="#2f7d68">
+    <title>الرياضيات المساعدة في الفيزياء - ثانية باك علوم فيزيائية</title>
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <main class="formula-page">
+    <header class="site-header" id="top">
+      <div class="header-content">
+        <a class="brand" href="./index.html" aria-label="العودة إلى الصفحة الرئيسية">
+          <img src="DB2_logo.png" alt="شعار DB2 - ثانية علوم فيزياء" class="site-logo-img">
+        </a>
+
+        <nav class="subject-nav" aria-label="أقسام المراجعة">
+          <a class="subject-nav-link" href="./index.html">الرئيسية</a>
+          <a class="subject-nav-link" href="./philosophy.html">الفلسفة</a>
+          <a class="subject-nav-link" href="./physics-equations.html">الفيزياء</a>
+          <a class="subject-nav-link" href="./chemistry-equations.html">الكيمياء</a>
+          <a class="subject-nav-link active" href="./math.html">الرياضيات</a>
+        </nav>
+
+        <p class="eyebrow">Mathématiques utiles en physique</p>
+        <h1>الرياضيات المساعدة في الفيزياء</h1>
+        <p class="intro">صفحة مركزة تجمع الأدوات الرياضية التي يحتاجها تلميذ الثانية باك علوم فيزيائية لفهم التمارين وحلها.</p>
+      </div>
+    </header>
+
+    <main class="formula-page math-page">
+      <nav class="breadcrumb" aria-label="مسار التنقل">
+        <a class="breadcrumb-link" href="./index.html">الرئيسية</a>
+        <span class="breadcrumb-separator" aria-hidden="true">›</span>
+        <span class="breadcrumb-current">الرياضيات المساعدة</span>
+      </nav>
+
+      <section class="home-dashboard formula-hero-card">
+        <div>
+          <p class="eyebrow">2e Bac Sciences Physiques</p>
+          <h2>لماذا نراجع الرياضيات داخل الفيزياء؟</h2>
+          <p class="muted">لأن أغلب تمارين الفيزياء لا تتوقف عند حفظ القانون فقط. التلميذ يحتاج إلى قراءة منحنى، استخراج ميل، تحويل علاقة، التعامل مع دالة أسية، أو استعمال اللوغاريتم.</p>
+        </div>
+        <div class="formula-note">
+          هذه الصفحة لا تعوض درس الرياضيات. هي جسر عملي بين الرياضيات وتمارين الفيزياء والكيمياء.
+        </div>
+      </section>
+
       <section class="content-block">
-        <h1>تم نقل صفحة الرياضيات</h1>
-        <p>تم تحويل الرياضيات إلى مادة مستقلة. إذا لم يتم الانتقال تلقائيًا، اضغط على الرابط التالي:</p>
-        <p><a class="toc-button" href="./math.html">الرياضيات – Mathématiques</a></p>
+        <h3>فهرس سريع / Sommaire rapide</h3>
+        <div class="toc-actions formula-toc">
+          <a class="toc-button" href="#lecture-graphique">قراءة المنحنيات / Lecture graphique</a>
+          <a class="toc-button" href="#calcul-algebrique">الحساب والتحويل / Calcul algébrique</a>
+          <a class="toc-button" href="#derivee-integrale">الاشتقاق والمساحة / Dérivée et aire</a>
+          <a class="toc-button" href="#expo-log">الأسية واللوغاريتم / Exponentielle et logarithme</a>
+          <a class="toc-button" href="#trigonometrie">المثلثات / Trigonométrie</a>
+        </div>
+      </section>
+
+      <section class="section-heading" id="lecture-graphique">
+        <p class="eyebrow">Lecture graphique</p>
+        <h2>1. قراءة المنحنيات واستغلالها / Lecture et exploitation des graphes</h2>
+        <p class="muted">هذا الجزء يساعدك على فهم الرسوم البيانية التي تتكرر في الفيزياء: منحنى خطي، ميل مستقيم، نقطة تقاطع، وتغير كمية بدلالة الزمن.</p>
+      </section>
+
+      <section class="formula-list">
+        <details class="formula-card" open>
+          <summary><span>1. التناسبية</span><small>Proportionnalité</small></summary>
+          <div class="formula-body">
+            <div class="equation-box">y = k x</div>
+            <h3>المعنى / Sens</h3>
+            <p>عندما تكون كمية y متناسبة مع كمية x، فإن النسبة y/x تكون ثابتة وتساوي k.</p>
+            <p class="fr">Quand y est proportionnel à x, le rapport y/x est constant et vaut k.</p>
+            <h3>متى أحتاجها في الفيزياء؟ / Quand l’utiliser ?</h3>
+            <p>عندما يكون المنحنى مستقيمًا يمر من أصل المعلم، مثل: U = R I أو q = C u.</p>
+            <p class="fr">Quand le graphe est une droite qui passe par l’origine, comme U = R I ou q = C u.</p>
+            <h3>خطأ شائع / Erreur fréquente</h3>
+            <p>اعتبار كل مستقيم علاقة تناسبية. التناسبية تتطلب أن يمر المستقيم من أصل المعلم.</p>
+            <h3>صح أم خطأ؟ / Vrai ou Faux</h3>
+            <p>إذا كان منحنى y بدلالة x مستقيمًا يمر من الأصل، فإن y و x متناسبان.</p>
+            <p><strong>الجواب: صحيح.</strong> لأن العلاقة تكون من الشكل y = kx.</p>
+          </div>
+        </details>
+
+        <details class="formula-card">
+          <summary><span>2. الدالة الخطية التآلفية</span><small>Fonction affine</small></summary>
+          <div class="formula-body">
+            <div class="equation-box">y = a x + b</div>
+            <h3>المعنى / Sens</h3>
+            <p>a هو الميل، و b هو قيمة y عندما x = 0.</p>
+            <p class="fr">a est la pente, et b est l’ordonnée à l’origine.</p>
+            <h3>متى أحتاجها في الفيزياء؟ / Quand l’utiliser ?</h3>
+            <p>عندما يعطي التمرين منحنى مستقيمًا لا يمر من الأصل، أو يطلب استخراج ثابتة من ميل مستقيم.</p>
+            <p class="fr">Quand le graphe est une droite qui ne passe pas par l’origine, ou quand il faut extraire une constante à partir d’une pente.</p>
+            <h3>خطأ شائع / Erreur fréquente</h3>
+            <p>نسيان b أو اعتبار العلاقة تناسبية رغم أن المستقيم لا يمر من الأصل.</p>
+          </div>
+        </details>
+
+        <details class="formula-card">
+          <summary><span>3. ميل مستقيم</span><small>Pente d’une droite</small></summary>
+          <div class="formula-body">
+            <div class="equation-box">a = Δy / Δx = (y₂ - y₁) / (x₂ - x₁)</div>
+            <h3>المعنى / Sens</h3>
+            <p>الميل يبين مقدار تغير y عندما تتغير x.</p>
+            <p class="fr">La pente indique la variation de y lorsque x varie.</p>
+            <h3>متى أحتاجها في الفيزياء؟ / Quand l’utiliser ?</h3>
+            <p>عند استخراج مقاومة R من منحنى U = f(I)، أو ثابتة C من منحنى q = f(u)، أو سرعة من منحنى x = f(t).</p>
+            <p class="fr">Pour trouver R à partir de U = f(I), C à partir de q = f(u), ou une vitesse à partir de x = f(t).</p>
+            <h3>خطأ شائع / Erreur fréquente</h3>
+            <p>اختيار نقطتين غير واضحتين من الرسم. الأفضل اختيار نقطتين بعيدتين وواضحتين على المستقيم.</p>
+            <h3>صح أم خطأ؟ / Vrai ou Faux</h3>
+            <p>لحساب الميل، يمكن استعمال أي نقطتين واضحتين على المستقيم.</p>
+            <p><strong>الجواب: صحيح.</strong> بشرط أن تكونا على المستقيم وأن تقرأ إحداثياتهما بدقة.</p>
+          </div>
+        </details>
+      </section>
+
+      <section class="section-heading" id="calcul-algebrique">
+        <p class="eyebrow">Calcul algébrique</p>
+        <h2>2. الحساب والتحويل داخل المعادلات / Calcul et transformation des relations</h2>
+        <p class="muted">كثير من الأخطاء لا تأتي من الفيزياء نفسها، بل من تحويل العلاقة أو عزل المجهول بطريقة خاطئة.</p>
+      </section>
+
+      <section class="formula-list">
+        <details class="formula-card">
+          <summary><span>4. عزل المجهول في علاقة</span><small>Isoler l’inconnue</small></summary>
+          <div class="formula-body">
+            <div class="equation-box">v = d / Δt ⟹ d = v Δt ⟹ Δt = d / v</div>
+            <h3>المعنى / Sens</h3>
+            <p>نستعمل نفس العلاقة، لكن نغير شكلها حسب الكمية المطلوبة.</p>
+            <p class="fr">On utilise la même relation, mais on la transforme selon la grandeur demandée.</p>
+            <h3>متى أحتاجها؟ / Quand l’utiliser ?</h3>
+            <p>عندما لا يكون المطلوب هو الطرف المكتوب مباشرة في القانون.</p>
+            <p class="fr">Quand la grandeur demandée n’est pas déjà isolée dans la formule.</p>
+            <h3>خطأ شائع / Erreur fréquente</h3>
+            <p>نقل الحدود دون احترام الضرب والقسمة، خصوصًا في علاقات مثل τ = RC أو T = 2π√(m/k).</p>
+          </div>
+        </details>
+
+        <details class="formula-card">
+          <summary><span>5. الكتابة العلمية وتحويل الوحدات</span><small>Notation scientifique et conversions</small></summary>
+          <div class="formula-body">
+            <div class="equation-box">1 km = 10³ m · 1 ms = 10⁻³ s · 1 mL = 10⁻³ L</div>
+            <h3>المعنى / Sens</h3>
+            <p>الكتابة العلمية تساعد على التعامل مع الأعداد الكبيرة والصغيرة، وهي ضرورية في النووي والكهرباء والكيمياء.</p>
+            <p class="fr">La notation scientifique facilite le traitement des très grands et très petits nombres.</p>
+            <h3>متى أحتاجها؟ / Quand l’utiliser ?</h3>
+            <p>عند استعمال الثوابت، الشحنات، الكتل الصغيرة، أو تحويل mL إلى L و km/h إلى m/s.</p>
+            <p class="fr">Pour utiliser les constantes, les charges, les petites masses, ou convertir les unités.</p>
+            <h3>خطأ شائع / Erreur fréquente</h3>
+            <p>الخلط بين 10⁻³ و 10³. لذلك يجب كتابة التحويل قبل التعويض العددي.</p>
+          </div>
+        </details>
+      </section>
+
+      <section class="section-heading" id="derivee-integrale">
+        <p class="eyebrow">Dérivée et aire</p>
+        <h2>3. الاشتقاق والمساحة تحت المنحنى / Dérivée et aire sous la courbe</h2>
+        <p class="muted">في الفيزياء، الاشتقاق يرتبط غالبًا بالسرعة والتسارع وشدة التيار، أما المساحة تحت المنحنى فترتبط أحيانًا بالمسافة أو الشغل أو الشحنة.</p>
+      </section>
+
+      <section class="formula-list">
+        <details class="formula-card">
+          <summary><span>6. الاشتقاق كسرعة تغير</span><small>Dérivée comme vitesse de variation</small></summary>
+          <div class="formula-body">
+            <div class="equation-box">v = dx/dt · a = dv/dt · i = dq/dt</div>
+            <h3>المعنى / Sens</h3>
+            <p>الاشتقاق يبين كيف تتغير كمية فيزيائية مع الزمن.</p>
+            <p class="fr">La dérivée montre comment une grandeur physique varie avec le temps.</p>
+            <h3>متى أحتاجها في الفيزياء؟ / Quand l’utiliser ?</h3>
+            <p>عندما يكون السؤال حول السرعة اللحظية، التسارع، أو شدة التيار الناتجة عن تغير الشحنة.</p>
+            <p class="fr">Quand il s’agit de vitesse instantanée, d’accélération ou d’intensité liée à la variation de charge.</p>
+            <h3>خطأ شائع / Erreur fréquente</h3>
+            <p>الخلط بين القيمة المتوسطة والقيمة اللحظية. الاشتقاق يعطي قيمة لحظية.</p>
+          </div>
+        </details>
+
+        <details class="formula-card">
+          <summary><span>7. المساحة تحت المنحنى</span><small>Aire sous la courbe</small></summary>
+          <div class="formula-body">
+            <div class="equation-box">Aire ≈ مجموع مساحات الأشكال البسيطة</div>
+            <h3>المعنى / Sens</h3>
+            <p>المساحة تحت منحنى فيزيائي قد تمثل كمية جديدة حسب المحورين، مثل المسافة من منحنى السرعة بدلالة الزمن.</p>
+            <p class="fr">L’aire sous une courbe peut représenter une grandeur physique selon les axes, par exemple la distance à partir de v(t).</p>
+            <h3>متى أحتاجها؟ / Quand l’utiliser ?</h3>
+            <p>عندما يطلب التمرين استغلال منحنى وليس فقط علاقة مباشرة، خاصة منحنيات بدلالة الزمن.</p>
+            <p class="fr">Quand l’exercice demande d’exploiter un graphe, surtout en fonction du temps.</p>
+            <h3>خطأ شائع / Erreur fréquente</h3>
+            <p>حساب المساحة دون الانتباه إلى وحدات المحورين. وحدة المساحة الفيزيائية تنتج من ضرب وحدتي المحورين.</p>
+          </div>
+        </details>
+      </section>
+
+      <section class="section-heading" id="expo-log">
+        <p class="eyebrow">Exponentielle et logarithme</p>
+        <h2>4. الدالة الأسية واللوغاريتم / Fonction exponentielle et logarithme</h2>
+        <p class="muted">هذا الجزء مهم في دارات RC وRL، والتحولات النووية، وبعض نماذج التناقص أو النمو.</p>
+      </section>
+
+      <section class="formula-list">
+        <details class="formula-card">
+          <summary><span>8. الدالة الأسية في التناقص</span><small>Exponentielle décroissante</small></summary>
+          <div class="formula-body">
+            <div class="equation-box">y(t) = y₀ e<sup>-t/τ</sup></div>
+            <h3>المعنى / Sens</h3>
+            <p>تصف هذه العلاقة تناقص كمية مع الزمن، مثل تفريغ مكثف أو تناقص عدد النوى المشعة.</p>
+            <p class="fr">Cette relation décrit une grandeur qui diminue avec le temps, comme la décharge d’un condensateur ou la décroissance radioactive.</p>
+            <h3>متى أحتاجها؟ / Quand l’utiliser ?</h3>
+            <p>عندما يظهر في التمرين: تناقص، تفريغ، ثابتة زمن، نصف العمر، أو e<sup>-t/τ</sup>.</p>
+            <p class="fr">Quand l’exercice parle de décroissance, décharge, constante de temps, demi-vie ou e<sup>-t/τ</sup>.</p>
+            <h3>خطأ شائع / Erreur fréquente</h3>
+            <p>اعتبار التناقص خطيًا. في العلاقة الأسية، التناقص سريع في البداية ثم يصبح أبطأ.</p>
+          </div>
+        </details>
+
+        <details class="formula-card">
+          <summary><span>9. اللوغاريتم لتبسيط العلاقة الأسية</span><small>Logarithme et exponentielle</small></summary>
+          <div class="formula-body">
+            <div class="equation-box">N = N₀ e<sup>-λt</sup> ⟹ ln(N/N₀) = -λt</div>
+            <h3>المعنى / Sens</h3>
+            <p>يساعد اللوغاريتم على تحويل علاقة أسية إلى علاقة خطية يمكن استغلال ميلها.</p>
+            <p class="fr">Le logarithme permet de transformer une relation exponentielle en relation linéaire exploitable.</p>
+            <h3>متى أحتاجه؟ / Quand l’utiliser ?</h3>
+            <p>عندما يطلب التمرين إثبات علاقة خطية أو استخراج λ من ميل مستقيم.</p>
+            <p class="fr">Quand il faut montrer une relation linéaire ou déterminer λ à partir de la pente.</p>
+            <h3>خطأ شائع / Erreur fréquente</h3>
+            <p>كتابة ln(N) / ln(N₀) بدل ln(N/N₀). هذا خطأ رياضي شائع.</p>
+          </div>
+        </details>
+      </section>
+
+      <section class="section-heading" id="trigonometrie">
+        <p class="eyebrow">Trigonométrie</p>
+        <h2>5. المثلثات والإسقاطات / Trigonométrie et projections</h2>
+        <p class="muted">تظهر المثلثات في الشغل الميكانيكي، القوى المائلة، الإسقاطات، والزوايا.</p>
+      </section>
+
+      <section class="formula-list">
+        <details class="formula-card">
+          <summary><span>10. جيب وجيب تمام زاوية</span><small>Sinus et cosinus</small></summary>
+          <div class="formula-body">
+            <div class="equation-box">cos(α) = adjacent / hypoténuse · sin(α) = opposé / hypoténuse</div>
+            <h3>المعنى / Sens</h3>
+            <p>نستعمل sin و cos لحساب مركبات قوة أو ربط الشغل بالزاوية بين القوة والإزاحة.</p>
+            <p class="fr">On utilise sin et cos pour calculer les composantes d’une force ou relier le travail à l’angle entre la force et le déplacement.</p>
+            <h3>متى أحتاجها في الفيزياء؟ / Quand l’utiliser ?</h3>
+            <p>عندما توجد زاوية في الرسم، قوة مائلة، أو علاقة الشغل W = F d cos(α).</p>
+            <p class="fr">Quand il y a un angle, une force inclinée ou la relation W = F d cos(α).</p>
+            <h3>خطأ شائع / Erreur fréquente</h3>
+            <p>استعمال sin بدل cos دون الرجوع إلى الرسم. يجب تحديد الضلع المجاور والمقابل للزاوية.</p>
+            <h3>صح أم خطأ؟ / Vrai ou Faux</h3>
+            <p>إذا كانت القوة في نفس اتجاه الحركة، فإن α = 0° و cos(α) = 1.</p>
+            <p><strong>الجواب: صحيح.</strong> لذلك يكون الشغل W = Fd.</p>
+          </div>
+        </details>
+      </section>
+
+      <section class="content-block">
+        <h3>كيف أراجع هذه الصفحة؟ / Comment réviser cette page ?</h3>
+        <ul class="methodology-steps compact">
+          <li>ابدأ بقراءة عنوان الأداة الرياضية، ثم اربطها بدرس في الفيزياء.</li>
+          <li>راجع مثالًا واحدًا على الأقل لكل أداة: منحنى، ميل، تحويل وحدة، أو علاقة أسية.</li>
+          <li>عند حل تمرين فيزياء، اسأل نفسك: هل المشكل في القانون الفيزيائي أم في الأداة الرياضية؟</li>
+          <li>اكتب التحويلات والعلاقات الوسيطة قبل التعويض العددي.</li>
+        </ul>
+      </section>
+
+      <section class="content-block next-actions">
+        <h3>روابط مرتبطة / Liens utiles</h3>
+        <div class="toc-actions formula-toc">
+          <a class="toc-button" href="./physics-equations.html">بنك معادلات الفيزياء</a>
+          <a class="toc-button" href="./chemistry-equations.html">بنك علاقات الكيمياء</a>
+          <a class="toc-button" href="./physics-methodology.html">منهجية حل تمارين الفيزياء</a>
+          <a class="toc-button" href="./physics-exercises.html">تمارين تفاعلية قصيرة</a>
+        </div>
       </section>
     </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="brand-mark">DB2</span>
+          <div>
+            <strong>Douae Bac 2</strong>
+            <p>ثانية باك علوم فيزيائية</p>
+          </div>
+        </div>
+        <p>منصة مراجعة مبسطة لمساعدة تلاميذ الثانية باك علوم فيزيائية على تنظيم مراجعتهم بطريقة تفاعلية.</p>
+        <p class="footer-meta">من إعداد: دعاء جول · 2026</p>
+        <p class="footer-note">هذا الموقع مخصص للمراجعة والدعم، ولا يغني عن الدروس الرسمية وتوجيهات الأستاذ.</p>
+      </div>
+    </footer>
+
+    <button class="to-top" id="toTop" type="button" aria-label="العودة للأعلى">↑</button>
+
+    <script>
+      const toTop = document.getElementById("toTop");
+      window.addEventListener("scroll", () => {
+        toTop.classList.toggle("visible", window.scrollY > 450);
+      });
+      toTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("./sw.js");
+        });
+      }
+    </script>
+      <script src="pwa-register.js"></script>
   </body>
 </html>
