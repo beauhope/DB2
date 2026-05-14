@@ -1572,112 +1572,131 @@ main {
 }
 
 
-/* PWA install prompt and offline page */
-.pwa-install-prompt {
-  position: fixed;
-  right: 1rem;
-  bottom: 1rem;
-  z-index: 9999;
-  width: min(420px, calc(100% - 2rem));
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 1rem;
-  border: 1px solid rgba(47, 125, 104, 0.28);
-  border-radius: 1.25rem;
-  background: rgba(255, 252, 246, 0.96);
-  box-shadow: 0 18px 45px rgba(22, 58, 48, 0.18);
-  color: #123f34;
-}
-
-.pwa-install-prompt strong {
-  display: block;
-  margin-bottom: 0.25rem;
-  font-weight: 800;
-}
-
-.pwa-install-prompt p {
-  margin: 0;
-  font-size: 0.92rem;
-  line-height: 1.7;
-}
-
-.pwa-install-actions {
-  display: flex;
-  align-items: center;
-  gap: 0.45rem;
-  flex-shrink: 0;
-}
-
-.pwa-install-main,
-.pwa-install-close {
-  border: 0;
-  cursor: pointer;
-  font-family: inherit;
-}
-
-.pwa-install-main {
-  padding: 0.65rem 1rem;
-  border-radius: 999px;
-  background: #2f7d68;
-  color: #fff;
-  font-weight: 800;
-}
-
-.pwa-install-close {
-  width: 2.25rem;
-  height: 2.25rem;
-  border-radius: 999px;
-  background: #eef4ef;
-  color: #17483c;
-  font-size: 1.25rem;
-  line-height: 1;
-}
-
-.offline-page {
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-  padding: 1.5rem;
-  background:
-    radial-gradient(circle at top, rgba(47, 125, 104, 0.16), transparent 35%),
-    #f5f1e9;
-}
-
-.offline-card {
-  width: min(760px, 100%);
-  padding: clamp(1.5rem, 4vw, 2.5rem);
-  border-radius: 2rem;
-  background: #fffaf1;
-  border: 1px solid rgba(47, 125, 104, 0.18);
-  box-shadow: 0 24px 70px rgba(22, 58, 48, 0.14);
+/* Landing page cards and dashboard layout */
+.home-landing-header .header-content {
   text-align: center;
 }
 
-.offline-logo {
-  width: min(260px, 70%);
-  margin: 0 auto 1.25rem;
-  display: block;
-  border-radius: 1.25rem;
+.home-landing-header .intro {
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.fr-note {
-  color: #5d6c66;
-  font-size: 0.96rem;
+.landing-page {
+  display: grid;
+  gap: 24px;
 }
 
-@media (max-width: 640px) {
-  .pwa-install-prompt {
-    left: 1rem;
-    right: 1rem;
-    bottom: 0.75rem;
-    width: auto;
-    flex-direction: column;
-    align-items: stretch;
+.landing-intro {
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 300px);
+  align-items: center;
+}
+
+.formula-note {
+  border: 1px solid rgba(47, 125, 104, 0.18);
+  border-radius: 16px;
+  padding: 16px;
+  background: var(--soft);
+  color: var(--primary-dark);
+  font-weight: 700;
+  box-shadow: var(--shadow-soft);
+}
+
+.landing-subject-grid,
+.future-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.landing-subject-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.future-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.landing-subject-card,
+.future-card {
+  position: relative;
+  display: grid;
+  align-content: start;
+  gap: 10px;
+  min-height: 172px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 18px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(255, 250, 242, 0.98)),
+    var(--surface-strong);
+  color: var(--text);
+  text-decoration: none;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.landing-subject-card:hover,
+.landing-subject-card:focus-visible,
+.future-card:hover,
+.future-card:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(47, 125, 104, 0.35);
+  box-shadow: var(--shadow);
+  outline: none;
+}
+
+.landing-subject-card h3,
+.future-card h2 {
+  margin: 0;
+  color: var(--primary-dark);
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.landing-subject-card p,
+.future-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.landing-subject-card small {
+  margin-top: auto;
+  color: var(--accent);
+  font-weight: 700;
+  direction: ltr;
+  text-align: right;
+}
+
+.subject-badge {
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 5px 11px;
+  background: var(--soft);
+  color: var(--primary-dark);
+  font-size: 0.82rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.future-link {
+  min-height: 150px;
+}
+
+.landing-next-steps {
+  margin-top: 4px;
+}
+
+@media (max-width: 760px) {
+  .landing-intro,
+  .landing-subject-grid,
+  .future-grid {
+    grid-template-columns: 1fr;
   }
 
-  .pwa-install-actions {
-    justify-content: space-between;
+  .landing-subject-card,
+  .future-card {
+    min-height: auto;
   }
 }
