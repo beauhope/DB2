@@ -172,6 +172,78 @@ function formatRichText(text) {
   return parts.join("");
 }
 
+function formatExamMethod(text) {
+  if (!text || !String(text).trim()) return "";
+
+  const lines = normalizeRichText(text)
+    .split(/\n+/)
+    .map((line) => line.trim())
+    .filter(Boolean)
+    .filter((line) => line !== "منهجية صغيرة للامتحان");
+
+  const stepLabels = [
+    "تمهيد بسيط",
+    "طرح الإشكال",
+    "موقف أول",
+    "موقف ثان",
+    "تركيب"
+  ];
+  const intro = [];
+  const steps = [];
+  const example = [];
+  let mode = "intro";
+
+  lines.forEach((line) => {
+    const cleanStep = line.replace(/^\d+[\.\-)]\s*/, "");
+    const isGuideLine = line.includes("استعملي هذا الشكل");
+    const isStep = stepLabels.some((label) => cleanStep.startsWith(label));
+    const isExample = line.includes("مثال تركيب");
+
+    if (isExample) {
+      mode = "example";
+      const [, rest = ""] = line.split(/:\s*/);
+      if (rest.trim()) example.push(rest.trim());
+      return;
+    }
+
+    if (isGuideLine) {
+      intro.push(line);
+      mode = "steps";
+      return;
+    }
+
+    if (isStep) {
+      steps.push(cleanStep);
+      mode = "steps";
+      return;
+    }
+
+    if (mode === "example") {
+      example.push(line);
+    } else if (mode === "steps" && /^\d+[\.\-)]\s*/.test(line)) {
+      steps.push(cleanStep);
+    } else {
+      intro.push(line);
+    }
+  });
+
+  return `
+    <div class="exam-method-body">
+      ${intro.map((line) => `<p>${escapeHtml(line)}</p>`).join("")}
+      ${
+        steps.length
+          ? `<ol class="exam-method-steps">${steps.map((step) => `<li>${escapeHtml(step)}</li>`).join("")}</ol>`
+          : ""
+      }
+      ${
+        example.length
+          ? `<div class="exam-method-example"><strong>مثال تركيب جيد</strong><p>${escapeHtml(example.join(" "))}</p></div>`
+          : ""
+      }
+    </div>
+  `;
+}
+
 function formatConceptTable(lines) {
   const cleaned = lines.filter((line) => line && line !== "المفهوم" && line !== "معناه المبسط");
   const rows = [];
@@ -374,6 +446,19 @@ function openLesson(moduleId, lessonId) {
   document.getElementById("modelAnswer").classList.add("hidden");
   document.getElementById("toggleModelAnswer").textContent = "إظهار نموذج جواب مختصر";
 
+  const examMethodSection = document.getElementById("examMethodSection");
+  const examMethodContent = document.getElementById("examMethodContent");
+  const examMethodTocButton = document.getElementById("examMethodTocButton");
+  if (lesson.examMethod && lesson.examMethod.trim()) {
+    examMethodContent.innerHTML = formatExamMethod(lesson.examMethod);
+    examMethodSection.classList.remove("hidden");
+    examMethodTocButton.classList.remove("hidden");
+  } else {
+    examMethodContent.innerHTML = "";
+    examMethodSection.classList.add("hidden");
+    examMethodTocButton.classList.add("hidden");
+  }
+
   const assignmentSection = document.getElementById("assignmentSection");
   const assignmentText = document.getElementById("assignmentText");
   if (lesson.assignment && lesson.assignment.trim()) {
@@ -461,7 +546,8 @@ function searchLessons(query) {
         lesson.title,
         lesson.summary,
         mindMapToSearchText(lesson.mindMap),
-        lesson.writingPrompt
+        lesson.writingPrompt,
+        lesson.examMethod
       ].join(" ").toLowerCase();
 
       if (text.includes(normalized)) {

@@ -89,6 +89,7 @@
               <button class="toc-button" type="button" data-target="mindMapSection">الخريطة الذهنية</button>
               <button class="toc-button" type="button" data-target="quizSection">صح أو خطأ</button>
               <button class="toc-button" type="button" data-target="writingSection">التدريب الكتابي</button>
+              <button class="toc-button hidden" id="examMethodTocButton" type="button" data-target="examMethodSection">منهجية الامتحان</button>
             </div>
           </nav>
 
@@ -115,6 +116,11 @@
             <div class="rich-text" id="writingPrompt"></div>
             <button class="secondary-button" id="toggleModelAnswer" type="button">إظهار نموذج جواب مختصر</button>
             <div class="model-answer rich-text hidden" id="modelAnswer"></div>
+          </section>
+
+          <section class="content-block exam-method-card hidden" id="examMethodSection">
+            <h3>منهجية صغيرة للامتحان</h3>
+            <div class="exam-method-content" id="examMethodContent"></div>
           </section>
 
           <section class="content-block hidden" id="assignmentSection">
