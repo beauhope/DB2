@@ -544,25 +544,64 @@ main {
 
 .concept-table-wrap {
   width: 100%;
-  overflow-x: auto;
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  background: var(--surface-strong);
-  box-shadow: var(--shadow-soft);
+  overflow: visible;
 }
 
 .concept-table {
   width: 100%;
-  min-width: 520px;
-  border-collapse: collapse;
+  min-width: 0;
+  border-collapse: separate;
+  border-spacing: 0;
+  display: block;
   text-align: right;
+}
+
+.concept-table thead {
+  display: none;
+}
+
+.concept-table tbody {
+  display: grid;
+  gap: 12px;
+}
+
+.concept-table tr {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px;
+  background: var(--surface-strong);
+  box-shadow: var(--shadow-soft);
 }
 
 .concept-table th,
 .concept-table td {
-  padding: 11px 12px;
-  border-bottom: 1px solid var(--line);
+  display: block;
+  padding: 0;
+  border-bottom: 0;
   vertical-align: top;
+}
+
+.concept-table td + td {
+  margin-top: 10px;
+}
+
+.concept-table td::before {
+  display: block;
+  margin-bottom: 3px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.concept-table td:first-child::before {
+  content: "المفهوم";
+}
+
+.concept-table td:nth-child(2)::before {
+  content: "معناه المبسط";
 }
 
 .concept-table th {
@@ -572,9 +611,14 @@ main {
 }
 
 .concept-table td:first-child {
-  width: 34%;
   color: var(--primary-dark);
   font-weight: 700;
+}
+
+.concept-table td:nth-child(2) {
+  color: var(--text);
+  font-size: 0.96rem;
+  line-height: 1.85;
 }
 
 .concept-table tr:last-child td {
@@ -881,6 +925,56 @@ main {
 
   .site-logo-img {
     width: 260px;
+  }
+
+  .concept-table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: var(--surface-strong);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .concept-table {
+    min-width: 520px;
+    border-collapse: collapse;
+    display: table;
+  }
+
+  .concept-table thead {
+    display: table-header-group;
+  }
+
+  .concept-table tbody {
+    display: table-row-group;
+  }
+
+  .concept-table tr {
+    display: table-row;
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .concept-table th,
+  .concept-table td {
+    display: table-cell;
+    padding: 11px 12px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .concept-table td + td {
+    margin-top: 0;
+  }
+
+  .concept-table td::before {
+    content: none;
+  }
+
+  .concept-table td:first-child {
+    width: 34%;
   }
 
   main {
