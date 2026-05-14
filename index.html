@@ -3,19 +3,17 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#2f7d68">
     <title>مراجعة الفلسفة - ثانية باك علوم فيزيائية</title>
+    <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <header class="site-header" id="top">
       <div class="header-content">
-        <button class="brand" id="brandHome" type="button" aria-label="العودة إلى الصفحة الرئيسية">
-          <span class="brand-mark">DB2</span>
-          <span class="brand-text">
-            <strong>Douae Bac 2</strong>
-            <small>ثانية باك علوم فيزيائية</small>
-          </span>
-        </button>
+        <a class="brand" id="brandHome" href="./index.html" aria-label="العودة إلى الصفحة الرئيسية">
+          <img src="DB2_logo.png" alt="شعار DB2 - ثانية علوم فيزياء" class="site-logo-img">
+        </a>
 
         <p class="eyebrow">ثانية باك علوم فيزيائية</p>
         <h1>مراجعة الفلسفة</h1>
@@ -150,5 +148,12 @@
 
     <script src="data.js"></script>
     <script src="app.js"></script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("./sw.js");
+        });
+      }
+    </script>
   </body>
 </html>

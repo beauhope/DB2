@@ -1,0 +1,13 @@
+{
+  "name": "Douae Bac 2",
+  "short_name": "Bac 2",
+  "description": "منصة مراجعة مبسطة لتلاميذ الثانية باك علوم فيزيائية",
+  "lang": "ar",
+  "dir": "rtl",
+  "display": "standalone",
+  "start_url": "./index.html",
+  "scope": "./",
+  "background_color": "#f5f1e9",
+  "theme_color": "#2f7d68",
+  "icons": []
+}

@@ -495,7 +495,8 @@ document.getElementById("backToHome").addEventListener("click", () => {
   setScreen("home");
 });
 
-document.getElementById("brandHome").addEventListener("click", () => {
+document.getElementById("brandHome").addEventListener("click", (event) => {
+  event.preventDefault();
   searchInput.value = "";
   renderModules();
   setScreen("home");
