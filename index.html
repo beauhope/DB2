@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>مراجعة الفلسفة - ثانية باك علوم فيزيائية</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <div class="header-content">
+        <button class="brand" id="brandHome" type="button" aria-label="العودة إلى الصفحة الرئيسية">
+          <span class="brand-mark">DB2</span>
+          <span class="brand-text">
+            <strong>Douae Bac 2</strong>
+            <small>ثانية باك علوم فيزيائية</small>
+          </span>
+        </button>
+
+        <p class="eyebrow">ثانية باك علوم فيزيائية</p>
+        <h1>مراجعة الفلسفة</h1>
+        <p class="intro">
+          نموذج أولي بسيط ومنظم للمراجعة، مع حفظ التقدم وأسئلة تفاعلية.
+        </p>
+
+        <label class="search-label" for="searchInput">البحث داخل الدروس</label>
+        <div class="search-box">
+          <input id="searchInput" type="search" placeholder="اكتبي كلمة مثل: الشخص، الهوية، القيمة">
+          <button id="clearSearch" type="button">مسح</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="screen active" id="homeScreen" aria-labelledby="modulesTitle">
+        <section class="home-dashboard" aria-label="تقدم المراجعة العام">
+          <div>
+            <p class="eyebrow">تقدمك العام</p>
+            <h2 id="progressCount">0 من 0 درس</h2>
+            <p class="muted" id="progressText">ابدئي بأول درس واحفظي تقدمك تلقائيا.</p>
+          </div>
+          <div class="overall-progress" aria-hidden="true">
+            <span id="progressFill"></span>
+          </div>
+        </section>
+
+        <div class="section-heading">
+          <p class="eyebrow">المجزوءات</p>
+          <h2 id="modulesTitle">اختاري مجزوءة للمراجعة</h2>
+        </div>
+        <div class="module-grid" id="moduleGrid"></div>
+      </section>
+
+      <section class="screen" id="moduleScreen" aria-labelledby="moduleTitle">
+        <nav class="breadcrumb" aria-label="مسار التنقل">
+          <button class="breadcrumb-link" id="moduleHomeCrumb" type="button">الرئيسية</button>
+          <span class="breadcrumb-separator" aria-hidden="true">›</span>
+          <span class="breadcrumb-current" id="moduleCurrentCrumb">المجزوءة</span>
+        </nav>
+        <button class="back-button" id="backToHome" type="button">رجوع</button>
+        <div class="section-heading">
+          <p class="eyebrow" id="moduleLabel">مجزوءة</p>
+          <h2 id="moduleTitle"></h2>
+          <p id="moduleDescription" class="muted"></p>
+        </div>
+        <div class="lesson-list" id="lessonList"></div>
+      </section>
+
+      <section class="screen" id="lessonScreen" aria-labelledby="lessonTitle">
+        <nav class="breadcrumb" aria-label="مسار التنقل">
+          <button class="breadcrumb-link" id="lessonHomeCrumb" type="button">الرئيسية</button>
+          <span class="breadcrumb-separator" aria-hidden="true">›</span>
+          <button class="breadcrumb-link" id="lessonModuleCrumb" type="button"></button>
+          <span class="breadcrumb-separator" aria-hidden="true">›</span>
+          <span class="breadcrumb-current" id="lessonCurrentCrumb"></span>
+        </nav>
+        <button class="back-button" id="backToModule" type="button">رجوع إلى المجزوءة</button>
+        <article class="lesson-card">
+          <div class="lesson-top title-card">
+            <div>
+              <p class="eyebrow" id="lessonModuleName"></p>
+              <h2 id="lessonTitle"></h2>
+            </div>
+            <button class="review-button" id="markReviewed" type="button">✓ أنهيت مراجعة هذا الدرس</button>
+          </div>
+
+          <nav class="lesson-toc" aria-label="فهرس الدرس">
+            <p class="toc-title">انتقلي إلى</p>
+            <div class="toc-actions">
+              <button class="toc-button" type="button" data-target="summarySection">الملخص</button>
+              <button class="toc-button" type="button" data-target="mindMapSection">الخريطة الذهنية</button>
+              <button class="toc-button" type="button" data-target="quizSection">صح أو خطأ</button>
+              <button class="toc-button" type="button" data-target="writingSection">التدريب الكتابي</button>
+            </div>
+          </nav>
+
+          <section class="content-block" id="summarySection">
+            <h3>ملخص قصير</h3>
+            <div class="rich-text" id="lessonSummary"></div>
+          </section>
+
+          <section class="content-block" id="mindMapSection">
+            <h3>خريطة ذهنية نصية</h3>
+            <ul class="mind-map" id="mindMap"></ul>
+          </section>
+
+          <section class="content-block" id="quizSection">
+            <div class="quiz-heading">
+              <h3>اختبري فهمك: صح أم خطأ؟</h3>
+              <p>اختاري الإجابة، ثم راجعي التصحيح مباشرة.</p>
+            </div>
+            <div id="quizList" class="quiz-list"></div>
+          </section>
+
+          <section class="content-block" id="writingSection">
+            <h3>تدريب كتابي قصير</h3>
+            <div class="rich-text" id="writingPrompt"></div>
+            <button class="secondary-button" id="toggleModelAnswer" type="button">إظهار نموذج جواب مختصر</button>
+            <div class="model-answer rich-text hidden" id="modelAnswer"></div>
+          </section>
+
+          <section class="content-block hidden" id="assignmentSection">
+            <h3>واجب صغير</h3>
+            <div class="rich-text" id="assignmentText"></div>
+          </section>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="brand-mark">DB2</span>
+          <div>
+            <strong>Douae Bac 2</strong>
+            <p>ثانية باك علوم فيزيائية</p>
+          </div>
+        </div>
+        <p>
+          منصة مراجعة مبسطة لمساعدة تلاميذ الثانية باك علوم فيزيائية على تنظيم مراجعتهم بطريقة تفاعلية.
+        </p>
+        <p class="footer-meta">من إعداد: دعاء جول · 2026</p>
+        <p class="footer-note">
+          هذا الموقع مخصص للمراجعة والدعم، ولا يغني عن الدروس الرسمية وتوجيهات الأستاذ.
+        </p>
+      </div>
+    </footer>
+
+    <button class="to-top" id="toTop" type="button" aria-label="العودة للأعلى">↑</button>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
