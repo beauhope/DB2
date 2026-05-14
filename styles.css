@@ -1153,3 +1153,741 @@ main {
     margin-bottom: 4px;
   }
 }
+
+
+/* Subject navigation and physics equations page */
+.subject-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 auto 24px;
+}
+
+.subject-nav-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-radius: 999px;
+  padding: 7px 16px;
+  background: rgba(255, 255, 255, 0.14);
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: var(--shadow-soft);
+}
+
+.subject-nav-link.active {
+  background: white;
+  color: var(--primary-dark);
+}
+
+.subject-nav-link.is-disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.quick-section {
+  margin-bottom: 22px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 16px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.compact-heading {
+  margin-top: 0;
+}
+
+.subject-card-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.subject-card {
+  display: grid;
+  gap: 4px;
+  border: 1px solid rgba(47, 125, 104, 0.18);
+  border-radius: 16px;
+  padding: 14px;
+  background: var(--surface-strong);
+  color: var(--text);
+  text-decoration: none;
+  box-shadow: var(--shadow-soft);
+}
+
+.subject-card span {
+  color: var(--primary-dark);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.subject-card small {
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.subject-card.current {
+  border-color: rgba(182, 107, 79, 0.35);
+  background: var(--accent-soft);
+}
+
+.formula-page {
+  display: grid;
+  gap: 16px;
+}
+
+.formula-hero-card {
+  align-items: start;
+}
+
+.formula-note {
+  border: 1px solid rgba(47, 125, 104, 0.16);
+  border-radius: 16px;
+  padding: 14px;
+  background: var(--soft);
+  color: var(--primary-dark);
+  font-weight: 700;
+}
+
+.formula-toc a {
+  text-decoration: none;
+}
+
+.section-spotlight {
+  border-color: rgba(206, 159, 82, 0.38);
+  background: linear-gradient(135deg, rgba(255, 250, 242, 0.98), rgba(247, 251, 246, 0.98));
+}
+
+.direct-jump-actions .toc-button:first-child {
+  flex-basis: 260px;
+}
+
+.chemistry-section {
+  scroll-margin-top: 110px;
+  margin-top: 28px;
+  border: 2px solid rgba(47, 125, 104, 0.22);
+  border-radius: 20px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: var(--shadow-soft);
+}
+
+.formula-list {
+  display: grid;
+  gap: 14px;
+}
+
+.formula-card {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  overflow: hidden;
+  background: var(--surface);
+  box-shadow: var(--shadow-soft);
+}
+
+.formula-card summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 15px 16px;
+  color: var(--primary-dark);
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+}
+
+.formula-card summary::-webkit-details-marker {
+  display: none;
+}
+
+.formula-card summary::after {
+  content: "+";
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: var(--soft);
+  color: var(--primary-dark);
+  font-weight: 700;
+}
+
+.formula-card[open] summary::after {
+  content: "−";
+}
+
+.formula-card summary small {
+  color: var(--accent);
+  font-size: 0.86rem;
+}
+
+.formula-body {
+  display: grid;
+  gap: 10px;
+  border-top: 1px solid var(--line);
+  padding: 16px;
+  background: var(--surface-strong);
+}
+
+.formula-body h3 {
+  width: fit-content;
+  margin: 8px 0 0;
+  border-radius: 999px;
+  padding: 4px 12px;
+  background: var(--soft);
+  color: var(--primary-dark);
+  font-size: 0.96rem;
+}
+
+.formula-body p {
+  margin: 0;
+}
+
+.formula-body .fr {
+  color: var(--muted);
+  direction: ltr;
+  text-align: left;
+}
+
+.equation-box {
+  direction: ltr;
+  text-align: center;
+  border: 1px solid rgba(47, 125, 104, 0.18);
+  border-radius: 16px;
+  padding: 16px;
+  background: #f7fbf6;
+  color: var(--primary-dark);
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.future-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.future-card {
+  border: 1px dashed rgba(47, 125, 104, 0.35);
+  border-radius: 18px;
+  padding: 16px;
+  background: rgba(255, 250, 242, 0.86);
+  box-shadow: var(--shadow-soft);
+}
+
+.future-card h2 {
+  color: var(--primary-dark);
+}
+
+@media (min-width: 700px) {
+  .subject-card-grid,
+  .future-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .subject-nav {
+    justify-content: stretch;
+  }
+
+  .subject-nav-link {
+    flex: 1 1 135px;
+    padding-inline: 10px;
+  }
+
+  .formula-card summary {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .formula-card summary::after {
+    position: absolute;
+    left: 16px;
+  }
+}
+
+/* Landing page */
+.landing-page {
+  display: grid;
+  gap: 18px;
+}
+
+.home-landing-header .intro {
+  max-width: 720px;
+  margin-inline: auto;
+}
+
+.landing-intro {
+  align-items: start;
+}
+
+.landing-subject-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.landing-subject-card {
+  position: relative;
+  display: grid;
+  gap: 8px;
+  min-height: 210px;
+  border: 1px solid rgba(47, 125, 104, 0.18);
+  border-radius: 22px;
+  padding: 18px;
+  background: var(--surface);
+  color: var(--text);
+  text-decoration: none;
+  box-shadow: var(--shadow);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.landing-subject-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(47, 125, 104, 0.36);
+  box-shadow: 0 18px 38px rgba(55, 67, 58, 0.15);
+}
+
+.landing-subject-card h3 {
+  margin: 10px 0 0;
+  color: var(--primary-dark);
+  font-size: 1.45rem;
+}
+
+.landing-subject-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.landing-subject-card small {
+  direction: ltr;
+  text-align: left;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.landing-subject-card.is-coming {
+  background: rgba(255, 250, 242, 0.72);
+  border-style: dashed;
+}
+
+.subject-badge {
+  width: fit-content;
+  border-radius: 999px;
+  padding: 4px 12px;
+  background: var(--soft);
+  color: var(--primary-dark);
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.muted-badge {
+  background: rgba(102, 117, 111, 0.12);
+  color: var(--muted);
+}
+
+.landing-next-steps h3 {
+  margin-top: 0;
+}
+
+@media (min-width: 760px) {
+  .landing-subject-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+
+/* Physics methodology page */
+.future-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.methodology-page .section-heading {
+  scroll-margin-top: 96px;
+}
+
+.methodology-steps-card {
+  background: linear-gradient(135deg, rgba(255, 250, 242, 0.98), rgba(247, 251, 246, 0.98));
+}
+
+.methodology-steps {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: method-step;
+}
+
+.methodology-steps li {
+  position: relative;
+  display: grid;
+  gap: 6px;
+  min-height: 72px;
+  border: 1px solid rgba(47, 125, 104, 0.18);
+  border-radius: 16px;
+  padding: 14px 58px 14px 14px;
+  background: var(--surface-strong);
+  box-shadow: var(--shadow-soft);
+  counter-increment: method-step;
+}
+
+.methodology-steps li::before {
+  content: counter(method-step);
+  position: absolute;
+  top: 16px;
+  right: 14px;
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--primary);
+  color: white;
+  font-weight: 700;
+}
+
+.methodology-steps p,
+.method-card p,
+.solution-lines p,
+.example-solution-card p {
+  margin: 0;
+}
+
+.fr {
+  direction: ltr;
+  text-align: left;
+  color: var(--muted);
+}
+
+.method-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.method-card {
+  display: grid;
+  gap: 8px;
+  border: 1px solid rgba(47, 125, 104, 0.18);
+  border-radius: 16px;
+  padding: 14px;
+  background: #f7fbf6;
+  box-shadow: var(--shadow-soft);
+}
+
+.method-card h3 {
+  margin: 0;
+}
+
+.unit-checklist {
+  display: grid;
+  gap: 10px;
+}
+
+.unit-checklist div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border: 1px solid rgba(47, 125, 104, 0.16);
+  border-radius: 14px;
+  padding: 10px 12px;
+  background: var(--surface);
+}
+
+.unit-checklist strong {
+  color: var(--primary-dark);
+  direction: ltr;
+}
+
+.unit-checklist span {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.method-warning {
+  margin: 12px 0 0;
+  border-right: 5px solid var(--accent);
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: var(--accent-soft);
+  color: #68442f;
+  font-weight: 700;
+}
+
+.solution-template,
+.example-solution-card,
+.next-actions-card,
+.physics-tools-strip {
+  border-color: rgba(47, 125, 104, 0.24);
+}
+
+.solution-lines {
+  display: grid;
+  gap: 8px;
+  border-radius: 16px;
+  padding: 12px;
+  background: #f7fbf6;
+}
+
+@media (min-width: 760px) {
+  .method-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .unit-checklist div {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+/* Physics common mistakes page */
+.mistakes-page .section-heading {
+  scroll-margin-top: 96px;
+}
+
+.mistake-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.mistake-card {
+  display: grid;
+  gap: 8px;
+  border: 1px solid rgba(47, 125, 104, 0.18);
+  border-radius: 18px;
+  padding: 14px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(247, 251, 246, 0.98));
+  box-shadow: var(--shadow-soft);
+}
+
+.mistake-card h3,
+.mistake-card p,
+.mistake-fix {
+  margin: 0;
+}
+
+.mistake-tag {
+  justify-self: start;
+  border-radius: 999px;
+  padding: 4px 10px;
+  background: var(--accent-soft);
+  color: #6f4f2f;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.mistake-fix {
+  border-right: 4px solid var(--primary);
+  border-radius: 12px;
+  padding: 9px 10px;
+  background: rgba(47, 125, 104, 0.08);
+  color: var(--primary-dark);
+}
+
+.exam-checklist-card {
+  background: linear-gradient(135deg, rgba(255, 250, 242, 0.98), rgba(247, 251, 246, 0.98));
+}
+
+.checklist-grid {
+  display: grid;
+  gap: 10px;
+}
+
+.checklist-grid label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid rgba(47, 125, 104, 0.16);
+  border-radius: 14px;
+  padding: 10px 12px;
+  background: var(--surface-strong);
+  color: var(--text);
+  font-weight: 700;
+}
+
+.checklist-grid input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--primary);
+}
+
+@media (min-width: 760px) {
+  .mistake-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .checklist-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+
+/* Physics interactive exercises page */
+.exercises-page .section-heading {
+  scroll-margin-top: 96px;
+}
+
+.exercise-score-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  background: linear-gradient(135deg, rgba(47, 125, 104, 0.10), rgba(212, 168, 83, 0.12));
+}
+
+.exercise-score-card h2,
+.exercise-score-card p {
+  margin: 0;
+}
+
+.quiz-reset-btn,
+.check-answer-btn {
+  border: 0;
+  border-radius: 999px;
+  padding: 10px 16px;
+  background: var(--primary);
+  color: #fff;
+  font-family: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.quiz-reset-btn:hover,
+.check-answer-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-soft);
+}
+
+.exercise-grid {
+  display: grid;
+  gap: 16px;
+  margin: 0 auto 28px;
+  max-width: 1120px;
+  width: min(100% - 28px, 1120px);
+}
+
+.exercise-card {
+  display: grid;
+  gap: 12px;
+  border: 1px solid rgba(47, 125, 104, 0.18);
+  border-radius: 20px;
+  padding: 16px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(247, 251, 246, 0.98));
+  box-shadow: var(--shadow-soft);
+}
+
+.exercise-card h3,
+.exercise-card p {
+  margin: 0;
+}
+
+.exercise-card[data-status="correct"] {
+  border-color: rgba(47, 125, 104, 0.55);
+}
+
+.exercise-card[data-status="wrong"] {
+  border-color: rgba(175, 79, 79, 0.42);
+}
+
+.exercise-tag {
+  justify-self: start;
+  border-radius: 999px;
+  padding: 4px 10px;
+  background: var(--accent-soft);
+  color: #6f4f2f;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.quiz-options {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.quiz-options.vertical {
+  flex-direction: column;
+}
+
+.quiz-options button {
+  border: 1px solid rgba(47, 125, 104, 0.24);
+  border-radius: 14px;
+  padding: 10px 12px;
+  background: var(--surface-strong);
+  color: var(--text);
+  font-family: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  text-align: right;
+}
+
+.quiz-options button.selected {
+  border-color: var(--primary);
+  background: rgba(47, 125, 104, 0.10);
+  color: var(--primary-dark);
+}
+
+.exercise-feedback {
+  border-radius: 14px;
+  padding: 10px 12px;
+  font-weight: 800;
+}
+
+.exercise-feedback.is-correct {
+  background: rgba(47, 125, 104, 0.12);
+  color: var(--primary-dark);
+}
+
+.exercise-feedback.is-wrong {
+  background: rgba(175, 79, 79, 0.12);
+  color: #8a3838;
+}
+
+.exercise-feedback.is-warning {
+  background: rgba(212, 168, 83, 0.16);
+  color: #7a5522;
+}
+
+.exercise-solution {
+  border-radius: 16px;
+  border: 1px solid rgba(47, 125, 104, 0.16);
+  background: rgba(255, 255, 255, 0.78);
+  padding: 10px 12px;
+}
+
+.exercise-solution summary {
+  cursor: pointer;
+  color: var(--primary-dark);
+  font-weight: 900;
+}
+
+.exercise-solution ol {
+  margin: 10px 0 8px;
+  padding-right: 20px;
+}
+
+.exercise-method-card {
+  background: linear-gradient(135deg, rgba(255, 250, 242, 0.98), rgba(247, 251, 246, 0.98));
+}
+
+.methodology-steps.compact {
+  margin: 0;
+}
+
+@media (min-width: 820px) {
+  .exercise-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

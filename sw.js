@@ -1,8 +1,14 @@
-const CACHE_NAME = "douae-bac2-v8";
+const CACHE_NAME = "douae-bac2-v20-physics-exercises";
 
 const STATIC_ASSETS = [
   "./",
   "./index.html",
+  "./philosophy.html",
+  "./physics-equations.html",
+  "./physics-methodology.html",
+  "./physics-common-mistakes.html",
+  "./physics-exercises.html",
+  "./chemistry-equations.html",
   "./styles.css",
   "./app.js",
   "./data.js",
@@ -32,14 +38,30 @@ self.addEventListener("activate", (event) => {
 self.addEventListener("fetch", (event) => {
   if (event.request.method !== "GET") return;
 
-  event.respondWith(
-    caches.match(event.request).then((cachedResponse) => {
-      if (cachedResponse) return cachedResponse;
+  const request = event.request;
+  const isHtmlRequest = request.mode === "navigate" || request.headers.get("accept")?.includes("text/html");
 
-      return fetch(event.request)
+  if (isHtmlRequest) {
+    event.respondWith(
+      fetch(request)
         .then((networkResponse) => {
           const responseClone = networkResponse.clone();
-          caches.open(CACHE_NAME).then((cache) => cache.put(event.request, responseClone));
+          caches.open(CACHE_NAME).then((cache) => cache.put(request, responseClone));
+          return networkResponse;
+        })
+        .catch(() => caches.match(request).then((cachedResponse) => cachedResponse || caches.match("./index.html")))
+    );
+    return;
+  }
+
+  event.respondWith(
+    caches.match(request).then((cachedResponse) => {
+      if (cachedResponse) return cachedResponse;
+
+      return fetch(request)
+        .then((networkResponse) => {
+          const responseClone = networkResponse.clone();
+          caches.open(CACHE_NAME).then((cache) => cache.put(request, responseClone));
           return networkResponse;
         })
         .catch(() => caches.match("./index.html"));

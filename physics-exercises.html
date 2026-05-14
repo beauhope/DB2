@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#2f7d68">
+    <title>تمارين قصيرة تفاعلية في الفيزياء - ثانية باك علوم فيزيائية</title>
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <div class="header-content">
+        <a class="brand" href="./index.html" aria-label="العودة إلى الصفحة الرئيسية">
+          <img src="DB2_logo.png" alt="شعار DB2 - ثانية علوم فيزياء" class="site-logo-img">
+        </a>
+
+        <nav class="subject-nav" aria-label="أقسام المراجعة">
+          <a class="subject-nav-link" href="./index.html">الرئيسية</a>
+          <a class="subject-nav-link" href="./philosophy.html">الفلسفة</a>
+          <a class="subject-nav-link active" href="./physics-equations.html">الفيزياء</a>
+          <a class="subject-nav-link" href="./chemistry-equations.html">الكيمياء</a>
+          <span class="subject-nav-link is-disabled" aria-disabled="true">الرياضيات قريبًا</span>
+        </nav>
+
+        <p class="eyebrow">ثانية باك علوم فيزيائية</p>
+        <h1>تمارين قصيرة تفاعلية في الفيزياء</h1>
+        <p class="intro">Exercices interactifs courts en physique</p>
+        <p class="intro">تدريب سريع على اختيار العلاقة المناسبة، تطبيق منهجية الحل، ثم مقارنة جوابك بالحل المنظم.</p>
+      </div>
+    </header>
+
+    <main class="formula-page exercises-page">
+      <nav class="breadcrumb" aria-label="مسار التنقل">
+        <a class="breadcrumb-link" href="./index.html">الرئيسية</a>
+        <span class="breadcrumb-separator" aria-hidden="true">›</span>
+        <a class="breadcrumb-link" href="./physics-equations.html">الفيزياء</a>
+        <span class="breadcrumb-separator" aria-hidden="true">›</span>
+        <span class="breadcrumb-current">تمارين تفاعلية</span>
+      </nav>
+
+      <section class="home-dashboard formula-hero-card">
+        <div>
+          <p class="eyebrow">تدريب قصير قبل التمارين الطويلة</p>
+          <h2>كيف تستعمل هذه الصفحة؟</h2>
+          <p class="muted">اختر الجواب، ثم اضغط على زر التحقق. بعد ذلك اقرأ منهجية الحل والحل الملائم. الهدف ليس معرفة الجواب فقط، بل فهم سبب اختيار العلاقة.</p>
+        </div>
+        <div class="formula-note">
+          بعد كل تمرين اسأل نفسك: ما المعطيات؟ ما المطلوب؟ ما العلاقة التي تربط بينهما؟ وهل الوحدات صحيحة؟
+        </div>
+      </section>
+
+      <section class="content-block">
+        <h3>فهرس الصفحة / Sommaire</h3>
+        <div class="toc-actions formula-toc">
+          <a class="toc-button" href="#true-false">صح أو خطأ / Vrai-Faux</a>
+          <a class="toc-button" href="#mcq">اختر الجواب / QCM</a>
+          <a class="toc-button" href="#complete-equation">أكمل المعادلة / Compléter</a>
+          <a class="toc-button" href="#choose-relation">اختر العلاقة / Choisir la relation</a>
+          <a class="toc-button" href="#method-box">منهجية مختصرة / Méthode</a>
+        </div>
+      </section>
+
+      <section class="content-block exercise-score-card" aria-live="polite">
+        <div>
+          <p class="eyebrow">نتيجتك الحالية</p>
+          <h2><span id="scoreValue">0</span> / <span id="scoreTotal">0</span></h2>
+          <p class="muted">النتيجة تتحدث كلما تحققت من تمرين. يمكن إعادة المحاولة قبل الانتقال إلى تمرين آخر.</p>
+        </div>
+        <button class="quiz-reset-btn" type="button" id="resetQuiz">إعادة المحاولة / Recommencer</button>
+      </section>
+
+      <section class="section-heading" id="true-false">
+        <p class="eyebrow">النوع الأول</p>
+        <h2>صح أو خطأ / Vrai ou Faux</h2>
+        <p class="muted">هذا النوع يساعدك على تصحيح المفاهيم السريعة المرتبطة بالمعادلات.</p>
+      </section>
+
+      <section class="exercise-grid">
+        <article class="exercise-card" data-answer="true">
+          <span class="exercise-tag">ميكانيك</span>
+          <h3>إذا تضاعفت سرعة جسم، فإن طاقته الحركية تصبح أربع مرات أكبر.</h3>
+          <p class="fr">Si la vitesse d’un corps double, son énergie cinétique devient quatre fois plus grande.</p>
+          <div class="quiz-options" role="group" aria-label="اختيار الجواب">
+            <button type="button" data-choice="true">صحيح / Vrai</button>
+            <button type="button" data-choice="false">خطأ / Faux</button>
+          </div>
+          <button class="check-answer-btn" type="button">تحقق من الجواب</button>
+          <div class="exercise-feedback" hidden></div>
+          <details class="exercise-solution">
+            <summary>منهجية الحل والحل الملائم</summary>
+            <ol>
+              <li>المعطيات: السرعة تضاعفت.</li>
+              <li>العلاقة: الطاقة الحركية تعتمد على مربع السرعة.</li>
+              <li>إذا أصبحت السرعة 2v فإن v² تصبح 4v².</li>
+            </ol>
+            <p><strong>الحل:</strong> العبارة صحيحة، لأن Ec = 1/2 m v².</p>
+          </details>
+        </article>
+
+        <article class="exercise-card" data-answer="false">
+          <span class="exercise-tag">كهرباء</span>
+          <h3>في العلاقة U = R I، يمكن استعمال R بالأوم و I بالملي أمبير دون تحويل.</h3>
+          <p class="fr">Dans U = R I, on peut utiliser R en ohm et I en milliampère sans conversion.</p>
+          <div class="quiz-options" role="group" aria-label="اختيار الجواب">
+            <button type="button" data-choice="true">صحيح / Vrai</button>
+            <button type="button" data-choice="false">خطأ / Faux</button>
+          </div>
+          <button class="check-answer-btn" type="button">تحقق من الجواب</button>
+          <div class="exercise-feedback" hidden></div>
+          <details class="exercise-solution">
+            <summary>منهجية الحل والحل الملائم</summary>
+            <ol>
+              <li>نحدد العلاقة: U = R I.</li>
+              <li>الوحدة المناسبة لشدة التيار في النظام الدولي هي الأمبير A.</li>
+              <li>إذا أعطيت I بالملي أمبير، نحولها إلى أمبير قبل التعويض.</li>
+            </ol>
+            <p><strong>الحل:</strong> العبارة خطأ. يجب تحويل mA إلى A.</p>
+          </details>
+        </article>
+      </section>
+
+      <section class="section-heading" id="mcq">
+        <p class="eyebrow">النوع الثاني</p>
+        <h2>اختر الجواب الصحيح / QCM</h2>
+      </section>
+
+      <section class="exercise-grid">
+        <article class="exercise-card" data-answer="b">
+          <span class="exercise-tag">موجات</span>
+          <h3>موجة طولها الموجي λ = 0.50 m وترددها f = 20 Hz. ما سرعة انتشارها؟</h3>
+          <p class="fr">Une onde a une longueur d’onde λ = 0,50 m et une fréquence f = 20 Hz. Quelle est sa célérité ?</p>
+          <div class="quiz-options vertical" role="group" aria-label="اختيار الجواب">
+            <button type="button" data-choice="a">5 m/s</button>
+            <button type="button" data-choice="b">10 m/s</button>
+            <button type="button" data-choice="c">40 m/s</button>
+          </div>
+          <button class="check-answer-btn" type="button">تحقق من الجواب</button>
+          <div class="exercise-feedback" hidden></div>
+          <details class="exercise-solution">
+            <summary>منهجية الحل والحل الملائم</summary>
+            <ol>
+              <li>المعطيات: λ = 0.50 m و f = 20 Hz.</li>
+              <li>المطلوب: سرعة الانتشار v.</li>
+              <li>العلاقة المناسبة: v = λ f.</li>
+              <li>التعويض: v = 0.50 × 20 = 10 m/s.</li>
+            </ol>
+            <p><strong>الحل:</strong> الجواب الصحيح هو 10 m/s.</p>
+          </details>
+        </article>
+
+        <article class="exercise-card" data-answer="c">
+          <span class="exercise-tag">نووي</span>
+          <h3>إذا كان النشاط A = 200 Bq وثابت التفكك λ = 0.5 s⁻¹، فما عدد النوى N؟</h3>
+          <p class="fr">Si A = 200 Bq et λ = 0,5 s⁻¹, quel est le nombre de noyaux N ?</p>
+          <div class="quiz-options vertical" role="group" aria-label="اختيار الجواب">
+            <button type="button" data-choice="a">100</button>
+            <button type="button" data-choice="b">200</button>
+            <button type="button" data-choice="c">400</button>
+          </div>
+          <button class="check-answer-btn" type="button">تحقق من الجواب</button>
+          <div class="exercise-feedback" hidden></div>
+          <details class="exercise-solution">
+            <summary>منهجية الحل والحل الملائم</summary>
+            <ol>
+              <li>المعطيات: A = 200 Bq و λ = 0.5 s⁻¹.</li>
+              <li>المطلوب: N.</li>
+              <li>العلاقة: A = λN، إذن N = A / λ.</li>
+              <li>التعويض: N = 200 / 0.5 = 400.</li>
+            </ol>
+            <p><strong>الحل:</strong> عدد النوى هو 400.</p>
+          </details>
+        </article>
+      </section>
+
+      <section class="section-heading" id="complete-equation">
+        <p class="eyebrow">النوع الثالث</p>
+        <h2>أكمل المعادلة / Compléter l’équation</h2>
+      </section>
+
+      <section class="exercise-grid">
+        <article class="exercise-card" data-answer="c">
+          <span class="exercise-tag">مكثف</span>
+          <h3>أكمل العلاقة: الطاقة المخزنة في مكثف هي E = ?</h3>
+          <p class="fr">Complète la relation : l’énergie stockée dans un condensateur est E = ?</p>
+          <div class="quiz-options vertical" role="group" aria-label="اختيار الجواب">
+            <button type="button" data-choice="a">C × U</button>
+            <button type="button" data-choice="b">R × I</button>
+            <button type="button" data-choice="c">1/2 × C × U²</button>
+          </div>
+          <button class="check-answer-btn" type="button">تحقق من الجواب</button>
+          <div class="exercise-feedback" hidden></div>
+          <details class="exercise-solution">
+            <summary>منهجية الحل والحل الملائم</summary>
+            <ol>
+              <li>المجال: كهرباء، مكثف.</li>
+              <li>المطلوب: طاقة مخزنة.</li>
+              <li>العلاقة المناسبة: E = 1/2 C U².</li>
+            </ol>
+            <p><strong>الحل:</strong> الجواب الصحيح هو E = 1/2 × C × U².</p>
+          </details>
+        </article>
+
+        <article class="exercise-card" data-answer="a">
+          <span class="exercise-tag">ميكانيك</span>
+          <h3>أكمل العلاقة: الوزن P يساوي...</h3>
+          <p class="fr">Complète la relation : le poids P est égal à...</p>
+          <div class="quiz-options vertical" role="group" aria-label="اختيار الجواب">
+            <button type="button" data-choice="a">m × g</button>
+            <button type="button" data-choice="b">m × v</button>
+            <button type="button" data-choice="c">R × I</button>
+          </div>
+          <button class="check-answer-btn" type="button">تحقق من الجواب</button>
+          <div class="exercise-feedback" hidden></div>
+          <details class="exercise-solution">
+            <summary>منهجية الحل والحل الملائم</summary>
+            <ol>
+              <li>المجال: الثقالة والقوى.</li>
+              <li>المطلوب: الوزن.</li>
+              <li>العلاقة: P = m g.</li>
+            </ol>
+            <p><strong>الحل:</strong> الجواب الصحيح هو P = m × g.</p>
+          </details>
+        </article>
+      </section>
+
+      <section class="section-heading" id="choose-relation">
+        <p class="eyebrow">النوع الرابع</p>
+        <h2>اختر العلاقة المناسبة / Choisir la relation adaptée</h2>
+      </section>
+
+      <section class="exercise-grid">
+        <article class="exercise-card" data-answer="b">
+          <span class="exercise-tag">ميكانيك</span>
+          <h3>جسم كتلته وسرعته معطاتان، والمطلوب حساب طاقته الحركية. ما العلاقة المناسبة؟</h3>
+          <p class="fr">La masse et la vitesse d’un corps sont données. On demande son énergie cinétique. Quelle relation utiliser ?</p>
+          <div class="quiz-options vertical" role="group" aria-label="اختيار الجواب">
+            <button type="button" data-choice="a">P = m g</button>
+            <button type="button" data-choice="b">Ec = 1/2 m v²</button>
+            <button type="button" data-choice="c">U = R I</button>
+          </div>
+          <button class="check-answer-btn" type="button">تحقق من الجواب</button>
+          <div class="exercise-feedback" hidden></div>
+          <details class="exercise-solution">
+            <summary>منهجية الحل والحل الملائم</summary>
+            <ol>
+              <li>نبدأ بالمطلوب: الطاقة الحركية Ec.</li>
+              <li>نبحث عن علاقة فيها Ec وتستعمل الكتلة والسرعة.</li>
+              <li>العلاقة التي تربط هذه المعطيات هي Ec = 1/2 m v².</li>
+            </ol>
+            <p><strong>الحل:</strong> العلاقة المناسبة هي Ec = 1/2 m v².</p>
+          </details>
+        </article>
+
+        <article class="exercise-card" data-answer="a">
+          <span class="exercise-tag">RC</span>
+          <h3>تمرين يتحدث عن شحن مكثف في دارة RC وثابتة الزمن. ما العلاقة الأساسية لثابتة الزمن؟</h3>
+          <p class="fr">Un exercice parle de la charge d’un condensateur dans un circuit RC et de la constante de temps. Quelle relation utiliser ?</p>
+          <div class="quiz-options vertical" role="group" aria-label="اختيار الجواب">
+            <button type="button" data-choice="a">τ = R C</button>
+            <button type="button" data-choice="b">τ = L / R</button>
+            <button type="button" data-choice="c">T = 1 / f</button>
+          </div>
+          <button class="check-answer-btn" type="button">تحقق من الجواب</button>
+          <div class="exercise-feedback" hidden></div>
+          <details class="exercise-solution">
+            <summary>منهجية الحل والحل الملائم</summary>
+            <ol>
+              <li>الكلمة المفتاحية: مكثف ودارة RC.</li>
+              <li>في دارة RC، ثابتة الزمن ترتبط بالمقاومة والسعة.</li>
+              <li>العلاقة المناسبة هي τ = R C.</li>
+            </ol>
+            <p><strong>الحل:</strong> العلاقة المناسبة هي τ = R C.</p>
+          </details>
+        </article>
+      </section>
+
+      <section class="section-heading" id="method-box">
+        <p class="eyebrow">منهجية ثابتة</p>
+        <h2>طريقة التعامل مع أي تمرين قصير / Méthode pour chaque exercice court</h2>
+      </section>
+
+      <section class="content-block exercise-method-card">
+        <ol class="methodology-steps compact">
+          <li><strong>المجال / Domaine :</strong> هل التمرين في الميكانيك، الكهرباء، الموجات، أم النووي؟</li>
+          <li><strong>المعطيات / Données :</strong> اكتب القيم المعطاة مع الوحدات.</li>
+          <li><strong>المطلوب / Inconnue :</strong> حدد الرمز المطلوب حسابه.</li>
+          <li><strong>العلاقة / Relation :</strong> اختر العلاقة التي تربط المعطيات بالمطلوب.</li>
+          <li><strong>الوحدات / Unités :</strong> حوّل إلى الوحدات المناسبة قبل التعويض.</li>
+          <li><strong>النتيجة / Résultat :</strong> اكتب الجواب بوحدة واضحة وتحقق من منطقيته.</li>
+        </ol>
+      </section>
+
+      <section class="content-block next-actions-card">
+        <h3>تابع المراجعة</h3>
+        <div class="toc-actions formula-toc">
+          <a class="toc-button" href="./physics-equations.html">بنك معادلات الفيزياء</a>
+          <a class="toc-button" href="./physics-methodology.html">منهجية حل التمارين</a>
+          <a class="toc-button" href="./physics-common-mistakes.html">الأخطاء الشائعة</a>
+          <a class="toc-button" href="./index.html">العودة إلى الصفحة الرئيسية</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="brand-mark">DB2</span>
+          <div>
+            <strong>Douae Bac 2</strong>
+            <p>ثانية باك علوم فيزيائية</p>
+          </div>
+        </div>
+        <p>تمارين تفاعلية قصيرة لتثبيت منهجية الحل قبل الانتقال إلى تمارين أطول.</p>
+        <p class="footer-meta">من إعداد: دعاء جول · 2026</p>
+        <p class="footer-note">هذا الموقع مخصص للمراجعة والدعم، ولا يغني عن الدروس الرسمية وتوجيهات الأستاذ.</p>
+      </div>
+    </footer>
+
+    <button class="to-top" id="toTop" type="button" aria-label="العودة للأعلى">↑</button>
+
+    <script>
+      const toTop = document.getElementById("toTop");
+      window.addEventListener("scroll", () => {
+        toTop.classList.toggle("visible", window.scrollY > 450);
+      });
+      toTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+
+      const cards = Array.from(document.querySelectorAll(".exercise-card"));
+      const scoreValue = document.getElementById("scoreValue");
+      const scoreTotal = document.getElementById("scoreTotal");
+      const resetQuiz = document.getElementById("resetQuiz");
+      scoreTotal.textContent = cards.length;
+
+      function updateScore() {
+        const correct = cards.filter((card) => card.dataset.status === "correct").length;
+        scoreValue.textContent = correct;
+      }
+
+      cards.forEach((card) => {
+        const optionButtons = Array.from(card.querySelectorAll("[data-choice]"));
+        const checkButton = card.querySelector(".check-answer-btn");
+        const feedback = card.querySelector(".exercise-feedback");
+
+        optionButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            optionButtons.forEach((btn) => btn.classList.remove("selected"));
+            button.classList.add("selected");
+            card.dataset.choice = button.dataset.choice;
+          });
+        });
+
+        checkButton.addEventListener("click", () => {
+          const selected = card.dataset.choice;
+          if (!selected) {
+            feedback.hidden = false;
+            feedback.className = "exercise-feedback is-warning";
+            feedback.textContent = "اختاري جوابًا أولًا، ثم اضغطي على التحقق.";
+            return;
+          }
+
+          const isCorrect = selected === card.dataset.answer;
+          card.dataset.status = isCorrect ? "correct" : "wrong";
+          feedback.hidden = false;
+          feedback.className = isCorrect ? "exercise-feedback is-correct" : "exercise-feedback is-wrong";
+          feedback.textContent = isCorrect
+            ? "جواب صحيح. افتحي منهجية الحل لتثبيت الفكرة."
+            : "الجواب غير صحيح. راجعي منهجية الحل والحل الملائم أسفل التمرين.";
+          updateScore();
+        });
+      });
+
+      resetQuiz.addEventListener("click", () => {
+        cards.forEach((card) => {
+          delete card.dataset.choice;
+          delete card.dataset.status;
+          card.querySelectorAll("[data-choice]").forEach((button) => button.classList.remove("selected"));
+          const feedback = card.querySelector(".exercise-feedback");
+          feedback.hidden = true;
+          feedback.textContent = "";
+          const solution = card.querySelector(".exercise-solution");
+          if (solution) solution.open = false;
+        });
+        updateScore();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("./sw.js");
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -4,130 +4,106 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#2f7d68">
-    <title>مراجعة الفلسفة - ثانية باك علوم فيزيائية</title>
+    <title>منصة مراجعة باك علوم فيزيائية</title>
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <header class="site-header" id="top">
+    <header class="site-header home-landing-header" id="top">
       <div class="header-content">
-        <a class="brand" id="brandHome" href="./index.html" aria-label="العودة إلى الصفحة الرئيسية">
+        <a class="brand" href="./index.html" aria-label="العودة إلى الصفحة الرئيسية">
           <img src="DB2_logo.png" alt="شعار DB2 - ثانية علوم فيزياء" class="site-logo-img">
         </a>
 
-        <p class="eyebrow">ثانية باك علوم فيزيائية</p>
-        <h1>مراجعة الفلسفة</h1>
-        <p class="intro">
-          نموذج أولي بسيط ومنظم للمراجعة، مع حفظ التقدم وأسئلة تفاعلية.
-        </p>
+        <nav class="subject-nav" aria-label="أقسام المراجعة">
+          <a class="subject-nav-link active" href="./index.html">الرئيسية</a>
+          <a class="subject-nav-link" href="./philosophy.html">الفلسفة</a>
+          <a class="subject-nav-link" href="./physics-equations.html">الفيزياء</a>
+          <a class="subject-nav-link" href="./chemistry-equations.html">الكيمياء</a>
+          <span class="subject-nav-link is-disabled" aria-disabled="true">الرياضيات قريبًا</span>
+        </nav>
 
-        <label class="search-label" for="searchInput">البحث داخل الدروس</label>
-        <div class="search-box">
-          <input id="searchInput" type="search" placeholder="اكتبي كلمة مثل: الشخص، الهوية، القيمة">
-          <button id="clearSearch" type="button">مسح</button>
-        </div>
+        <p class="eyebrow">ثانية باك علوم فيزيائية</p>
+        <h1>منصة مراجعة باك علوم فيزيائية</h1>
+        <p class="intro">
+          بوابة بسيطة ومنظمة تجمع مواد المراجعة في مكان واحد: الفلسفة، الفيزياء، الكيمياء، والرياضيات لاحقًا.
+        </p>
       </div>
     </header>
 
-    <main>
-      <section class="screen active" id="homeScreen" aria-labelledby="modulesTitle">
-        <section class="home-dashboard" aria-label="تقدم المراجعة العام">
-          <div>
-            <p class="eyebrow">تقدمك العام</p>
-            <h2 id="progressCount">0 من 0 درس</h2>
-            <p class="muted" id="progressText">ابدئي بأول درس واحفظي تقدمك تلقائيا.</p>
-          </div>
-          <div class="overall-progress" aria-hidden="true">
-            <span id="progressFill"></span>
-          </div>
-        </section>
-
-        <div class="section-heading">
-          <p class="eyebrow">المجزوءات</p>
-          <h2 id="modulesTitle">اختاري مجزوءة للمراجعة</h2>
+    <main class="landing-page">
+      <section class="home-dashboard landing-intro" aria-label="تقديم المنصة">
+        <div>
+          <p class="eyebrow">Révision Bac Sciences Physiques</p>
+          <h2>اختاري المادة وابدئي المراجعة</h2>
+          <p class="muted">
+            الهدف من هذه الصفحة أن تكون مدخلًا واضحًا لكل مواد المراجعة، بدل أن تكون الصفحة الرئيسية مخصصة لمادة واحدة فقط.
+          </p>
         </div>
-        <div class="module-grid" id="moduleGrid"></div>
+        <div class="formula-note">
+          نعمل خطوة بخطوة: نثبت الصفحات الأساسية أولًا، ثم نضيف المنهجيات، الأخطاء الشائعة، والتمارين التفاعلية.
+        </div>
       </section>
 
-      <section class="screen" id="moduleScreen" aria-labelledby="moduleTitle">
-        <nav class="breadcrumb" aria-label="مسار التنقل">
-          <button class="breadcrumb-link" id="moduleHomeCrumb" type="button">الرئيسية</button>
-          <span class="breadcrumb-separator" aria-hidden="true">›</span>
-          <span class="breadcrumb-current" id="moduleCurrentCrumb">المجزوءة</span>
-        </nav>
-        <button class="back-button" id="backToHome" type="button">رجوع</button>
-        <div class="section-heading">
-          <p class="eyebrow" id="moduleLabel">مجزوءة</p>
-          <h2 id="moduleTitle"></h2>
-          <p id="moduleDescription" class="muted"></p>
-        </div>
-        <div class="lesson-list" id="lessonList"></div>
+      <section class="section-heading">
+        <p class="eyebrow">مواد المراجعة</p>
+        <h2>بطاقات المواد</h2>
+        <p class="muted">كل بطاقة تقود إلى قسم مستقل داخل الموقع.</p>
       </section>
 
-      <section class="screen" id="lessonScreen" aria-labelledby="lessonTitle">
-        <nav class="breadcrumb" aria-label="مسار التنقل">
-          <button class="breadcrumb-link" id="lessonHomeCrumb" type="button">الرئيسية</button>
-          <span class="breadcrumb-separator" aria-hidden="true">›</span>
-          <button class="breadcrumb-link" id="lessonModuleCrumb" type="button"></button>
-          <span class="breadcrumb-separator" aria-hidden="true">›</span>
-          <span class="breadcrumb-current" id="lessonCurrentCrumb"></span>
-        </nav>
-        <button class="back-button" id="backToModule" type="button">رجوع إلى المجزوءة</button>
-        <article class="lesson-card">
-          <div class="lesson-top title-card">
-            <div>
-              <p class="eyebrow" id="lessonModuleName"></p>
-              <h2 id="lessonTitle"></h2>
-            </div>
-            <button class="review-button" id="markReviewed" type="button">✓ أنهيت مراجعة هذا الدرس</button>
-          </div>
+      <section class="landing-subject-grid" aria-label="بطاقات المواد">
+        <a class="landing-subject-card" href="./philosophy.html">
+          <span class="subject-badge">متاح الآن</span>
+          <h3>الفلسفة</h3>
+          <p>مجزوءات، ملخصات، خريطة ذهنية، وأسئلة صح أو خطأ.</p>
+          <small>Révision philosophie</small>
+        </a>
 
-          <nav class="lesson-toc" aria-label="فهرس الدرس">
-            <p class="toc-title">انتقلي إلى</p>
-            <div class="toc-actions">
-              <button class="toc-button" type="button" data-target="summarySection">الملخص</button>
-              <button class="toc-button" type="button" data-target="mindMapSection">الخريطة الذهنية</button>
-              <button class="toc-button" type="button" data-target="quizSection">صح أو خطأ</button>
-              <button class="toc-button" type="button" data-target="writingSection">التدريب الكتابي</button>
-              <button class="toc-button hidden" id="examMethodTocButton" type="button" data-target="examMethodSection">منهجية الامتحان</button>
-            </div>
-          </nav>
+        <a class="landing-subject-card" href="./physics-equations.html">
+          <span class="subject-badge">متاح الآن</span>
+          <h3>الفيزياء</h3>
+          <p>بنك المعادلات الأساسية مع شرح بالعربية والفرنسية.</p>
+          <small>Banque des équations de physique</small>
+        </a>
 
-          <section class="content-block" id="summarySection">
-            <h3>ملخص قصير</h3>
-            <div class="rich-text" id="lessonSummary"></div>
-          </section>
+        <a class="landing-subject-card" href="./chemistry-equations.html">
+          <span class="subject-badge">متاح الآن</span>
+          <h3>الكيمياء</h3>
+          <p>صفحة مستقلة لعلاقات الكيمياء الحسابية، المعايرة، pH، والتقدم الكيميائي.</p>
+          <small>Chimie quantitative</small>
+        </a>
 
-          <section class="content-block" id="mindMapSection">
-            <h3>خريطة ذهنية نصية</h3>
-            <ul class="mind-map" id="mindMap"></ul>
-          </section>
-
-          <section class="content-block" id="quizSection">
-            <div class="quiz-heading">
-              <h3>اختبري فهمك: صح أم خطأ؟</h3>
-              <p>اختاري الإجابة، ثم راجعي التصحيح مباشرة.</p>
-            </div>
-            <div id="quizList" class="quiz-list"></div>
-          </section>
-
-          <section class="content-block" id="writingSection">
-            <h3>تدريب كتابي قصير</h3>
-            <div class="rich-text" id="writingPrompt"></div>
-            <button class="secondary-button" id="toggleModelAnswer" type="button">إظهار نموذج جواب مختصر</button>
-            <div class="model-answer rich-text hidden" id="modelAnswer"></div>
-          </section>
-
-          <section class="content-block exam-method-card hidden" id="examMethodSection">
-            <h3>منهجية صغيرة للامتحان</h3>
-            <div class="exam-method-content" id="examMethodContent"></div>
-          </section>
-
-          <section class="content-block hidden" id="assignmentSection">
-            <h3>واجب صغير</h3>
-            <div class="rich-text" id="assignmentText"></div>
-          </section>
+        <article class="landing-subject-card is-coming">
+          <span class="subject-badge muted-badge">قريبًا</span>
+          <h3>الرياضيات المساعدة</h3>
+          <p>العلاقات الرياضية التي يحتاجها تلميذ الفيزياء: الأسية، اللوغاريتم، الاشتقاق، والمنحنيات.</p>
+          <small>Mathématiques utiles en physique</small>
         </article>
+      </section>
+
+      <section class="content-block landing-next-steps">
+        <h3>ما الذي سنضيفه لاحقًا؟</h3>
+        <div class="future-grid">
+          <a class="future-card future-link" href="./physics-methodology.html">
+            <span class="subject-badge">متاح الآن</span>
+            <h2>منهجية حل تمارين الفيزياء</h2>
+            <p>خطوات قراءة السؤال، استخراج المعطيات، اختيار العلاقة، تحويل الوحدات، وكتابة النتيجة.</p>
+          </a>
+          <a class="future-card future-link" href="./physics-common-mistakes.html">
+            <span class="subject-badge">متاح الآن</span>
+            <h2>أخطاء شائعة في امتحان الفيزياء</h2>
+            <p>أخطاء الوحدات، الخلط بين الرموز، واستعمال قانون غير مناسب، مع طريقة التصحيح.</p>
+          </a>
+          <a class="future-card future-link" href="./physics-exercises.html">
+            <span class="subject-badge">متاح الآن</span>
+            <h2>تمارين تفاعلية قصيرة</h2>
+            <p>صح أو خطأ، اختر الجواب الصحيح، أكمل المعادلة، واختر العلاقة المناسبة مع الحل المنظم.</p>
+          </a>
+          <div class="future-card">
+            <h2>مربع مؤشرات استعمال المعادلات</h2>
+            <p>نضيف داخل كل قسم: كيف أعرف أنني أحتاج هذه المعادلة في الامتحان؟</p>
+          </div>
+        </div>
       </section>
     </main>
 
@@ -152,9 +128,13 @@
 
     <button class="to-top" id="toTop" type="button" aria-label="العودة للأعلى">↑</button>
 
-    <script src="data.js"></script>
-    <script src="app.js"></script>
     <script>
+      const toTop = document.getElementById("toTop");
+      window.addEventListener("scroll", () => {
+        toTop.classList.toggle("visible", window.scrollY > 450);
+      });
+      toTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", () => {
           navigator.serviceWorker.register("./sw.js");

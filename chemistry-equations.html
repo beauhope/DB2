@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#2f7d68">
+    <title>بنك علاقات الكيمياء الحسابية - ثانية باك علوم فيزيائية</title>
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <div class="header-content">
+        <a class="brand" href="./index.html" aria-label="العودة إلى الصفحة الرئيسية">
+          <img src="DB2_logo.png" alt="شعار DB2 - ثانية علوم فيزياء" class="site-logo-img">
+        </a>
+
+        <nav class="subject-nav" aria-label="أقسام المراجعة">
+          <a class="subject-nav-link" href="./index.html">الرئيسية</a>
+          <a class="subject-nav-link" href="./philosophy.html">الفلسفة</a>
+          <a class="subject-nav-link" href="./physics-equations.html">الفيزياء</a>
+          <a class="subject-nav-link active" href="./chemistry-equations.html">الكيمياء</a>
+          <span class="subject-nav-link is-disabled" aria-disabled="true">الرياضيات قريبًا</span>
+        </nav>
+
+        <p class="eyebrow">ثانية باك علوم فيزيائية</p>
+        <h1>بنك علاقات الكيمياء الحسابية</h1>
+        <p class="intro">Banque des relations de chimie quantitative</p>
+        <p class="intro">صفحة مستقلة تجمع علاقات كمية المادة، التركيز، التخفيف، pH، المعايرة، والتقدم الكيميائي.</p>
+      </div>
+    </header>
+
+    <main class="formula-page chemistry-page">
+      <nav class="breadcrumb" aria-label="مسار التنقل">
+        <a class="breadcrumb-link" href="./index.html">الرئيسية</a>
+        <span class="breadcrumb-separator" aria-hidden="true">›</span>
+        <span class="breadcrumb-current">الكيمياء</span>
+      </nav>
+
+      <section class="home-dashboard formula-hero-card">
+        <div>
+          <p class="eyebrow">Chimie quantitative</p>
+          <h2>كيف نستعمل هذه الصفحة؟</h2>
+          <p class="muted">ابدأ بتحديد نوع السؤال: كمية مادة، تركيز، تخفيف، pH، معايرة، أو تقدم كيميائي. بعد ذلك اختر العلاقة المناسبة.</p>
+        </div>
+        <div class="formula-note">
+          في الكيمياء الحسابية، أكثر الأخطاء تأتي من الوحدات: mL/L، g/mol، mol/L، ومن شروط التكافؤ في المعايرة.
+        </div>
+      </section>
+
+      <section class="content-block">
+        <h3>فهرس سريع / Sommaire rapide</h3>
+        <div class="toc-actions formula-toc">
+          <a class="toc-button" href="#chimie-quantitative">العلاقات الأساسية / Relations essentielles</a>
+          <a class="toc-button" href="./physics-equations.html">العودة إلى الفيزياء / Retour à la physique</a>
+        </div>
+      </section>
+
+
+
+
+      <section class="formula-section chemistry-section" id="chimie-quantitative">
+        <div class="section-heading">
+          <p class="eyebrow">الكيمياء الحسابية</p>
+          <h2>الكيمياء الحسابية / Chimie quantitative</h2>
+          <p class="muted">في هذا القسم نبدأ بالعلاقات الحسابية الأكثر استعمالًا في التحولات الكيميائية، كمية المادة، التركيز، pH، والمعايرة.</p>
+        </div>
+
+        <details class="formula-card">
+          <summary><span>1. كمية المادة انطلاقًا من الكتلة</span><small>Quantité de matière à partir de la masse</small></summary>
+          <div class="formula-body">
+            <div class="equation-box">n = m / M</div>
+            <h3>معنى المعادلة / Sens de l’équation</h3>
+            <p>تربط هذه العلاقة بين كمية المادة، كتلة العينة، والكتلة المولية.</p>
+            <p class="fr">Cette relation lie la quantité de matière, la masse de l’échantillon et la masse molaire.</p>
+            <h3>متى نستعملها؟ / Quand l’utiliser ?</h3>
+            <p>نستعملها عندما يعطينا التمرين كتلة مادة ويريد حساب كمية المادة بالمول.</p>
+            <p class="fr">On l’utilise quand l’exercice donne la masse d’une espèce chimique et demande la quantité de matière.</p>
+            <h3>الوحدات / Unités</h3>
+            <p>n : mol · m : g أو kg · M : g/mol أو kg/mol</p>
+            <h3>خطأ شائع / Erreur fréquente</h3>
+            <p>استعمال m بالغرام و M بالكيلوغرام لكل مول، أو العكس. يجب توحيد الوحدات.</p>
+            <p class="fr">Utiliser m en g et M en kg/mol, ou l’inverse. Il faut garder des unités cohérentes.</p>
+            <h3>صح أم خطأ؟ / Vrai ou Faux</h3>
+            <p>إذا كانت m = 10 g و M = 20 g/mol، فإن n = 0.5 mol.</p>
+            <p><strong>الجواب: صحيح.</strong> لأن n = 10 / 20 = 0.5 mol.</p>
+          </div>
+        </details>
+
+        <details class="formula-card">
+          <summary><span>2. التركيز المولي</span><small>Concentration molaire</small></summary>
+          <div class="formula-body">
+            <div class="equation-box">C = n / V</div>
+            <h3>معنى المعادلة / Sens de l’équation</h3>
+            <p>التركيز المولي يبين كمية المادة المذابة في كل لتر من المحلول.</p>
+            <p class="fr">La concentration molaire indique la quantité de matière dissoute dans un litre de solution.</p>
+            <h3>متى نستعملها؟ / Quand l’utiliser ?</h3>
+            <p>نستعملها عند دراسة محلول كيميائي وحساب تركيزه أو كمية المادة فيه.</p>
+            <p class="fr">On l’utilise pour étudier une solution et calculer sa concentration ou la quantité de matière dissoute.</p>
+            <h3>الوحدات / Unités</h3>
+            <p>C : mol/L أو mol·m⁻³ · n : mol · V : L أو m³</p>
+            <h3>خطأ شائع / Erreur fréquente</h3>
+            <p>نسيان تحويل الحجم من mL إلى L قبل الحساب.</p>
+            <p class="fr">Oublier de convertir le volume de mL en L avant le calcul.</p>
+            <h3>صح أم خطأ؟ / Vrai ou Faux</h3>
+            <p>إذا كان n = 0.02 mol و V = 0.10 L، فإن C = 0.20 mol/L.</p>
+            <p><strong>الجواب: صحيح.</strong> لأن C = 0.02 / 0.10 = 0.20 mol/L.</p>
+          </div>
+        </details>
+
+        <details class="formula-card">
+          <summary><span>3. التركيز الكتلي</span><small>Concentration massique</small></summary>
+          <div class="formula-body">
+            <div class="equation-box">C<sub>m</sub> = m / V</div>
+            <h3>معنى المعادلة / Sens de l’équation</h3>
+            <p>التركيز الكتلي يبين كتلة المذاب الموجودة في حجم معين من المحلول.</p>
+            <p class="fr">La concentration massique indique la masse de soluté contenue dans un volume donné de solution.</p>
+            <h3>متى نستعملها؟ / Quand l’utiliser ?</h3>
+            <p>نستعملها عندما يعطى التمرين الكتلة والحجم، أو عندما يطلب تركيزًا بوحدة g/L.</p>
+            <p class="fr">On l’utilise quand l’exercice donne la masse et le volume, ou demande une concentration en g/L.</p>
+            <h3>الوحدات / Unités</h3>
+            <p>C<sub>m</sub> : g/L · m : g · V : L</p>
+            <h3>خطأ شائع / Erreur fréquente</h3>
+            <p>الخلط بين التركيز المولي C والتركيز الكتلي C<sub>m</sub>.</p>
+            <p class="fr">Confondre la concentration molaire C et la concentration massique C<sub>m</sub>.</p>
+            <h3>صح أم خطأ؟ / Vrai ou Faux</h3>
+            <p>إذا ذوبنا 5 g في 0.5 L، فإن C<sub>m</sub> = 10 g/L.</p>
+            <p><strong>الجواب: صحيح.</strong> لأن C<sub>m</sub> = 5 / 0.5 = 10 g/L.</p>
+          </div>
+        </details>
+
+        <details class="formula-card">
+          <summary><span>4. علاقة التخفيف</span><small>Relation de dilution</small></summary>
+          <div class="formula-body">
+            <div class="equation-box">C<sub>i</sub> V<sub>i</sub> = C<sub>f</sub> V<sub>f</sub></div>
+            <h3>معنى المعادلة / Sens de l’équation</h3>
+            <p>أثناء التخفيف تبقى كمية المادة المذابة ثابتة، لكن الحجم يزداد والتركيز ينقص.</p>
+            <p class="fr">Lors d’une dilution, la quantité de matière dissoute reste constante, le volume augmente et la concentration diminue.</p>
+            <h3>متى نستعملها؟ / Quand l’utiliser ?</h3>
+            <p>نستعملها عند تحضير محلول مخفف انطلاقًا من محلول أم.</p>
+            <p class="fr">On l’utilise pour préparer une solution diluée à partir d’une solution mère.</p>
+            <h3>الوحدات / Unités</h3>
+            <p>يجب استعمال نفس وحدة الحجم في الطرفين، ونفس وحدة التركيز في الطرفين.</p>
+            <p class="fr">Il faut utiliser les mêmes unités de volume et les mêmes unités de concentration des deux côtés.</p>
+            <h3>خطأ شائع / Erreur fréquente</h3>
+            <p>الخلط بين V<sub>i</sub> حجم المحلول الأم المأخوذ و V<sub>f</sub> الحجم النهائي بعد إضافة الماء.</p>
+            <p class="fr">Confondre V<sub>i</sub>, volume prélevé, avec V<sub>f</sub>, volume final après ajout d’eau.</p>
+            <h3>صح أم خطأ؟ / Vrai ou Faux</h3>
+            <p>في التخفيف، يكون التركيز النهائي أصغر من التركيز الابتدائي.</p>
+            <p><strong>الجواب: صحيح.</strong> لأننا نضيف الماء دون إضافة كمية مادة جديدة.</p>
+          </div>
+        </details>
+
+        <details class="formula-card">
+          <summary><span>5. pH وتركيز أيونات الأوكسونيوم</span><small>pH et ions oxonium</small></summary>
+          <div class="formula-body">
+            <div class="equation-box">pH = -log[H3O<sup>+</sup>]</div>
+            <div class="equation-box">[H3O<sup>+</sup>] = 10<sup>-pH</sup></div>
+            <h3>معنى المعادلة / Sens de l’équation</h3>
+            <p>تربط هذه العلاقة بين pH المحلول وتركيز أيونات الأوكسونيوم.</p>
+            <p class="fr">Cette relation lie le pH d’une solution à la concentration des ions oxonium.</p>
+            <h3>متى نستعملها؟ / Quand l’utiliser ?</h3>
+            <p>نستعملها في دراسة المحاليل الحمضية والقاعدية، وحساب pH أو [H3O<sup>+</sup>].</p>
+            <p class="fr">On l’utilise pour étudier les solutions acides et basiques, et calculer le pH ou [H3O<sup>+</sup>].</p>
+            <h3>الوحدات / Unités</h3>
+            <p>[H3O<sup>+</sup>] غالبًا mol/L · pH بدون وحدة</p>
+            <h3>خطأ شائع / Erreur fréquente</h3>
+            <p>نسيان الإشارة السالبة في pH = -log[H3O<sup>+</sup>].</p>
+            <p class="fr">Oublier le signe moins dans pH = -log[H3O<sup>+</sup>].</p>
+            <h3>صح أم خطأ؟ / Vrai ou Faux</h3>
+            <p>إذا كان pH = 3، فإن [H3O<sup>+</sup>] = 10⁻³ mol/L.</p>
+            <p><strong>الجواب: صحيح.</strong> لأن [H3O<sup>+</sup>] = 10<sup>-pH</sup>.</p>
+          </div>
+        </details>
+
+        <details class="formula-card">
+          <summary><span>6. الجداء الأيوني للماء</span><small>Produit ionique de l’eau</small></summary>
+          <div class="formula-body">
+            <div class="equation-box">K<sub>e</sub> = [H3O<sup>+</sup>] [HO<sup>-</sup>]</div>
+            <div class="equation-box">K<sub>e</sub> = 10⁻¹⁴ عند 25°C</div>
+            <h3>معنى المعادلة / Sens de l’équation</h3>
+            <p>تربط هذه العلاقة بين تركيز أيونات الأوكسونيوم وتركيز أيونات الهيدروكسيد في الماء.</p>
+            <p class="fr">Cette relation lie les concentrations des ions oxonium et hydroxyde dans l’eau.</p>
+            <h3>متى نستعملها؟ / Quand l’utiliser ?</h3>
+            <p>نستعملها للانتقال بين [H3O<sup>+</sup>] و [HO<sup>-</sup>] أو عند دراسة الوسط الحمضي والقاعدي.</p>
+            <p class="fr">On l’utilise pour passer de [H3O<sup>+</sup>] à [HO<sup>-</sup>] ou pour étudier un milieu acide ou basique.</p>
+            <h3>خطأ شائع / Erreur fréquente</h3>
+            <p>اعتبار K<sub>e</sub> ثابتًا بنفس القيمة دون الانتباه إلى درجة الحرارة. في التمارين المدرسية غالبًا يؤخذ عند 25°C.</p>
+            <p class="fr">Considérer K<sub>e</sub> sans tenir compte de la température. Dans les exercices, on l’utilise souvent à 25°C.</p>
+            <h3>صح أم خطأ؟ / Vrai ou Faux</h3>
+            <p>عند 25°C، إذا زاد [H3O<sup>+</sup>] فإن [HO<sup>-</sup>] ينقص.</p>
+            <p><strong>الجواب: صحيح.</strong> لأن حاصل الضرب يبقى K<sub>e</sub>.</p>
+          </div>
+        </details>
+
+        <details class="formula-card">
+          <summary><span>7. ثابتة الحموضة</span><small>Constante d’acidité</small></summary>
+          <div class="formula-body">
+            <div class="equation-box">K<sub>A</sub> = ([A<sup>-</sup>] [H3O<sup>+</sup>]) / [AH]</div>
+            <div class="equation-box">pK<sub>A</sub> = -log K<sub>A</sub></div>
+            <h3>معنى المعادلة / Sens de l’équation</h3>
+            <p>تصف ثابتة الحموضة قوة حمض ضعيف AH في تفاعله مع الماء.</p>
+            <p class="fr">La constante d’acidité décrit la force d’un acide faible AH dans sa réaction avec l’eau.</p>
+            <h3>متى نستعملها؟ / Quand l’utiliser ?</h3>
+            <p>نستعملها عند دراسة الأزواج حمض/قاعدة، ومقارنة قوة الأحماض، أو حساب pK<sub>A</sub>.</p>
+            <p class="fr">On l’utilise pour étudier les couples acide/base, comparer la force des acides ou calculer pK<sub>A</sub>.</p>
+            <h3>خطأ شائع / Erreur fréquente</h3>
+            <p>الخلط بين K<sub>A</sub> و pK<sub>A</sub>. كلما كان K<sub>A</sub> أكبر كان الحمض أقوى، وكلما كان pK<sub>A</sub> أصغر كان الحمض أقوى.</p>
+            <p class="fr">Confondre K<sub>A</sub> et pK<sub>A</sub>. Un acide est plus fort si K<sub>A</sub> est grand, ou si pK<sub>A</sub> est petit.</p>
+            <h3>صح أم خطأ؟ / Vrai ou Faux</h3>
+            <p>كلما كان pK<sub>A</sub> أصغر، كان الحمض أقوى.</p>
+            <p><strong>الجواب: صحيح.</strong> لأن pK<sub>A</sub> = -log K<sub>A</sub>.</p>
+          </div>
+        </details>
+
+        <details class="formula-card">
+          <summary><span>8. علاقة المعايرة عند التكافؤ</span><small>Relation de dosage à l’équivalence</small></summary>
+          <div class="formula-body">
+            <div class="equation-box">a A + b B → produits</div>
+            <div class="equation-box">n(A) / a = n(B) / b</div>
+            <div class="equation-box">C<sub>A</sub> V<sub>A</sub> / a = C<sub>B</sub> V<sub>BE</sub> / b</div>
+            <h3>معنى المعادلة / Sens de l’équation</h3>
+            <p>عند التكافؤ تكون كميتا المتفاعلين متناسبتين مع معاملهما الستوكيومتري في المعادلة الكيميائية.</p>
+            <p class="fr">À l’équivalence, les quantités de matière des réactifs sont proportionnelles à leurs coefficients stœchiométriques.</p>
+            <h3>متى نستعملها؟ / Quand l’utiliser ?</h3>
+            <p>نستعملها في تمارين المعايرة لحساب تركيز محلول مجهول.</p>
+            <p class="fr">On l’utilise dans les exercices de dosage pour déterminer la concentration d’une solution inconnue.</p>
+            <h3>خطأ شائع / Erreur fréquente</h3>
+            <p>استعمال العلاقة C<sub>A</sub>V<sub>A</sub> = C<sub>B</sub>V<sub>BE</sub> دائمًا، رغم أنها صحيحة مباشرة فقط إذا كانت النسب 1:1.</p>
+            <p class="fr">Utiliser toujours C<sub>A</sub>V<sub>A</sub> = C<sub>B</sub>V<sub>BE</sub>, alors qu’elle est directe seulement pour un rapport 1:1.</p>
+            <h3>صح أم خطأ؟ / Vrai ou Faux</h3>
+            <p>في تفاعل 1:1، عند التكافؤ يمكن استعمال C<sub>A</sub>V<sub>A</sub> = C<sub>B</sub>V<sub>BE</sub>.</p>
+            <p><strong>الجواب: صحيح.</strong> لأن المعاملين الستوكيومتريين متساويان.</p>
+          </div>
+        </details>
+
+        <details class="formula-card">
+          <summary><span>9. التقدم الكيميائي</span><small>Avancement chimique</small></summary>
+          <div class="formula-body">
+            <div class="equation-box">n<sub>i</sub>(réactif) = n<sub>0</sub> - ν x</div>
+            <div class="equation-box">n<sub>i</sub>(produit) = n<sub>0</sub> + ν x</div>
+            <h3>معنى المعادلة / Sens de l’équation</h3>
+            <p>التقدم x يسمح بتتبع تغير كميات المادة أثناء تحول كيميائي باستعمال معاملات المعادلة.</p>
+            <p class="fr">L’avancement x permet de suivre l’évolution des quantités de matière pendant une transformation chimique.</p>
+            <h3>متى نستعملها؟ / Quand l’utiliser ?</h3>
+            <p>نستعملها لإنجاز جدول التقدم، تحديد المتفاعل المحد، وحساب الحالة النهائية.</p>
+            <p class="fr">On l’utilise pour établir un tableau d’avancement, déterminer le réactif limitant et calculer l’état final.</p>
+            <h3>خطأ شائع / Erreur fréquente</h3>
+            <p>نسيان ضرب التقدم في المعامل الستوكيومتري ν.</p>
+            <p class="fr">Oublier de multiplier l’avancement par le coefficient stœchiométrique ν.</p>
+            <h3>صح أم خطأ؟ / Vrai ou Faux</h3>
+            <p>كمية مادة المتفاعل تنقص مع التقدم، بينما كمية مادة الناتج غالبًا تزداد.</p>
+            <p><strong>الجواب: صحيح.</strong> لأن المتفاعلات تستهلك والنواتج تتكون.</p>
+          </div>
+        </details>
+
+        <details class="formula-card">
+          <summary><span>10. السرعة الحجمية للتفاعل</span><small>Vitesse volumique de réaction</small></summary>
+          <div class="formula-body">
+            <div class="equation-box">v = (1 / V) × (dx / dt)</div>
+            <h3>معنى المعادلة / Sens de l’équation</h3>
+            <p>تعبر السرعة الحجمية عن سرعة تطور التفاعل الكيميائي بالنسبة إلى حجم المزيج.</p>
+            <p class="fr">La vitesse volumique exprime la rapidité d’évolution d’une réaction chimique rapportée au volume du mélange.</p>
+            <h3>متى نستعملها؟ / Quand l’utiliser ?</h3>
+            <p>نستعملها في التحولات السريعة والبطيئة، خاصة عند استغلال منحنى x(t).</p>
+            <p class="fr">On l’utilise pour les transformations rapides et lentes, surtout à partir d’une courbe x(t).</p>
+            <h3>الوحدات / Unités</h3>
+            <p>v : mol·L⁻¹·s⁻¹ إذا كان V باللتر و t بالثانية</p>
+            <h3>خطأ شائع / Erreur fréquente</h3>
+            <p>الخلط بين سرعة التفاعل dx/dt والسرعة الحجمية التي تقسم على حجم المزيج.</p>
+            <p class="fr">Confondre la vitesse de réaction dx/dt avec la vitesse volumique, qui est divisée par le volume.</p>
+            <h3>صح أم خطأ؟ / Vrai ou Faux</h3>
+            <p>إذا كان حجم المزيج ثابتًا، فإن v تتناسب مع ميل منحنى x(t).</p>
+            <p><strong>الجواب: صحيح.</strong> لأن dx/dt يمثل ميل المنحنى.</p>
+          </div>
+        </details>
+
+        <details class="formula-card">
+          <summary><span>11. زمن نصف التفاعل</span><small>Temps de demi-réaction</small></summary>
+          <div class="formula-body">
+            <div class="equation-box">x(t<sub>1/2</sub>) = x<sub>f</sub> / 2</div>
+            <h3>معنى المعادلة / Sens de l’équation</h3>
+            <p>زمن نصف التفاعل هو المدة اللازمة ليصل التقدم إلى نصف قيمته النهائية.</p>
+            <p class="fr">Le temps de demi-réaction est la durée nécessaire pour que l’avancement atteigne la moitié de sa valeur finale.</p>
+            <h3>متى نستعملها؟ / Quand l’utiliser ?</h3>
+            <p>نستعملها لوصف سرعة تحول كيميائي ومقارنة تحول بآخر.</p>
+            <p class="fr">On l’utilise pour caractériser la rapidité d’une transformation chimique et comparer deux réactions.</p>
+            <h3>خطأ شائع / Erreur fréquente</h3>
+            <p>الخلط بين زمن نصف التفاعل ونصف مدة التجربة. هما ليسا نفس الشيء دائمًا.</p>
+            <p class="fr">Confondre le temps de demi-réaction avec la moitié de la durée de l’expérience.</p>
+            <h3>صح أم خطأ؟ / Vrai ou Faux</h3>
+            <p>إذا كان x<sub>f</sub> = 0.40 mol، فإن t<sub>1/2</sub> يوافق اللحظة التي يكون فيها x = 0.20 mol.</p>
+            <p><strong>الجواب: صحيح.</strong> لأن x<sub>f</sub> / 2 = 0.20 mol.</p>
+          </div>
+        </details>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="brand-mark">DB2</span>
+          <div>
+            <strong>Douae Bac 2</strong>
+            <p>ثانية باك علوم فيزيائية</p>
+          </div>
+        </div>
+        <p>منصة مراجعة مبسطة لمساعدة تلاميذ الثانية باك علوم فيزيائية على تنظيم مراجعتهم بطريقة تفاعلية.</p>
+        <p class="footer-meta">من إعداد: دعاء جول · 2026</p>
+      </div>
+    </footer>
+
+    <button class="to-top" id="toTop" type="button" aria-label="العودة للأعلى">↑</button>
+    <script>
+      const toTop = document.getElementById("toTop");
+      window.addEventListener("scroll", () => toTop.classList.toggle("visible", window.scrollY > 320));
+      toTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => navigator.serviceWorker.register("./sw.js"));
+      }
+    </script>
+  </body>
+</html>
