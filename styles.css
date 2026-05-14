@@ -1732,6 +1732,26 @@ main {
 }
 
 
+/* Exam trigger guidance boxes */
+.exam-trigger-box {
+  width: min(100% - 28px, 1120px);
+  margin: -6px auto 24px;
+  padding: 16px 18px;
+  border-radius: 20px;
+  border: 1px solid rgba(212, 168, 83, 0.38);
+  background: linear-gradient(135deg, rgba(255, 250, 242, 0.98), rgba(247, 251, 246, 0.98));
+  box-shadow: var(--shadow-soft);
+}
+
+.exam-trigger-box h3 {
+  margin: 0 0 8px;
+  color: var(--primary-dark);
+}
+
+.exam-trigger-box p {
+  margin: 6px 0;
+}
+
 /* Physics interactive exercises page */
 .exercises-page .section-heading {
   scroll-margin-top: 96px;

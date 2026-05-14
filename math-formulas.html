@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#2f7d68">
+    <title>بنك القواعد والقوانين الأساسية في الرياضيات - ثانية باك علوم فيزيائية</title>
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <div class="header-content">
+        <a class="brand" href="./index.html" aria-label="العودة إلى الصفحة الرئيسية">
+          <img src="DB2_logo.png" alt="شعار DB2 - ثانية علوم فيزياء" class="site-logo-img">
+        </a>
+
+        <nav class="subject-nav" aria-label="أقسام المراجعة">
+          <a class="subject-nav-link" href="./index.html">الرئيسية</a>
+          <a class="subject-nav-link" href="./philosophy.html">الفلسفة</a>
+          <a class="subject-nav-link" href="./physics-equations.html">الفيزياء</a>
+          <a class="subject-nav-link" href="./chemistry-equations.html">الكيمياء</a>
+          <a class="subject-nav-link active" href="./math.html">الرياضيات</a>
+        </nav>
+
+        <p class="eyebrow">Banque des formules et règles essentielles</p>
+        <h1>بنك القواعد والقوانين الأساسية في الرياضيات</h1>
+        <p class="intro">صفحة مراجعة مركزة تجمع أهم القواعد والعلاقات التي يحتاجها تلميذ الثانية باك علوم فيزيائية في مادة الرياضيات، مع شرح عربي مبسط ومصطلحات فرنسية كما ترد في الدرس والامتحان.</p>
+      </div>
+    </header>
+
+    <main class="formula-page math-page">
+      <nav class="breadcrumb" aria-label="مسار التنقل">
+        <a class="breadcrumb-link" href="./index.html">الرئيسية</a>
+        <span class="breadcrumb-separator" aria-hidden="true">›</span>
+        <a class="breadcrumb-link" href="./math.html">الرياضيات</a>
+        <span class="breadcrumb-separator" aria-hidden="true">›</span>
+        <span class="breadcrumb-current">بنك القواعد</span>
+      </nav>
+
+      <section class="home-dashboard formula-hero-card">
+        <div>
+          <p class="eyebrow">Révision ciblée</p>
+          <h2>قواعد مختصرة للاستعمال السريع</h2>
+          <p class="muted">هذه الصفحة ليست درسًا مطولًا. هي بنك مراجعة سريع: القاعدة، معناها، متى نستعملها، والخطأ الشائع المرتبط بها.</p>
+        </div>
+        <div class="formula-note">
+          طريقة الاستعمال: افتح المحور المطلوب، راجع القاعدة، ثم طبقها مباشرة في تمرين قصير.
+        </div>
+      </section>
+
+      <section class="content-block">
+        <h3>فهرس سريع / Sommaire rapide</h3>
+        <div class="toc-actions formula-toc">
+          <a class="toc-button" href="#limites">النهايات والاتصال</a>
+          <a class="toc-button" href="#derivation">الاشتقاق والدوال</a>
+          <a class="toc-button" href="#suites">المتتاليات</a>
+          <a class="toc-button" href="#primitives-integrales">الأصليات والتكامل</a>
+          <a class="toc-button" href="#log-exp">اللوغاريتم والأسية</a>
+          <a class="toc-button" href="#complexes">الأعداد العقدية</a>
+          <a class="toc-button" href="#equations-differentielles">المعادلات التفاضلية</a>
+          <a class="toc-button" href="#geometrie">الهندسة في الفضاء</a>
+          <a class="toc-button" href="#probabilites">الاحتمالات</a>
+        </div>
+      </section>
+
+      <section class="section-heading" id="limites">
+        <p class="eyebrow">Limites et continuité</p>
+        <h2>1. النهايات والاتصال</h2>
+        <p class="muted">نستعمل هذا المحور لفهم سلوك الدالة قرب عدد معين أو عند المالانهاية.</p>
+      </section>
+
+      <section class="formula-list">
+        <details class="formula-card" open>
+          <summary><span>نهاية مجموع أو جداء أو خارج</span><small>Somme, produit, quotient</small></summary>
+          <div class="formula-body">
+            <h3>القاعدة / Règle</h3>
+            <p>إذا كانت نهايات الدوال موجودة، نستعمل قواعد العمليات: نهاية المجموع هي مجموع النهايات، ونهاية الجداء هي جداء النهايات، ونهاية الخارج هي خارج النهايات إذا كانت نهاية المقام غير منعدمة.</p>
+            <p class="fr">Si les limites existent, on utilise les règles des opérations : somme, produit et quotient, avec un dénominateur non nul.</p>
+            <h3>متى نستعملها؟ / Quand l’utiliser ?</h3>
+            <p>عندما يكون التعبير مباشرًا ولا ينتج عنه شكل غير محدد.</p>
+            <h3>خطأ شائع / Erreur fréquente</h3>
+            <p>تطبيق القاعدة رغم وجود شكل غير محدد مثل 0/0 أو ∞/∞.</p>
+          </div>
+        </details>
+
+        <details class="formula-card">
+          <summary><span>الأشكال غير المحددة</span><small>Formes indéterminées</small></summary>
+          <div class="formula-body">
+            <h3>أمثلة / Exemples</h3>
+            <p>0/0 ، ∞/∞ ، ∞ - ∞ ، 0 × ∞.</p>
+            <h3>متى نستعملها؟ / Quand l’utiliser ?</h3>
+            <p>عندما لا يمكن حساب النهاية مباشرة. هنا نحتاج إلى التحليل، الاختزال، العامل المشترك، أو ضرب المرافق.</p>
+            <p class="fr">On transforme l’expression : factorisation, simplification, mise en facteur ou multiplication par le conjugué.</p>
+            <h3>خطأ شائع / Erreur fréquente</h3>
+            <p>اعتبار 0/0 يساوي 0. هذا خطأ، لأنه شكل غير محدد ويحتاج معالجة.</p>
+          </div>
+        </details>
+
+        <details class="formula-card">
+          <summary><span>الاتصال في نقطة</span><small>Continuité en un point</small></summary>
+          <div class="formula-body">
+            <h3>القاعدة / Règle</h3>
+            <p>تكون الدالة f متصلة في a إذا كانت معرفة في a وكانت نهاية f(x) عندما يقترب x من a تساوي f(a).</p>
+            <p class="fr">f est continue en a si f(a) existe et si la limite de f(x) quand x tend vers a est égale à f(a).</p>
+            <h3>متى نستعملها؟ / Quand l’utiliser ?</h3>
+            <p>عند السؤال عن الاتصال أو عند استعمال مبرهنة القيم المتوسطة لإثبات وجود حل.</p>
+          </div>
+        </details>
+      </section>
+
+      <section class="section-heading" id="derivation">
+        <p class="eyebrow">Dérivation et étude des fonctions</p>
+        <h2>2. الاشتقاق ودراسة الدوال</h2>
+      </section>
+
+      <section class="formula-list">
+        <details class="formula-card" open>
+          <summary><span>مشتقات أساسية</span><small>Dérivées usuelles</small></summary>
+          <div class="formula-body">
+            <h3>قواعد / Règles</h3>
+            <p>(xⁿ)' = n xⁿ⁻¹، و (1/x)' = -1/x²، و (√x)' = 1/(2√x) حيث x &gt; 0.</p>
+            <p class="fr">Ces dérivées sont utilisées pour calculer rapidement f'(x) avant l’étude des variations.</p>
+            <h3>متى نستعملها؟ / Quand l’utiliser ?</h3>
+            <p>عند حساب المشتقة أو دراسة تغيرات دالة.</p>
+            <h3>خطأ شائع / Erreur fréquente</h3>
+            <p>نسيان مجال تعريف √x أو 1/x قبل الاشتقاق.</p>
+          </div>
+        </details>
+
+        <details class="formula-card">
+          <summary><span>مشتقة مجموع وجدائين</span><small>Somme, produit, quotient</small></summary>
+          <div class="formula-body">
+            <h3>قواعد / Règles</h3>
+            <p>(u + v)' = u' + v'</p>
+            <p>(uv)' = u'v + uv'</p>
+            <p>(u/v)' = (u'v - uv') / v²، مع v ≠ 0.</p>
+            <h3>متى نستعملها؟ / Quand l’utiliser ?</h3>
+            <p>عندما تكون الدالة مركبة من جمع، جداء، أو خارج دالتين.</p>
+          </div>
+        </details>
+
+        <details class="formula-card">
+          <summary><span>إشارة المشتقة وجدول التغيرات</span><small>Signe de f' et variations</small></summary>
+          <div class="formula-body">
+            <h3>القاعدة / Règle</h3>
+            <p>إذا كانت f'(x) موجبة على مجال، فإن f متزايدة عليه. وإذا كانت f'(x) سالبة، فإن f متناقصة عليه.</p>
+            <p class="fr">Le signe de f'(x) permet de construire le tableau de variations de f.</p>
+            <h3>خطأ شائع / Erreur fréquente</h3>
+            <p>دراسة إشارة f بدل دراسة إشارة f'.</p>
+          </div>
+        </details>
+      </section>
+
+      <section class="section-heading" id="suites">
+        <p class="eyebrow">Suites numériques</p>
+        <h2>3. المتتاليات العددية</h2>
+      </section>
+
+      <section class="formula-list">
+        <details class="formula-card" open>
+          <summary><span>المتتالية الحسابية</span><small>Suite arithmétique</small></summary>
+          <div class="formula-body">
+            <h3>العلاقات / Relations</h3>
+            <p>uₙ₊₁ = uₙ + r</p>
+            <p>uₙ = u₀ + nr أو uₙ = u₁ + (n - 1)r</p>
+            <h3>متى نستعملها؟ / Quand l’utiliser ?</h3>
+            <p>إذا كان الفرق بين حدين متتاليين ثابتًا.</p>
+            <p class="fr">On l’utilise lorsque la différence entre deux termes consécutifs est constante.</p>
+          </div>
+        </details>
+
+        <details class="formula-card">
+          <summary><span>المتتالية الهندسية</span><small>Suite géométrique</small></summary>
+          <div class="formula-body">
+            <h3>العلاقات / Relations</h3>
+            <p>uₙ₊₁ = q uₙ</p>
+            <p>uₙ = u₀ qⁿ أو uₙ = u₁ qⁿ⁻¹</p>
+            <h3>متى نستعملها؟ / Quand l’utiliser ?</h3>
+            <p>إذا كان خارج حدين متتاليين ثابتًا.</p>
+            <h3>خطأ شائع / Erreur fréquente</h3>
+            <p>الخلط بين أساس المتتالية الحسابية r وأساس المتتالية الهندسية q.</p>
+          </div>
+        </details>
+      </section>
+
+      <section class="section-heading" id="primitives-integrales">
+        <p class="eyebrow">Primitives et calcul intégral</p>
+        <h2>4. الدوال الأصلية والحساب التكاملي</h2>
+      </section>
+
+      <section class="formula-list">
+        <details class="formula-card" open>
+          <summary><span>الدالة الأصلية</span><small>Primitive</small></summary>
+          <div class="formula-body">
+            <h3>الفكرة / Idée</h3>
+            <p>F دالة أصلية لـ f على مجال إذا كان F'(x) = f(x).</p>
+            <p class="fr">F est une primitive de f si F'(x) = f(x).</p>
+            <h3>أمثلة / Exemples</h3>
+            <p>دالة أصلية لـ xⁿ هي xⁿ⁺¹/(n + 1)، إذا كان n ≠ -1.</p>
+          </div>
+        </details>
+
+        <details class="formula-card">
+          <summary><span>التكامل المحدد</span><small>Intégrale définie</small></summary>
+          <div class="formula-body">
+            <h3>القاعدة / Règle</h3>
+            <p>إذا كانت F دالة أصلية لـ f، فإن ∫ من a إلى b لـ f(x) dx = F(b) - F(a).</p>
+            <p class="fr">Si F est une primitive de f, alors l’intégrale de a à b de f(x) dx vaut F(b) - F(a).</p>
+            <h3>خطأ شائع / Erreur fréquente</h3>
+            <p>عكس الترتيب وكتابة F(a) - F(b).</p>
+          </div>
+        </details>
+      </section>
+
+      <section class="section-heading" id="log-exp">
+        <p class="eyebrow">Logarithme et exponentielle</p>
+        <h2>5. اللوغاريتم والأسية</h2>
+      </section>
+
+      <section class="formula-list">
+        <details class="formula-card" open>
+          <summary><span>قواعد ln</span><small>Propriétés de ln</small></summary>
+          <div class="formula-body">
+            <h3>قواعد / Règles</h3>
+            <p>ln(ab) = ln(a) + ln(b)، و ln(a/b) = ln(a) - ln(b)، و ln(aⁿ) = n ln(a)، مع a &gt; 0 و b &gt; 0.</p>
+            <h3>خطأ شائع / Erreur fréquente</h3>
+            <p>نسيان شرط الموجب: لا نستعمل ln(x) إلا عندما x &gt; 0.</p>
+          </div>
+        </details>
+
+        <details class="formula-card">
+          <summary><span>قواعد exp</span><small>Propriétés de exp</small></summary>
+          <div class="formula-body">
+            <h3>قواعد / Règles</h3>
+            <p>eᵃ × eᵇ = eᵃ⁺ᵇ، و eᵃ / eᵇ = eᵃ⁻ᵇ، و (eᵃ)ᵇ = eᵃᵇ.</p>
+            <p class="fr">La fonction exponentielle est toujours positive.</p>
+            <h3>متى نستعملها؟ / Quand l’utiliser ?</h3>
+            <p>في حل المعادلات، دراسة الدوال، وبعض نماذج التغير.</p>
+          </div>
+        </details>
+      </section>
+
+      <section class="section-heading" id="complexes">
+        <p class="eyebrow">Nombres complexes</p>
+        <h2>6. الأعداد العقدية</h2>
+      </section>
+
+      <section class="formula-list">
+        <details class="formula-card" open>
+          <summary><span>الشكل الجبري</span><small>Forme algébrique</small></summary>
+          <div class="formula-body">
+            <h3>الكتابة / Écriture</h3>
+            <p>z = a + ib حيث a هو الجزء الحقيقي و b هو الجزء التخيلي.</p>
+            <p class="fr">a est la partie réelle et b est la partie imaginaire.</p>
+            <h3>المرافق / Conjugué</h3>
+            <p>إذا كان z = a + ib فإن مرافقه هو z̄ = a - ib.</p>
+          </div>
+        </details>
+
+        <details class="formula-card">
+          <summary><span>الوحدة والعمدة</span><small>Module et argument</small></summary>
+          <div class="formula-body">
+            <h3>الوحدة / Module</h3>
+            <p>|z| = √(a² + b²)</p>
+            <h3>العمدة / Argument</h3>
+            <p>تحدد زاوية العدد العقدي في المستوى العقدي، وغالبًا نستعمل الشكل المثلثي z = r(cos θ + i sin θ).</p>
+            <p class="fr">La forme trigonométrique permet de relier le calcul complexe à la géométrie du plan.</p>
+          </div>
+        </details>
+      </section>
+
+      <section class="section-heading" id="equations-differentielles">
+        <p class="eyebrow">Équations différentielles</p>
+        <h2>7. المعادلات التفاضلية</h2>
+      </section>
+
+      <section class="formula-list">
+        <details class="formula-card" open>
+          <summary><span>نموذج y' = ay</span><small>Solution exponentielle</small></summary>
+          <div class="formula-body">
+            <h3>الحل العام / Solution générale</h3>
+            <p>حل المعادلة y' = ay هو y = C eᵃˣ، حيث C ثابتة تحدد باستعمال الشرط الابتدائي.</p>
+            <p class="fr">La constante C est déterminée à partir d’une condition initiale.</p>
+            <h3>خطأ شائع / Erreur fréquente</h3>
+            <p>نسيان استعمال الشرط الابتدائي عندما يكون مطلوبًا تحديد الحل الخاص.</p>
+          </div>
+        </details>
+      </section>
+
+      <section class="section-heading" id="geometrie">
+        <p class="eyebrow">Géométrie dans l’espace</p>
+        <h2>8. الهندسة في الفضاء</h2>
+      </section>
+
+      <section class="formula-list">
+        <details class="formula-card" open>
+          <summary><span>الجداء السلمي</span><small>Produit scalaire</small></summary>
+          <div class="formula-body">
+            <h3>علاقة مهمة / Relation importante</h3>
+            <p>إذا كان u(x, y, z) و v(x', y', z')، فإن u·v = xx' + yy' + zz'.</p>
+            <h3>متى نستعملها؟ / Quand l’utiliser ?</h3>
+            <p>لحساب زاوية، إثبات التعامد، أو دراسة علاقة بين مستقيمات ومستويات.</p>
+          </div>
+        </details>
+
+        <details class="formula-card">
+          <summary><span>تمثيل مستقيم في الفضاء</span><small>Représentation paramétrique</small></summary>
+          <div class="formula-body">
+            <h3>الفكرة / Idée</h3>
+            <p>نحتاج نقطة من المستقيم ومتجهة موجهة لكتابة تمثيل بارامتري.</p>
+            <p class="fr">Une droite de l’espace est souvent donnée par un point et un vecteur directeur.</p>
+          </div>
+        </details>
+      </section>
+
+      <section class="section-heading" id="probabilites">
+        <p class="eyebrow">Probabilités</p>
+        <h2>9. الاحتمالات</h2>
+      </section>
+
+      <section class="formula-list">
+        <details class="formula-card" open>
+          <summary><span>احتمال حدث معاكس</span><small>Événement contraire</small></summary>
+          <div class="formula-body">
+            <h3>القاعدة / Règle</h3>
+            <p>P(Ā) = 1 - P(A)</p>
+            <h3>متى نستعملها؟ / Quand l’utiliser ?</h3>
+            <p>عندما يكون حساب الحدث المعاكس أسهل من حساب الحدث مباشرة.</p>
+          </div>
+        </details>
+
+        <details class="formula-card">
+          <summary><span>الاحتمال الشرطي</span><small>Probabilité conditionnelle</small></summary>
+          <div class="formula-body">
+            <h3>القاعدة / Règle</h3>
+            <p>P(A/B) = P(A ∩ B) / P(B)، مع P(B) ≠ 0.</p>
+            <p class="fr">On lit P(A/B) : probabilité de A sachant B.</p>
+            <h3>خطأ شائع / Erreur fréquente</h3>
+            <p>الخلط بين P(A/B) و P(B/A).</p>
+          </div>
+        </details>
+      </section>
+
+      <section class="content-block solution-template">
+        <h3>كيف أراجع هذه الصفحة؟ / Comment réviser cette page ?</h3>
+        <ol class="method-list">
+          <li>اختر محورًا واحدًا فقط في كل مرة.</li>
+          <li>اقرأ القاعدة بالعربية ثم اربطها بالمصطلح الفرنسي.</li>
+          <li>اكتب مثالًا صغيرًا بيدك، لا تكتف بالقراءة.</li>
+          <li>سجل الخطأ الشائع المرتبط بالقاعدة.</li>
+          <li>ارجع إلى الدرس التفصيلي أو التمرين إذا شعرت أن القاعدة غير واضحة.</li>
+        </ol>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="brand-mark">DB2</span>
+          <div>
+            <strong>Douae Bac 2</strong>
+            <p>ثانية باك علوم فيزيائية</p>
+          </div>
+        </div>
+        <p>بنك القواعد والقوانين الأساسية في الرياضيات ضمن منصة Douae Bac 2.</p>
+      </div>
+    </footer>
+
+    <button class="to-top" id="toTop" type="button" aria-label="العودة للأعلى">↑</button>
+
+    <script>
+      const toTop = document.getElementById("toTop");
+      window.addEventListener("scroll", () => {
+        toTop.classList.toggle("visible", window.scrollY > 450);
+      });
+      toTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("./sw.js");
+        });
+      }
+    </script>
+  </body>
+</html>

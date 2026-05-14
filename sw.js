@@ -1,4 +1,4 @@
-const CACHE_NAME = "douae-bac2-v20-physics-exercises";
+const CACHE_NAME = "douae-bac2-v24-math-methodology";
 
 const STATIC_ASSETS = [
   "./",
@@ -9,6 +9,10 @@ const STATIC_ASSETS = [
   "./physics-common-mistakes.html",
   "./physics-exercises.html",
   "./chemistry-equations.html",
+  "./math.html",
+  "./math-formulas.html",
+  "./math-methodology.html",
+  "./math-for-physics.html",
   "./styles.css",
   "./app.js",
   "./data.js",
