@@ -1,4 +1,4 @@
-const CACHE_NAME = "douae-bac2-v43-svt-qcm";
+const CACHE_NAME = "douae-bac2-v44-pwa-install-polish";
 
 const STATIC_ASSETS = [
   "./",
