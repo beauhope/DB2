@@ -1,4 +1,4 @@
-const CACHE_NAME = "douae-bac2-v33-landing-cards-fix";
+const CACHE_NAME = "douae-bac2-v43-svt-qcm";
 
 const STATIC_ASSETS = [
   "./",
@@ -10,6 +10,15 @@ const STATIC_ASSETS = [
   "./physics-exercises.html",
   "./chemistry-equations.html",
   "./math.html",
+  "./svt.html",
+  "./svt-energie.html",
+  "./svt-exercices.html",
+  "./svt-geologie.html",
+  "./svt-genetique-expression.html",
+  "./svt-methodologie.html",
+  "./svt-nutrition.html",
+  "./svt-qcm.html",
+  "./svt-reproduction-sexuee.html",
   "./math-formulas.html",
   "./math-methodology.html",
   "./math-common-mistakes.html",

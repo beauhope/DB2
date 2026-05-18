@@ -753,6 +753,37 @@ main {
   border-bottom: 0;
 }
 
+.page-ltr {
+  direction: ltr;
+  text-align: left;
+}
+
+.page-ltr .formula-page,
+.page-ltr .content-block,
+.page-ltr .section-heading,
+.page-ltr .landing-subject-card,
+.page-ltr .future-card,
+.page-ltr .method-card,
+.page-ltr .formula-card,
+.page-ltr .concept-table {
+  direction: ltr;
+  text-align: left;
+}
+
+.page-ltr .concept-table td::before {
+  content: attr(data-label);
+  text-align: left;
+}
+
+.page-ltr .concept-table td[dir="rtl"]::before {
+  text-align: right;
+}
+
+.page-ltr [dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
 .mind-map {
   display: grid;
   gap: 10px;
@@ -1665,6 +1696,15 @@ main {
   font-weight: 700;
   direction: ltr;
   text-align: right;
+}
+
+.svt-program-card,
+.svt-program-card h3,
+.svt-program-card p,
+.svt-program-card small,
+.svt-program-card .subject-badge {
+  direction: ltr;
+  text-align: left;
 }
 
 .subject-badge {

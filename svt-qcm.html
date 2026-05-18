@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#2f7d68">
+    <title>QCM SVT interactif - Vrai / Faux</title>
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="page-ltr">
+    <header class="site-header" id="top">
+      <div class="header-content">
+        <a class="brand" href="./index.html" aria-label="العودة إلى الصفحة الرئيسية">
+          <img src="DB2_logo.png" alt="شعار DB2" class="site-logo-img">
+        </a>
+
+        <nav class="subject-nav" aria-label="أقسام المراجعة">
+          <a class="subject-nav-link" href="./index.html">الرئيسية</a>
+          <a class="subject-nav-link" href="./philosophy.html">الفلسفة</a>
+          <a class="subject-nav-link" href="./physics-equations.html">الفيزياء</a>
+          <a class="subject-nav-link" href="./chemistry-equations.html">الكيمياء</a>
+          <a class="subject-nav-link" href="./math.html">الرياضيات</a>
+          <a class="subject-nav-link active" href="./svt.html">SVT</a>
+        </nav>
+
+        <p class="eyebrow">SVT - 2ème Bac Sciences Physiques BIOF</p>
+        <h1>QCM SVT interactif - Vrai / Faux</h1>
+        <p class="intro">
+          Révision rapide avec 20 questions Vrai / Faux, une correction immédiate et un score en direct.
+        </p>
+      </div>
+    </header>
+
+    <main class="formula-page exercises-page svt-page">
+      <nav class="breadcrumb" aria-label="مسار التنقل">
+        <a class="breadcrumb-link" href="./index.html">الرئيسية</a>
+        <span class="breadcrumb-separator" aria-hidden="true">›</span>
+        <a class="breadcrumb-link" href="./svt.html">SVT</a>
+        <span class="breadcrumb-separator" aria-hidden="true">›</span>
+        <span class="breadcrumb-current">QCM SVT</span>
+      </nav>
+
+      <section class="home-dashboard formula-hero-card">
+        <div>
+          <p class="eyebrow">Vrai / Faux</p>
+          <h2>Réviser les notions essentielles</h2>
+          <p class="muted">
+            Choisis Vrai ou Faux pour chaque affirmation. La correction apparaît immédiatement après ton choix.
+          </p>
+        </div>
+        <div class="formula-note" dir="rtl">
+          حاولي الإجابة دون تخمين، ثم استعملي التصحيح لتثبيت المصطلحات العلمية.
+        </div>
+      </section>
+
+      <section class="content-block exercise-score-card" aria-live="polite">
+        <div>
+          <p class="eyebrow">Score obtenu</p>
+          <h3><span id="scoreValue">0</span> / <span id="totalValue">20</span></h3>
+          <p class="muted"><span id="answeredValue">0</span> question(s) répondue(s)</p>
+        </div>
+        <button class="quiz-reset-btn" id="resetQuiz" type="button">Recommencer</button>
+      </section>
+
+      <section class="exercise-grid" id="quizGrid" aria-label="Questions Vrai Faux"></section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="brand-mark">DB2</span>
+          <div>
+            <strong>Douae Bac 2</strong>
+            <p>SVT - QCM interactif</p>
+          </div>
+        </div>
+        <p>Questions Vrai / Faux pour réviser rapidement les chapitres essentiels de SVT.</p>
+      </div>
+    </footer>
+
+    <button class="to-top" id="toTop" type="button" aria-label="العودة للأعلى">↑</button>
+
+    <script>
+      const questions = [
+        {
+          axe: "Consommation de la matière organique et flux d’énergie",
+          text: "La respiration cellulaire nécessite du dioxygène.",
+          answer: true,
+          correction: "La respiration cellulaire se fait en présence de dioxygène et permet une dégradation complète du glucose."
+        },
+        {
+          axe: "Consommation de la matière organique et flux d’énergie",
+          text: "La fermentation produit plus d’ATP que la respiration cellulaire.",
+          answer: false,
+          correction: "La fermentation produit peu d’ATP car la dégradation du glucose est incomplète."
+        },
+        {
+          axe: "Consommation de la matière organique et flux d’énergie",
+          text: "L’ATP est une forme d’énergie utilisable par la cellule.",
+          answer: true,
+          correction: "L’ATP fournit l’énergie directement utilisable pour les activités cellulaires."
+        },
+        {
+          axe: "Consommation de la matière organique et flux d’énergie",
+          text: "La fermentation alcoolique peut produire du dioxyde de carbone.",
+          answer: true,
+          correction: "La fermentation alcoolique produit de l’éthanol, du CO2 et une faible quantité d’ATP."
+        },
+        {
+          axe: "Expression de l’information génétique",
+          text: "La transcription permet de former un ARN messager à partir de l’ADN.",
+          answer: true,
+          correction: "La transcription copie l’information d’un gène sous forme d’ARN messager."
+        },
+        {
+          axe: "Expression de l’information génétique",
+          text: "La traduction se déroule à partir de l’ADN directement.",
+          answer: false,
+          correction: "La traduction utilise l’ARN messager pour fabriquer une chaîne d’acides aminés."
+        },
+        {
+          axe: "Expression de l’information génétique",
+          text: "Un codon est formé de trois nucléotides.",
+          answer: true,
+          correction: "Un codon est un triplet de nucléotides sur l’ARN messager."
+        },
+        {
+          axe: "Expression de l’information génétique",
+          text: "Une protéine peut intervenir dans l’expression d’un caractère.",
+          answer: true,
+          correction: "Un gène peut diriger la synthèse d’une protéine qui participe à l’expression d’un caractère."
+        },
+        {
+          axe: "Reproduction sexuée et transmission de l’information génétique",
+          text: "La méiose produit des gamètes haploïdes.",
+          answer: true,
+          correction: "La méiose réduit le nombre de chromosomes de 2n à n."
+        },
+        {
+          axe: "Reproduction sexuée et transmission de l’information génétique",
+          text: "La fécondation diminue le nombre de chromosomes.",
+          answer: false,
+          correction: "La fécondation réunit deux gamètes haploïdes et rétablit le nombre diploïde."
+        },
+        {
+          axe: "Reproduction sexuée et transmission de l’information génétique",
+          text: "Le zygote résulte de l’union de deux gamètes.",
+          answer: true,
+          correction: "Le zygote est la cellule-œuf formée après la fécondation."
+        },
+        {
+          axe: "Reproduction sexuée et transmission de l’information génétique",
+          text: "La reproduction sexuée produit toujours des descendants génétiquement identiques.",
+          answer: false,
+          correction: "La méiose et la fécondation créent de nouvelles combinaisons génétiques."
+        },
+        {
+          axe: "Utilisation des matières organiques et inorganiques",
+          text: "L’eau et les sels minéraux sont des matières minérales.",
+          answer: true,
+          correction: "Ce sont des substances minérales prélevées dans le milieu."
+        },
+        {
+          axe: "Utilisation des matières organiques et inorganiques",
+          text: "La photosynthèse produit de la matière organique chez les végétaux chlorophylliens.",
+          answer: true,
+          correction: "En présence de lumière, la plante produit de la matière organique à partir de matière minérale."
+        },
+        {
+          axe: "Utilisation des matières organiques et inorganiques",
+          text: "La lumière n’intervient pas dans la production de matière organique.",
+          answer: false,
+          correction: "La lumière est une condition essentielle de la photosynthèse."
+        },
+        {
+          axe: "Utilisation des matières organiques et inorganiques",
+          text: "Le dioxyde de carbone est utilisé par la plante verte pendant la photosynthèse.",
+          answer: true,
+          correction: "Le CO2 est une matière minérale utilisée pour produire de la matière organique."
+        },
+        {
+          axe: "Géologie et tectonique des plaques",
+          text: "Une dorsale océanique correspond à une zone de divergence.",
+          answer: true,
+          correction: "Au niveau d’une dorsale, les plaques s’écartent et une nouvelle lithosphère océanique se forme."
+        },
+        {
+          axe: "Géologie et tectonique des plaques",
+          text: "La subduction correspond à l’écartement de deux plaques.",
+          answer: false,
+          correction: "La subduction est une convergence où une plaque plonge sous une autre."
+        },
+        {
+          axe: "Géologie et tectonique des plaques",
+          text: "Les séismes peuvent indiquer une limite de plaques.",
+          answer: true,
+          correction: "Les séismes sont souvent concentrés aux limites des plaques lithosphériques."
+        },
+        {
+          axe: "Géologie et tectonique des plaques",
+          text: "Une collision continentale peut former une chaîne de montagnes.",
+          answer: true,
+          correction: "La collision provoque un épaississement de la croûte et la formation de reliefs."
+        }
+      ];
+
+      const quizGrid = document.getElementById("quizGrid");
+      const scoreValue = document.getElementById("scoreValue");
+      const totalValue = document.getElementById("totalValue");
+      const answeredValue = document.getElementById("answeredValue");
+      const resetQuiz = document.getElementById("resetQuiz");
+
+      totalValue.textContent = questions.length;
+
+      function updateScore() {
+        const answered = questions.filter((question) => question.selected !== undefined).length;
+        const score = questions.filter((question) => question.selected === question.answer).length;
+        scoreValue.textContent = score;
+        answeredValue.textContent = answered;
+      }
+
+      function renderQuiz() {
+        quizGrid.innerHTML = "";
+        questions.forEach((question, index) => {
+          const card = document.createElement("article");
+          card.className = "exercise-card";
+          card.innerHTML = `
+            <span class="exercise-tag">${question.axe}</span>
+            <h3>Question ${index + 1}</h3>
+            <p class="fr">${question.text}</p>
+            <div class="quiz-options" role="group" aria-label="Réponses question ${index + 1}">
+              <button type="button" data-answer="true">Vrai</button>
+              <button type="button" data-answer="false">Faux</button>
+            </div>
+            <div class="exercise-feedback" hidden></div>
+            <div class="exercise-solution" hidden>
+              <p><strong>Correction :</strong> ${question.correction}</p>
+            </div>
+          `;
+
+          const buttons = card.querySelectorAll("button[data-answer]");
+          const feedback = card.querySelector(".exercise-feedback");
+          const solution = card.querySelector(".exercise-solution");
+
+          buttons.forEach((button) => {
+            button.addEventListener("click", () => {
+              const selected = button.dataset.answer === "true";
+              question.selected = selected;
+              buttons.forEach((item) => item.classList.remove("selected"));
+              button.classList.add("selected");
+              const isCorrect = selected === question.answer;
+              feedback.hidden = false;
+              feedback.className = `exercise-feedback ${isCorrect ? "is-correct" : "is-wrong"}`;
+              feedback.textContent = isCorrect ? "Correct" : "Incorrect";
+              solution.hidden = false;
+              updateScore();
+            });
+          });
+
+          quizGrid.appendChild(card);
+        });
+        updateScore();
+      }
+
+      resetQuiz.addEventListener("click", () => {
+        questions.forEach((question) => {
+          delete question.selected;
+        });
+        renderQuiz();
+      });
+
+      renderQuiz();
+
+      const toTop = document.getElementById("toTop");
+      window.addEventListener("scroll", () => {
+        toTop.classList.toggle("visible", window.scrollY > 450);
+      });
+      toTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("./sw.js");
+        });
+      }
+    </script>
+    <script src="pwa-register.js"></script>
+  </body>
+</html>
